@@ -25,6 +25,7 @@
   "derivation": {
     "method": "BRIEF.md was read and split; no design decision was taken. Every fixed_requirements entry, and every spec-table row sourced from the brief, carries a quotation that was checked by literal substring match against the brief bytes digested above. The build refuses to emit this file if any quotation is not found.",
     "quotations_verified": 24,
+    "where_the_quotations_are": "Every one of them is in this file: fixed_requirements[].brief_evidence and brief_spec_rows[].brief_evidence. The count above is the sum of those two lists, so it is recomputable from this repository alone - re-read BRIEF.md and check each string is a substring of it. brief_spec_rows carries the quotations behind the README's spec table, which would otherwise cite the brief with the evidence left in a build script.",
     "review": "two rounds of adversarial review against the brief, looking for invented requirements, lost requirements, evidence supporting a weaker claim than the one made beside it, and worksheet questions that presuppose their own answer"
   },
   "fixed_requirements": [
@@ -92,6 +93,63 @@
       "id": "REQ-13",
       "requirement": "The requirements the brief states are to be treated as authoritative.",
       "brief_evidence": "Treat stated requirements as authoritative; where the brief leaves choices open"
+    }
+  ],
+  "brief_spec_rows": [
+    {
+      "aspect": "Board function",
+      "value": "Single-cell Li-ion power bank board",
+      "brief_evidence": "Design a single-cell Li-ion power bank board with USB-C input, battery charging"
+    },
+    {
+      "aspect": "Input interface",
+      "value": "USB-C input",
+      "brief_evidence": "power bank board with USB-C input, battery charging, battery protection"
+    },
+    {
+      "aspect": "Charging",
+      "value": "Battery charging on the board",
+      "brief_evidence": "battery charging, battery protection, and regulated 5 V output capable of at least 2 A."
+    },
+    {
+      "aspect": "Battery protection",
+      "value": "Battery protection required (location and topology unstated)",
+      "brief_evidence": "battery protection, and regulated 5 V output capable of at least 2 A."
+    },
+    {
+      "aspect": "Output rail",
+      "value": "Regulated 5 V, capable of at least 2 A",
+      "brief_evidence": "regulated 5 V output capable of at least 2 A. Include fuel/status indication"
+    },
+    {
+      "aspect": "Indication",
+      "value": "Fuel/status indication (form not specified)",
+      "brief_evidence": "Include fuel/status indication and a pushbutton-controlled output enable."
+    },
+    {
+      "aspect": "User control",
+      "value": "Pushbutton-controlled output enable",
+      "brief_evidence": "Include fuel/status indication and a pushbutton-controlled output enable."
+    },
+    {
+      "aspect": "Power IC integration preference",
+      "value": "Integrated charger/power-path/boost solution where practical (a preference, with \"practical\" left undefined)",
+      "brief_evidence": "Choose an integrated charger/power-path/boost solution where practical."
+    },
+    {
+      "aspect": "Layout constraint",
+      "value": "Follow the selected power ICs' layout guidance; minimize high-current loop area",
+      "brief_evidence": "Respect the layout guidance of the selected power ICs and minimize high-current loop area."
+    },
+    {
+      "aspect": "Requirement authority",
+      "value": "Stated requirements are authoritative; where the brief is open, the agent makes and documents the decision",
+      "brief_evidence": "Treat stated requirements as authoritative; where the brief leaves choices open, make and document reasonable engineering decisions"
+    },
+    {
+      "aspect": "Toolkit relationship",
+      "value": "Repo consumes the shared PCBA_AutoDesignAndTest toolkit; no board-specific logic added to the toolkit",
+      "brief_evidence": "The repository should remain a consumer of the shared `PCBA_AutoDesignAndTest` toolkit rather than accumulating board-specific logic in the toolkit."
     }
   ],
   "open_decisions": [
