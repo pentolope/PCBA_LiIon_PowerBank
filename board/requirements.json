@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "repo": "PCBA_LiIon_PowerBank",
+  "board_id": "liion_power_bank",
+  "benchmark_id": 7,
+  "title": "Single-Cell Li-Ion Power Bank",
+  "description": "The split between what BRIEF.md fixes and what it leaves open. Every fixed_requirements entry carries the verbatim brief text that substantiates it, bound to the recorded brief digest. An open_decisions entry is a choice for the design agent: record it in 'chosen' with 'rationale', and never move it into fixed_requirements. Missing details are design freedom, not permission to fabricate unstated user requirements.",
+  "brief": {
+    "path": "../BRIEF.md",
+    "sha256": "a83c2729b4cd3572342d1c0d042245c18bb77970d150b0bb1acddd78cdec8627",
+    "authority": "supplied by the benchmark; authoritative; preserved byte for byte and never edited"
+  },
+  "metadata": {
+    "category": "power-management",
+    "difficulty": 2,
+    "detail": 2,
+    "layers": "2 or 4",
+    "stressors": [
+      "charger layout",
+      "power-path routing",
+      "battery safety",
+      "USB-C power"
+    ]
+  },
+  "derivation": {
+    "method": "BRIEF.md was read and split; no design decision was taken. Every fixed_requirements entry, and every spec-table row sourced from the brief, carries a quotation that was checked by literal substring match against the brief bytes digested above. The build refuses to emit this file if any quotation is not found.",
+    "quotations_verified": 24,
+    "review": "two rounds of adversarial review against the brief, looking for invented requirements, lost requirements, evidence supporting a weaker claim than the one made beside it, and worksheet questions that presuppose their own answer"
+  },
+  "fixed_requirements": [
+    {
+      "id": "REQ-01",
+      "requirement": "The board is a single-cell Li-ion power bank board.",
+      "brief_evidence": "Design a single-cell Li-ion power bank board with USB-C input, battery charging"
+    },
+    {
+      "id": "REQ-02",
+      "requirement": "The board has a USB-C input.",
+      "brief_evidence": "power bank board with USB-C input, battery charging, battery protection"
+    },
+    {
+      "id": "REQ-03",
+      "requirement": "The board performs battery charging.",
+      "brief_evidence": "battery charging, battery protection, and regulated 5 V output capable of at least 2 A."
+    },
+    {
+      "id": "REQ-04",
+      "requirement": "The board provides battery protection.",
+      "brief_evidence": "battery protection, and regulated 5 V output capable of at least 2 A."
+    },
+    {
+      "id": "REQ-05",
+      "requirement": "The board provides a regulated 5 V output capable of at least 2 A.",
+      "brief_evidence": "regulated 5 V output capable of at least 2 A. Include fuel/status indication"
+    },
+    {
+      "id": "REQ-06",
+      "requirement": "The board includes fuel/status indication.",
+      "brief_evidence": "Include fuel/status indication and a pushbutton-controlled output enable."
+    },
+    {
+      "id": "REQ-07",
+      "requirement": "The output enable is controlled by a pushbutton.",
+      "brief_evidence": "Include fuel/status indication and a pushbutton-controlled output enable."
+    },
+    {
+      "id": "REQ-08",
+      "requirement": "An integrated charger/power-path/boost solution is to be chosen where practical.",
+      "brief_evidence": "Choose an integrated charger/power-path/boost solution where practical."
+    },
+    {
+      "id": "REQ-09",
+      "requirement": "The layout must respect the layout guidance of the power ICs actually selected.",
+      "brief_evidence": "Respect the layout guidance of the selected power ICs"
+    },
+    {
+      "id": "REQ-10",
+      "requirement": "High-current loop area must be minimized in the layout.",
+      "brief_evidence": "Respect the layout guidance of the selected power ICs and minimize high-current loop area."
+    },
+    {
+      "id": "REQ-11",
+      "requirement": "Where the brief is open, the design agent must make and document reasonable engineering decisions rather than invent hidden user requirements.",
+      "brief_evidence": "where the brief leaves choices open, make and document reasonable engineering decisions rather than inventing hidden user requirements."
+    },
+    {
+      "id": "REQ-12",
+      "requirement": "The repository stays a consumer of the shared PCBA_AutoDesignAndTest toolkit; board-specific logic must not accumulate in the toolkit.",
+      "brief_evidence": "The repository should remain a consumer of the shared `PCBA_AutoDesignAndTest` toolkit rather than accumulating board-specific logic in the toolkit."
+    },
+    {
+      "id": "REQ-13",
+      "requirement": "The requirements the brief states are to be treated as authoritative.",
+      "brief_evidence": "Treat stated requirements as authoritative; where the brief leaves choices open"
+    }
+  ],
+  "open_decisions": [
+    {
+      "id": "OPEN-01",
+      "decision": "Which charger, power-path, protection, and output-stage devices to use, from which vendor, in which packages.",
+      "why_open": "The brief names no part, vendor, IC family, or package anywhere; it only expresses a preference for integration.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-02",
+      "decision": "Whether a single integrated charger/power-path/boost device is used, or the function is split across discrete stages; what makes one or the other \"practical\" here; and how that judgement is recorded.",
+      "why_open": "The brief asks for integration only \"where practical\", does not define the practicality test, imposes no burden of proof for departing from integration, and does not say what to do if no integrated device meets the output requirement. Any documentation obligation here comes from REQ-11's general instruction, not from the integration sentence itself.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-03",
+      "decision": "How much power is drawn from the USB-C input, and by what means the sink advertises or negotiates it (CC configuration, any negotiation protocol, any negotiation controller).",
+      "why_open": "The brief states a USB-C input but fixes no input voltage, input current, negotiated profile, or configuration method.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-04",
+      "decision": "Charge current, termination voltage, charge profile, pre-charge and timer behavior, and whether charge current adapts to available input power.",
+      "why_open": "The brief requires battery charging but states no electrical charge parameters at all.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-05",
+      "decision": "The cell or pack itself: chemistry variant, capacity, form factor, and how it attaches to the board (connector, solder tabs, holder, or off-board harness).",
+      "why_open": "The brief says \"single-cell Li-ion\" and nothing further about the cell, its capacity, or its mechanical/electrical interface.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-06",
+      "decision": "How battery protection is implemented — on-board protection circuitry, a protected pack, or both — by what switching or interrupting elements, and what over-voltage, under-voltage, over-current and short-circuit thresholds and delays apply.",
+      "why_open": "The brief requires \"battery protection\" as a function but fixes neither its location, its topology, nor any threshold.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-07",
+      "decision": "Whether cell temperature is monitored, and if so by what sensing element and with what charge/discharge inhibit window.",
+      "why_open": "The brief is silent on temperature sensing; \"battery safety\" appears only as a benchmark stressor, not as a stated requirement for a specific mechanism.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-08",
+      "decision": "The output connector type, how many output ports exist, and how the 2 A capability is apportioned across them.",
+      "why_open": "The brief fixes the output rail's voltage and current capability but names no connector and no port count.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-09",
+      "decision": "How fuel/status is measured and displayed — voltage-based estimate, coulomb counting with a sense element, a dedicated gauge device, or a host-side readout — and what resolution or accuracy is claimed.",
+      "why_open": "The brief asks for \"fuel/status indication\" without specifying the estimation method, the display medium, the number of states, or any accuracy target.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-10",
+      "decision": "Pushbutton semantics: momentary versus latching, short/long press behavior, wake and shutdown rules, auto-shutdown on light load, debounce, and where that state machine lives.",
+      "why_open": "The brief fixes only that a pushbutton controls the output enable; all behavior around it is unstated.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-11",
+      "decision": "Whether any microcontroller or programmable logic exists on the board at all, and if so what it controls.",
+      "why_open": "The brief never mentions a controller; the required indication and enable behavior could be realized with or without one.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-12",
+      "decision": "Board outline, dimensions, mounting features, keep-outs, connector positions, and any enclosure or cell-pack mechanical envelope.",
+      "why_open": "The brief states no mechanical constraint of any kind.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-13",
+      "decision": "Layer count, stackup, copper weight, and minimum trace/space class.",
+      "why_open": "The brief header and metadata both call 2 or 4 layers \"likely\"; neither fixes a layer count or excludes another stackup, so the choice must follow from current density, thermal, and fabricator capability analysis.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-14",
+      "decision": "Thermal strategy for the charge and output stages at full rated load: copper area, pours, vias, component placement, and any derating or thermal-foldback behavior.",
+      "why_open": "The brief states an output capability but no ambient, duty cycle, surface-temperature limit, or airflow assumption.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-15",
+      "decision": "Protection strategy beyond the battery itself — input transient handling, output over-current and short-circuit response, reverse-current and hot-plug behavior, ESD posture at exposed connectors.",
+      "why_open": "The brief names battery protection only; it does not state what happens at the input or output ports under fault or transient conditions.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-16",
+      "decision": "Efficiency, quiescent/standby current, and self-discharge targets.",
+      "why_open": "The brief sets no efficiency or standby budget, even though a power bank's usefulness depends on both.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-17",
+      "decision": "Test, bring-up, and programming provisions: test points, sense access, in-circuit test strategy, and how the 2 A claim will be measured.",
+      "why_open": "The brief specifies no test or verification requirement.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-18",
+      "decision": "Fabrication and assembly process constraints: fabricator, single- versus double-sided assembly, finish, and DFM rule set.",
+      "why_open": "The brief names no vendor, process, or manufacturing constraint.",
+      "chosen": null,
+      "rationale": null
+    },
+    {
+      "id": "OPEN-19",
+      "decision": "The physical form of the USB-C input interface — receptacle variant, orientation and mounting style, or a captive cable/plug — and its mechanical retention approach.",
+      "why_open": "The brief says only \"USB-C input\". It names no connector part, variant, or mounting style, and does not fix that the input is a receptacle rather than a captive cable or plug.",
+      "chosen": null,
+      "rationale": null
+    }
+  ]
+}
