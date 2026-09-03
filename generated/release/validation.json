@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_utc": "2026-09-03T08:54:54.030572+00:00",
-  "source_closure_sha256": "5126f5850c13c320d87ebad7a1bf4e9be4273020651bd2cbfd3015db3f2cb9d8",
+  "generated_utc": "2026-09-03T16:29:42.264017+00:00",
+  "source_closure_sha256": "cfb2249492d8e80d8c1e4bcdb207f2e8cb72eab25690d12be4b78c9420a65344",
   "manifest": {
     "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/board/manifest.json",
     "sha256": "c431919312f36947d9d462526ae707ef7e90c0b6a8bba910d955658be8ba8048",
@@ -13,7 +13,7 @@
     "kicad_cli": "/usr/bin/kicad-cli",
     "validation_implementation": {
       "toolkit_root": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/tooling/PCBA_AutoDesignAndTest",
-      "commit": "a0f53eb0a0245d7c12d10c3f31f39af1ba53cc43",
+      "commit": "0c051f23f5cb7c08360e7db4ab231ec321a4459c",
       "working_tree_dirty": false,
       "detail": "git HEAD of the toolkit checkout that executed this validation"
     },
@@ -160,7 +160,7 @@
         {
           "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/generated/release/liion_power_bank-fabrication.zip",
           "name": "liion_power_bank-fabrication.zip",
-          "sha256": "1cc30b51b87713342aff6596e28e8e6b1f7493440a7c87793fd6bbdf8d95ef40"
+          "sha256": "b520d892fe1949cfb7b3b19499019fbed10f10279c50b62e2c0baf7bbf8faa56"
         }
       ]
     },
@@ -173,8 +173,8 @@
         "fabrication_manifest": "fabrication.json",
         "artifacts_recorded": 16,
         "artifacts_present": 16,
-        "source_closure_sha256": "5126f5850c13c320d87ebad7a1bf4e9be4273020651bd2cbfd3015db3f2cb9d8",
-        "recorded_source_closure_sha256": "5126f5850c13c320d87ebad7a1bf4e9be4273020651bd2cbfd3015db3f2cb9d8"
+        "source_closure_sha256": "cfb2249492d8e80d8c1e4bcdb207f2e8cb72eab25690d12be4b78c9420a65344",
+        "recorded_source_closure_sha256": "cfb2249492d8e80d8c1e4bcdb207f2e8cb72eab25690d12be4b78c9420a65344"
       },
       "limits": {},
       "finding_count": 0,
@@ -183,7 +183,7 @@
         {
           "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/generated/release/fabrication.json",
           "name": "fabrication.json",
-          "sha256": "f6b45c455eab31878bc92c26f5db52fc63d2ead0cab1ae011c46c1fb6de11aab"
+          "sha256": "e7e47d3b8bdc97ef7b74226ea25d0aad9c6a785ab3f88224dd3f7e6d0ca97a73"
         }
       ]
     },
@@ -459,10 +459,10 @@
         "rules_sha256": "54c3042197d8b3cbad54e1a41b529ebd3ec9594e7c2338e1d4e03c1ae9ef253e",
         "constraint_manifest_sha256": "c431919312f36947d9d462526ae707ef7e90c0b6a8bba910d955658be8ba8048",
         "kicad_version": "10.0.5",
-        "generated_utc": "2026-09-03T08:54:44.053310+00:00",
+        "generated_utc": "2026-09-03T16:29:29.990485+00:00",
         "report_meta": {
           "schema": "https://schemas.kicad.org/drc.v1.json",
-          "date": "2026-09-03T02:54:43",
+          "date": "2026-09-03T10:29:29",
           "kicad_version": "10.0.5",
           "source": "liion_power_bank.kicad_pcb",
           "ignored_checks": [],
@@ -496,9 +496,9 @@
       "findings": [],
       "evidence": [
         {
-          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260903T085441Z-6a70c621/work/drc_authoritative.json",
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260903T162925Z-aa542ca8/work/drc_authoritative.json",
           "name": "drc_authoritative.json",
-          "sha256": "c5038c6a7f6674fe47c73b91ec3a7a0bc72783c193ccaa464bc8876db84724f3"
+          "sha256": "1347c58b1e6800016f6d91fa6e377867d4db9406886a52bdc81f9c8152629fdb"
         }
       ]
     },
@@ -699,10 +699,10 @@
         "rules_sha256": "54c3042197d8b3cbad54e1a41b529ebd3ec9594e7c2338e1d4e03c1ae9ef253e",
         "constraint_manifest_sha256": "c431919312f36947d9d462526ae707ef7e90c0b6a8bba910d955658be8ba8048",
         "kicad_version": "10.0.5",
-        "generated_utc": "2026-09-03T08:54:45.994873+00:00",
+        "generated_utc": "2026-09-03T16:29:32.437872+00:00",
         "report_meta": {
           "schema": "https://schemas.kicad.org/erc.v1.json",
-          "date": "2026-09-03T02:54:45",
+          "date": "2026-09-03T10:29:32",
           "kicad_version": "10.0.5",
           "source": "liion_power_bank.kicad_sch",
           "ignored_checks": [],
@@ -736,9 +736,9 @@
       "findings": [],
       "evidence": [
         {
-          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260903T085441Z-6a70c621/work/erc_authoritative.json",
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260903T162925Z-aa542ca8/work/erc_authoritative.json",
           "name": "erc_authoritative.json",
-          "sha256": "53f9d63524412c1ffa639b0b8dcbb7347f7baf5ebfb035d09819f4f404afd6ba"
+          "sha256": "5a361bb6b7355aae6b9d012f481671fc1cc61ce0c9d4f0d1dff63409b4c60c5a"
         }
       ]
     },
@@ -864,7 +864,7 @@
       "reason": "all 2 committed report(s) bind the canonical digest of all 19 source inputs, and every one still matches",
       "measurements": {
         "source_closure_files": 19,
-        "source_closure_sha256": "5126f5850c13c320d87ebad7a1bf4e9be4273020651bd2cbfd3015db3f2cb9d8",
+        "source_closure_sha256": "cfb2249492d8e80d8c1e4bcdb207f2e8cb72eab25690d12be4b78c9420a65344",
         "source_sha256": {
           "pcb": "93416fe7794d938e",
           "schematic": "e98d86e6e9936ba0"
@@ -1041,7 +1041,7 @@
       "status": "PASS",
       "reason": "2 shipped copper layers match a fresh export by geometric symmetric difference (limit 0.05 mm2)",
       "measurements": {
-        "fresh_export_command": "pcb export gerbers --output /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260903T085441Z-6a70c621/work/fresh_gerbers --layers F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts --no-protel-ext --use-drill-file-origin --subtract-soldermask /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260903T085441Z-6a70c621/work/design/liion_power_bank.kicad_pcb",
+        "fresh_export_command": "pcb export gerbers --output /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260903T162925Z-aa542ca8/work/fresh_gerbers --layers F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts --no-protel-ext --use-drill-file-origin --subtract-soldermask /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260903T162925Z-aa542ca8/work/design/liion_power_bank.kicad_pcb",
         "fresh_export_exit": 0,
         "shipped_copper_layers": [
           "copper,l1,top",
