@@ -1,0 +1,63 @@
+(footprint "TI_X1SON-2_1.0x0.6mm_P0.65mm"
+	(version 20260206)
+	(generator "liion-power-bank-design-source")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "TI X1SON-2, drawing 4224561/C: 0.3 x 0.5 pads on 0.7 centres")
+	(tags "X1SON DPY0002A")
+	(attr smd)
+	(property "Reference" "REF**"
+		(at 0 -1.2000 0)
+		(layer "F.SilkS")
+		(uuid "")
+		(effects
+			(font
+				(size 0.60 0.60)
+				(thickness 0.1200)
+			)
+		)
+	)
+	(property "Value" "TI_X1SON-2_1.0x0.6mm_P0.65mm"
+		(at 0 1.2000 0)
+		(layer "F.Fab")
+		(uuid "")
+		(effects
+			(font
+				(size 0.60 0.60)
+				(thickness 0.1200)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -0.3500 0.0000)
+		(size 0.3000 0.5000)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "")
+	)
+	(pad "2" smd rect
+		(at 0.3500 0.0000)
+		(size 0.3000 0.5000)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "")
+	)
+	(fp_rect
+		(start -0.5500 -0.3500)
+		(end 0.5500 0.3500)
+		(stroke
+			(width 0.1000)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+	)
+	(fp_rect
+		(start -0.7000 -0.5000)
+		(end 0.7000 0.5000)
+		(stroke
+			(width 0.0500)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+	)
+)

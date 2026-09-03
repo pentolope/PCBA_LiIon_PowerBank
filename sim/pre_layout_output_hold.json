@@ -1,0 +1,104 @@
+{
+  "analyses": [
+    {
+      "kind": "tran",
+      "step_s": 5.0000000000000004e-08,
+      "stop_s": 0.00301
+    }
+  ],
+  "assumptions": {
+    "COUT": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the output capacitance at the low end of its tolerance and retaining only the declared fraction of that under bias"
+    },
+    "RCHARGE": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the path that brings the capacitance up to the regulated value before the step. During the step it supplies under four percent of the load, so the capacitance answers the step essentially alone, which is the point"
+    },
+    "RLOAD": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the load as a resistance drawing the rated current at the regulated output"
+    },
+    "STEP": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the load appearing in a step, as an ideal switch"
+    },
+    "VSTART": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the converter's regulated output as an ideal source at its typical value, which is all the datasheet states"
+    }
+  },
+  "description": "the output capacitance alone carrying a step to the rated current for the time this design allows the converter's loop to respond in",
+  "elements": [
+    {
+      "kind": "vsource_dc",
+      "name": "VSTART",
+      "nodes": [
+        "src",
+        "0"
+      ],
+      "value": 5.1
+    },
+    {
+      "kind": "resistor",
+      "name": "RCHARGE",
+      "nodes": [
+        "src",
+        "out"
+      ],
+      "value": 10.0
+    },
+    {
+      "kind": "capacitor",
+      "name": "COUT",
+      "nodes": [
+        "out",
+        "0"
+      ],
+      "value": 3.872e-05
+    },
+    {
+      "kind": "resistor",
+      "name": "RLOAD",
+      "nodes": [
+        "out",
+        "step"
+      ],
+      "value": 2.55
+    },
+    {
+      "kind": "vsource_pulse",
+      "name": "STEP",
+      "nodes": [
+        "step",
+        "0"
+      ],
+      "pulse": {
+        "delay_s": 0.003,
+        "fall_s": 1e-08,
+        "period_s": 0.02,
+        "rise_s": 1e-08,
+        "v1": 5.1,
+        "v2": 0.0,
+        "width_s": 0.01
+      }
+    }
+  ],
+  "measurements": [
+    {
+      "assertion": {
+        "op": ">=",
+        "value": 4.4
+      },
+      "kind": "tran_min_voltage",
+      "name": "output_minimum",
+      "node": "out"
+    },
+    {
+      "kind": "tran_final_voltage",
+      "name": "output_at_the_response_budget",
+      "node": "out"
+    }
+  ],
+  "name": "output_holds_through_the_converter_response_budget"
+}

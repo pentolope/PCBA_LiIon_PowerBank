@@ -1,0 +1,237 @@
+{
+  "documents": {
+    "ao3400a_aos": {
+      "applies_to": [
+        "AO3400A"
+      ],
+      "bytes": 491520,
+      "document_id": "AO3400A Rev 3, December 2011",
+      "file": "datasheets/ao3400a_aos.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "e5bfeef6cd3aa209f2e191ba42d5616259e8e7143ff01ed6c532b8ec3b13ab73",
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/130876b936da464599428c58fd8de8f6.pdf"
+    },
+    "ao3401a_aos": {
+      "applies_to": [
+        "AO3401A"
+      ],
+      "bytes": 326568,
+      "document_id": "AO3401A Rev 3.1, December 2023",
+      "file": "datasheets/ao3401a_aos.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "0d8e3261ae280e007b5837fff60c55142f2d92af71edc4d02aee6f7a760a785c",
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/fee353dd1e9e0bc90b295f14f381aa4c.pdf"
+    },
+    "ao3415a_aos": {
+      "applies_to": [
+        "AO3415A"
+      ],
+      "bytes": 730643,
+      "document_id": "AO3415A -20V P-channel MOSFET, Rev 3.0, June 2013",
+      "file": "datasheets/ao3415a_aos.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "9340fe2395009f1f8b83d11651e677c6357cb078472a33ff61880ae918718221",
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/4fe5043a2c3149108be834737fd7b448.pdf"
+    },
+    "ao8810_aos": {
+      "applies_to": [
+        "AO8810"
+      ],
+      "bytes": 221555,
+      "document_id": "AO8810 20V common-drain dual N-channel MOSFET, Rev 8, October 2012",
+      "file": "datasheets/ao8810_aos.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "89e55e17d96c35feeac7ff282a388173217b27c7a084c7cec35a29f6645ffe22",
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/26d8ed0c631e45aaacbd4f8082ccbf0c.pdf"
+    },
+    "dw01a_puolop": {
+      "applies_to": [
+        "DW01A"
+      ],
+      "bytes": 953916,
+      "document_id": "PUOLOP DW01A one-cell lithium battery protection IC, Rev B, 2016-4-12",
+      "file": "datasheets/dw01a_puolop.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "37348f602e5e5d50fd60ea868b05e5c552bd965b0a94fcf937800f9b49d4c1b1",
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/0d2b2b5e8d1207bf276387cb4ff3a495.pdf"
+    },
+    "ip5306_injoinic": {
+      "applies_to": [
+        "IP5306"
+      ],
+      "bytes": 1813723,
+      "document_id": "Injoinic IP5306 fully-integrated power bank system-on-chip, V1.10",
+      "file": "datasheets/ip5306_injoinic.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "76818e77bf2002bf361c2f865ac4bd59a622afb18551f056dce546f4fdc89a1f",
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/309666add984eaea02a8f06d99102496.pdf"
+    },
+    "jst_vh": {
+      "applies_to": [
+        "B2P-VH(LF)(SN)"
+      ],
+      "bytes": 107050,
+      "document_id": "JST VH series 3.96 mm pitch connector drawing",
+      "file": "datasheets/jst_vh_b2p.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "81749febb7219778f775bff9dd1f486f6ea31aaa0088500936e872308de94e25",
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/f2527f0a1a0b17e099f1e5ddd7cdf9f3.pdf"
+    },
+    "kt0603g_kento": {
+      "applies_to": [
+        "KT-0603G"
+      ],
+      "bytes": 576251,
+      "document_id": "Hubei KENTO KT-0603G specification",
+      "file": "datasheets/kt0603g_kento.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "770831ccd4b3ab793a5d4df9fbf8aeaa80170f904de09f4032b09357595872ad",
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/69e84a3abd84e5ab5856c47a2d0334ce.pdf"
+    },
+    "kt0603r_kento": {
+      "applies_to": [
+        "KT-0603R"
+      ],
+      "bytes": 610865,
+      "document_id": "Hubei KENTO KT-0603R specification",
+      "file": "datasheets/kt0603r_kento.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "a3bac1cc9c59cb306ad03512945cce12c87bb54252abc223b796e1d20d41d4a1",
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/011ec3e8cb1e825f6961d29bc4db4c7a.pdf"
+    },
+    "lm393_onsemi": {
+      "applies_to": [
+        "LM393DR2G"
+      ],
+      "bytes": 113977,
+      "document_id": "onsemi LM393, LM393E, LM293, LM2903, LM2903E, LM2903V, NCV2903 single supply dual comparators",
+      "file": "datasheets/lm393_onsemi.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "b2ecbd1776d1e664f2882b801c75ca83da0f938948f23590d78dfe9b26e64126",
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/0a7f69005bd54ef2bf3e8b1a5a2f8965.pdf"
+    },
+    "mlcc_cctc_1206": {
+      "applies_to": [
+        "TCC1206X5R226M250HT"
+      ],
+      "bytes": 8502475,
+      "document_id": "CCTC multilayer ceramic chip capacitor specification",
+      "file": "datasheets/mlcc_cctc_1206.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "3eae359a544792b48fb9f4697721b1e23ae2378fe09120ac330b5f3fabf3d581",
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/7c7c1f8fb8282eab2492065cbbfa1665.pdf"
+    },
+    "mlcc_samsung_cl": {
+      "applies_to": [
+        "CL21A106KAYNNNE",
+        "CL10A225KO8NNNC"
+      ],
+      "bytes": 7856403,
+      "document_id": "Samsung Electro-Mechanics multilayer ceramic capacitor catalogue",
+      "file": "datasheets/mlcc_samsung_cl.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "96baebe4bd0ce363e87be28b5b003f511f1502e084a6fc4f02333ded56c808f6",
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/02336ea48ea44ca18c72517dd3cb7b47.pdf"
+    },
+    "mlcc_yageo_cc0603": {
+      "applies_to": [
+        "CC0603KRX7R9BB104"
+      ],
+      "bytes": 1131214,
+      "document_id": "YAGEO CC series 0603 MLCC specification",
+      "file": "datasheets/mlcc_yageo_cc0603.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "61a606825ab314ea318cfb5362848a62fdffb851efa9818d642e9a541c56a648",
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/23ccee80ee542e7cf156a772bb589942.pdf"
+    },
+    "res_0603_uniroyal": {
+      "applies_to": [
+        "0603WAJ022JT5E",
+        "0603WAF1000T5E",
+        "0603WAF1001T5E",
+        "0603WAF1501T5E",
+        "0603WAF4701T5E",
+        "0603WAF5101T5E",
+        "0603WAF1002T5E",
+        "0603WAF1003T5E",
+        "0603WAF4703T5E",
+        "0603WAF1004T5E"
+      ],
+      "bytes": 467557,
+      "document_id": "Uniroyal 0603W chip resistor series specification",
+      "file": "datasheets/res_0603_uniroyal.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "11cd644d5d8a34a6d12775afb80bf58d8fc11f0c3b700dbd0f7a59942ceaa5ef",
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/0a975aaa49b7c97f38a963127be4a823.pdf"
+    },
+    "swpa8040_sunlord": {
+      "applies_to": [
+        "SWPA8040S1R0NT"
+      ],
+      "bytes": 7802649,
+      "document_id": "Sunlord SMD power inductor catalogue, revised 2023/06/01",
+      "file": "datasheets/swpa8040_sunlord.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "435da2e32ce68b2df1fe14b42aa26f5e841b281aaf423890a3e8c03912e0e2b0",
+      "url": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2310251551_Sunlord-SWPA8040S1R0NT_C96968.pdf"
+    },
+    "tlv431_ti": {
+      "applies_to": [
+        "TLV431AIDBZR"
+      ],
+      "bytes": 1535180,
+      "document_id": "TI TLV431, TLV431A, TLV431B low-voltage adjustable precision shunt regulator, SLVS139V, revised January 2015",
+      "file": "datasheets/tlv431_ti.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "4c8a6bd9d4c66c01344dc131c4fddb6d04e6ecde6e0ec5d37b30302f3172140a",
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/1f0b6b30afca4cb79b547decc5f49aec.pdf"
+    },
+    "tpd1e10b06_ti": {
+      "applies_to": [
+        "TPD1E10B06DPYR"
+      ],
+      "bytes": 1221393,
+      "document_id": "TI TPD1E10B06 single-channel ESD protection diode, SLLSEB1",
+      "file": "datasheets/tpd1e10b06_ti.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "ce2dfe05c5c9c49a01e53cfd1b55142de5b819e035c2a1210052dadb8f495d82",
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/338eb197fbc247888eaf2230887550ac.pdf"
+    },
+    "ts1187a_xkb": {
+      "applies_to": [
+        "TS-1187A-B-A-B"
+      ],
+      "bytes": 805305,
+      "document_id": "XKB TS-1187A-X-X-X tact switch drawing, rev A0",
+      "file": "datasheets/ts1187a_xkb.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "64b75233cadaceb75ab3f3e33b532af8d04de98821c910ea13eb76c5fd1eed34",
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/56c8799ae5193945a16a1ffbe378246a.pdf"
+    },
+    "usb_type_c": {
+      "applies_to": [
+        "Type-C sink terminations",
+        "Type-C source pull-ups",
+        "sink current advertisement thresholds"
+      ],
+      "bytes": 10980886,
+      "document_id": "USB Type-C Cable and Connector Specification, Release 2.0, August 2019",
+      "file": "datasheets/usb_type_c_r2_0.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "87d15160bf8bd25129b27e0b7c5e261ed0b1806b3b0d3a7b5d8b1eb783dc9981",
+      "url": "https://www.usb.org/sites/default/files/USB%20Type-C%20Spec%20R2.0%20-%20August%202019.pdf"
+    },
+    "usbc_hro": {
+      "applies_to": [
+        "TYPE-C-31-M-12"
+      ],
+      "bytes": 118176,
+      "document_id": "HRO Electronics TYPE-C-31-M-12 drawing, 2020.12.08",
+      "file": "datasheets/usbc_hro_type_c_31_m_12.pdf",
+      "retrieved": "2026-09-02",
+      "sha256": "6ae33d50ac47820114661138dc4e4659f40fdc5d4f485b46685dfec338da1a9e",
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/9e56b777c022540fcce7c7f67825f55e.pdf"
+    }
+  },
+  "schema_version": 1
+}

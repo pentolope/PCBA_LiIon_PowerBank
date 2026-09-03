@@ -1,0 +1,124 @@
+{
+  "analyses": [
+    {
+      "kind": "op"
+    }
+  ],
+  "assumptions": {
+    "RLEAKOFF": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the comparator's open output as the resistance that carries its highest stated input current from the supply; the datasheet's output leakage is smaller still, so this overstates what the open output can pull down"
+    },
+    "RSAT": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the comparator's asserting output as the resistance that produces its highest stated saturation voltage at the current the datasheet states that voltage for; the gate network draws far less, so the real output sits lower"
+    },
+    "RSEROFF": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the series element at the high end of its tolerance"
+    },
+    "RSERON": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the series element at the low end of its tolerance"
+    },
+    "RUPOFF": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the gate pull-up at the high end of its tolerance"
+    },
+    "RUPON": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the gate pull-up at the low end of its tolerance, which is the value that holds the gate highest when the detector is pulling it down"
+    },
+    "VBUS": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the source at the bottom of the Type-C range, as an ideal source with no output impedance of its own"
+    }
+  },
+  "description": "the input switch's gate with the detector open and with it asserting, at the lowest input the board accepts",
+  "elements": [
+    {
+      "kind": "vsource_dc",
+      "name": "VBUS",
+      "nodes": [
+        "bus",
+        "0"
+      ],
+      "value": 4.75
+    },
+    {
+      "kind": "resistor",
+      "name": "RUPOFF",
+      "nodes": [
+        "bus",
+        "goff"
+      ],
+      "value": 101000.0
+    },
+    {
+      "kind": "resistor",
+      "name": "RSEROFF",
+      "nodes": [
+        "goff",
+        "open"
+      ],
+      "value": 10100.0
+    },
+    {
+      "kind": "resistor",
+      "name": "RLEAKOFF",
+      "nodes": [
+        "open",
+        "0"
+      ],
+      "value": 11875000.0
+    },
+    {
+      "kind": "resistor",
+      "name": "RUPON",
+      "nodes": [
+        "bus",
+        "gon"
+      ],
+      "value": 99000.0
+    },
+    {
+      "kind": "resistor",
+      "name": "RSERON",
+      "nodes": [
+        "gon",
+        "sat"
+      ],
+      "value": 9900.0
+    },
+    {
+      "kind": "resistor",
+      "name": "RSAT",
+      "nodes": [
+        "sat",
+        "0"
+      ],
+      "value": 174.99999999999997
+    }
+  ],
+  "measurements": [
+    {
+      "assertion": {
+        "op": ">=",
+        "value": 3.85
+      },
+      "kind": "op_voltage",
+      "name": "gate_with_detector_open",
+      "node": "goff"
+    },
+    {
+      "assertion": {
+        "op": "<=",
+        "value": 2.25
+      },
+      "kind": "op_voltage",
+      "name": "gate_with_detector_asserting",
+      "node": "gon"
+    }
+  ],
+  "name": "input_switch_gate_in_both_detector_states"
+}

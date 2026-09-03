@@ -1,0 +1,166 @@
+{
+  "accepted_attempt": 1,
+  "adopted_sha256": "93416fe7794d938e4199cabadec93cd810fb1c1d26940c24a5ed99df89b7bc0d",
+  "attempts": [
+    {
+      "accepted": true,
+      "attempt": 1,
+      "context": {
+        "adopted_metrics": {
+          "errors": 0,
+          "schematic_parity": 0,
+          "unconnected": 0,
+          "vias_on_mask_openings": 0,
+          "warnings": 0
+        },
+        "ordering": "inside_out",
+        "router_summary": {
+          "failed": 1,
+          "failed_single": [],
+          "finalize_excluded_nets": [
+            "GND"
+          ],
+          "main_loop_time_s": 1.2,
+          "min_clearance_used": 0.225,
+          "multipoint_deficit": 2,
+          "open_single": [],
+          "pad_pairs_open": {
+            "count": 1,
+            "nets": [
+              "VIN"
+            ]
+          },
+          "routed": 27,
+          "scope": "merged",
+          "terminal_restores_broken": [],
+          "vias": 70
+        }
+      },
+      "source_sha256": "31ae0090d44863dd86f9b5db8da95f5ab94eb90911a887c164a2455e4670aff9",
+      "stages": [
+        {
+          "produced_by": "router",
+          "sha256": "59d9daf79b7340c8712fbd3c0af8a3571e04377cf79626f2f03745550307cf61",
+          "stage": "routed"
+        },
+        {
+          "effects": {
+            "collapsed_tracks_removed": 33,
+            "dangling_tracks_removed": 20,
+            "duplicate_segments_removed": 5,
+            "endpoints_snapped": 75,
+            "endpoints_snapped_to_pads": 2,
+            "ends_carried_into_pours": 4,
+            "fragments_absorbed": 34,
+            "junctions_resolved": 9,
+            "narrow_tracks_widened": 0,
+            "undersized_vias_restored": 0,
+            "unneeded_vias_removed": 10,
+            "vias_left_on_mask_openings": 0,
+            "vias_lifted_off_mask_openings": 4,
+            "zones_refilled": 6
+          },
+          "parameters": {
+            "snap_within_via_annulus": true,
+            "touch_tolerance_mm": 0.01
+          },
+          "produced_by": "transform",
+          "sha256": "93416fe7794d938e4199cabadec93cd810fb1c1d26940c24a5ed99df89b7bc0d",
+          "stage": "tidied",
+          "transform": "refill the pours so every judgement below is made against the copper that will be fabricated rather than the fill the search inherited; snap a track end standing on a same-net via onto that via's centre; pull a track end that stopped inside a same-net pad's outline onto that pad's anchor, and only where the track still stands clear afterwards; drop tracks the snap collapsed to a point; fold a fragment shorter than the floor into the single neighbour it meets away from a pad or a via, and only where the neighbour that follows the fold still stands clear of everything else; restore the declared width on any track and the declared size on any via the search narrowed below them; drop copper drawn twice, keeping the wider of the pair; move a via that stands on a solder-mask opening to the nearest position that clears every opening, carrying the ends that met it; carry an end that stops inside a pour on to a pad the pour's own copper reaches; cut a track where another ends part way along it, so the junction is an end on both, or pull that end onto the corner where the cut would leave a sliver; drop any via the search left that carries nothing, and prune dangling track ends, keeping any removal only while connectivity is unchanged and repeating all three until none finds anything, because each leaves work for the others; refill the zones so the pours are knocked out around the copper the router added"
+        }
+      ]
+    }
+  ],
+  "context": {
+    "acceptance": "a candidate is adopted only when a fresh DRC over the adopted board reports no violation, nothing unconnected and no disagreement with the schematic, and no via on the board stands within 0.15 mm of a pad's solder-mask opening",
+    "net_selection": "the search is given the nets the placed board still reports unconnected and the nets the placement poured, less the reserved ones; a pour is repaired only by a run whose scope covers its net, and a net that is neither open nor poured has nothing for the search to add",
+    "options": [
+      "--track-width",
+      "0.25",
+      "--clearance",
+      "0.3",
+      "--via-size",
+      "0.6",
+      "--via-drill",
+      "0.3",
+      "--board-edge-clearance",
+      "0.45",
+      "--hole-to-hole-clearance",
+      "0.3",
+      "--same-net-pad-clearance",
+      "0.15",
+      "--no-power-tap-neckdown"
+    ],
+    "reproducibility": "the router is not bit-reproducible; candidates are generated until one is accepted and every attempt is recorded here",
+    "reserved_nets": [
+      "GND",
+      "SW",
+      "PROT_D3",
+      "PROT_D4",
+      "PROT_D5"
+    ],
+    "resolution": {
+      "origin": "vendored submodule",
+      "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/toolkit/PCBA_AutoDesignAndTest/tooling/KiCadRoutingTools"
+    },
+    "routed_nets": [
+      "ADV_3A",
+      "BAT",
+      "BAT_DAMP",
+      "BTN",
+      "CC1",
+      "CC2",
+      "CELLN",
+      "FAULT_A",
+      "FAULT_G",
+      "FAULT_K",
+      "KEY",
+      "LED1",
+      "LED2",
+      "LED3",
+      "OUT_CC1",
+      "OUT_CC2",
+      "OUT_G",
+      "OUT_G_D",
+      "PROT_OC",
+      "PROT_OD",
+      "PROT_VCC",
+      "PROT_VM",
+      "SET",
+      "SET_D",
+      "VBUS",
+      "VBUS_DAMP",
+      "VIN",
+      "VIN_G",
+      "VOUT",
+      "VOUT_SW",
+      "VREF"
+    ],
+    "router": {
+      "git": {
+        "dirty": false,
+        "sha": "3fb9c05f182db88fe1fccfaa515bc5c466169dd4",
+        "upstream_base": null
+      },
+      "grid_router": {
+        "kind": "native-binary",
+        "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/toolkit/PCBA_AutoDesignAndTest/tooling/KiCadRoutingTools/rust_router/grid_router.so",
+        "sha256": "bac20f431312bdf6ab2e585295cb320e2b634a9f28a0c6286b6ae170a51b3cf2",
+        "version": "0.21.4"
+      },
+      "kicad_cli": "/usr/bin/kicad-cli",
+      "kicad_version": "10.0.5",
+      "kind": "krt-provenance",
+      "meaning": "the routing implementation identity for this run; a different sha, dirty state or native hash is a different router, and downstream routing-derived artifacts must go stale with it",
+      "python": {
+        "executable": "/usr/bin/python3",
+        "version": "3.12.3"
+      },
+      "source_path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/toolkit/PCBA_AutoDesignAndTest/tooling/KiCadRoutingTools",
+      "version": "0.21.5"
+    }
+  },
+  "kind": "routing-run",
+  "source_sha256": "31ae0090d44863dd86f9b5db8da95f5ab94eb90911a887c164a2455e4670aff9"
+}

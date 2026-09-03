@@ -1,0 +1,1362 @@
+{
+  "parts": {
+    "0603WAF1000T5E": {
+      "resistor": {
+        "overload_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 150.0
+        },
+        "power_max_w": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.1
+        },
+        "resistance_ohm": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 100.0
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.01
+        },
+        "working_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 75.0
+        }
+      }
+    },
+    "0603WAF1001T5E": {
+      "resistor": {
+        "overload_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 150.0
+        },
+        "power_max_w": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.1
+        },
+        "resistance_ohm": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 1000.0
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.01
+        },
+        "working_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 75.0
+        }
+      }
+    },
+    "0603WAF1002T5E": {
+      "resistor": {
+        "overload_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 150.0
+        },
+        "power_max_w": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.1
+        },
+        "resistance_ohm": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 10000.0
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.01
+        },
+        "working_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 75.0
+        }
+      }
+    },
+    "0603WAF1003T5E": {
+      "resistor": {
+        "overload_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 150.0
+        },
+        "power_max_w": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.1
+        },
+        "resistance_ohm": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 100000.0
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.01
+        },
+        "working_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 75.0
+        }
+      }
+    },
+    "0603WAF1004T5E": {
+      "resistor": {
+        "overload_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 150.0
+        },
+        "power_max_w": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.1
+        },
+        "resistance_ohm": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 1000000.0
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.01
+        },
+        "working_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 75.0
+        }
+      }
+    },
+    "0603WAF1501T5E": {
+      "resistor": {
+        "overload_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 150.0
+        },
+        "power_max_w": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.1
+        },
+        "resistance_ohm": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 1500.0
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.01
+        },
+        "working_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 75.0
+        }
+      }
+    },
+    "0603WAF4701T5E": {
+      "resistor": {
+        "overload_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 150.0
+        },
+        "power_max_w": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.1
+        },
+        "resistance_ohm": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 4700.0
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.01
+        },
+        "working_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 75.0
+        }
+      }
+    },
+    "0603WAF4703T5E": {
+      "resistor": {
+        "overload_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 150.0
+        },
+        "power_max_w": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.1
+        },
+        "resistance_ohm": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 470000.0
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.01
+        },
+        "working_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 75.0
+        }
+      }
+    },
+    "0603WAF5101T5E": {
+      "resistor": {
+        "overload_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 150.0
+        },
+        "power_max_w": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.1
+        },
+        "resistance_ohm": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 5100.0
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.01
+        },
+        "working_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 75.0
+        }
+      }
+    },
+    "0603WAJ022JT5E": {
+      "resistor": {
+        "overload_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 150.0
+        },
+        "power_max_w": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.1
+        },
+        "resistance_ohm": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 2.2
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 0.05
+        },
+        "working_voltage_max_v": {
+          "basis": "direct",
+          "document": "res_0603_uniroyal",
+          "value": 75.0
+        }
+      }
+    },
+    "AO3400A": {
+      "absolute_maximum": {
+        "drain_current_25c_a": {
+          "basis": "direct",
+          "document": "ao3400a_aos",
+          "value": 5.7
+        },
+        "drain_source_voltage_v": {
+          "basis": "direct",
+          "document": "ao3400a_aos",
+          "value": 30.0
+        },
+        "gate_source_voltage_v": {
+          "basis": "direct",
+          "document": "ao3400a_aos",
+          "value": 12.0
+        },
+        "junction_temperature_c": {
+          "basis": "direct",
+          "document": "ao3400a_aos",
+          "value": 150.0
+        },
+        "power_dissipation_25c_w": {
+          "basis": "direct",
+          "document": "ao3400a_aos",
+          "value": 1.4
+        }
+      },
+      "fet": {
+        "rds_on_ohm": {
+          "2.5": {
+            "basis": "direct",
+            "document": "ao3400a_aos",
+            "value": 0.048
+          },
+          "4.5": {
+            "basis": "direct",
+            "document": "ao3400a_aos",
+            "value": 0.032
+          }
+        },
+        "vgs_threshold_max_v": {
+          "basis": "direct",
+          "document": "ao3400a_aos",
+          "value": 1.45
+        },
+        "vgs_threshold_min_v": {
+          "basis": "direct",
+          "document": "ao3400a_aos",
+          "value": 0.65
+        }
+      },
+      "thermal": {
+        "junction_to_ambient_max_c_per_w": {
+          "basis": "direct",
+          "document": "ao3400a_aos",
+          "value": 125.0
+        }
+      }
+    },
+    "AO3401A": {
+      "absolute_maximum": {
+        "drain_current_25c_a": {
+          "basis": "direct",
+          "document": "ao3401a_aos",
+          "value": 4.0
+        },
+        "drain_source_voltage_v": {
+          "basis": "direct",
+          "document": "ao3401a_aos",
+          "value": 30.0
+        },
+        "gate_source_voltage_v": {
+          "basis": "direct",
+          "document": "ao3401a_aos",
+          "value": 12.0
+        },
+        "junction_temperature_c": {
+          "basis": "direct",
+          "document": "ao3401a_aos",
+          "value": 150.0
+        }
+      },
+      "fet": {
+        "rds_on_ohm": {
+          "2.5": {
+            "basis": "direct",
+            "document": "ao3401a_aos",
+            "value": 0.085
+          },
+          "4.5": {
+            "basis": "direct",
+            "document": "ao3401a_aos",
+            "value": 0.06
+          }
+        },
+        "vgs_threshold_max_v": {
+          "basis": "direct",
+          "document": "ao3401a_aos",
+          "value": 1.3
+        },
+        "vgs_threshold_min_v": {
+          "basis": "direct",
+          "document": "ao3401a_aos",
+          "value": 0.5
+        }
+      }
+    },
+    "AO3415A": {
+      "absolute_maximum": {
+        "drain_current_25c_a": {
+          "basis": "direct",
+          "document": "ao3415a_aos",
+          "value": 5.0
+        },
+        "drain_current_70c_a": {
+          "basis": "direct",
+          "document": "ao3415a_aos",
+          "value": 4.0
+        },
+        "drain_source_voltage_v": {
+          "basis": "direct",
+          "document": "ao3415a_aos",
+          "value": 20.0
+        },
+        "gate_source_voltage_v": {
+          "basis": "direct",
+          "document": "ao3415a_aos",
+          "value": 8.0
+        },
+        "junction_temperature_c": {
+          "basis": "direct",
+          "document": "ao3415a_aos",
+          "value": 150.0
+        },
+        "power_dissipation_25c_w": {
+          "basis": "direct",
+          "document": "ao3415a_aos",
+          "value": 1.5
+        }
+      },
+      "fet": {
+        "body_diode_forward_max_v": {
+          "basis": "direct",
+          "document": "ao3415a_aos",
+          "value": 1.0
+        },
+        "rds_on_hot_ohm": {
+          "4.5": {
+            "basis": "direct",
+            "document": "ao3415a_aos",
+            "note": "TJ = 125 C",
+            "value": 0.059
+          }
+        },
+        "rds_on_ohm": {
+          "2.5": {
+            "basis": "direct",
+            "document": "ao3415a_aos",
+            "value": 0.053
+          },
+          "4.5": {
+            "basis": "direct",
+            "document": "ao3415a_aos",
+            "value": 0.041
+          }
+        },
+        "vgs_threshold_max_v": {
+          "basis": "direct",
+          "document": "ao3415a_aos",
+          "value": 0.9
+        }
+      },
+      "thermal": {
+        "junction_to_ambient_max_c_per_w": {
+          "basis": "direct",
+          "document": "ao3415a_aos",
+          "note": "steady state, on the datasheet's own test board",
+          "value": 100.0
+        }
+      }
+    },
+    "AO8810": {
+      "absolute_maximum": {
+        "drain_current_25c_a": {
+          "basis": "direct",
+          "document": "ao8810_aos",
+          "value": 7.0
+        },
+        "drain_current_70c_a": {
+          "basis": "direct",
+          "document": "ao8810_aos",
+          "value": 5.7
+        },
+        "drain_source_voltage_v": {
+          "basis": "direct",
+          "document": "ao8810_aos",
+          "value": 20.0
+        },
+        "gate_source_voltage_v": {
+          "basis": "direct",
+          "document": "ao8810_aos",
+          "value": 8.0
+        },
+        "junction_temperature_c": {
+          "basis": "direct",
+          "document": "ao8810_aos",
+          "value": 150.0
+        },
+        "power_dissipation_25c_w": {
+          "basis": "direct",
+          "document": "ao8810_aos",
+          "value": 1.5
+        },
+        "pulsed_drain_current_a": {
+          "basis": "direct",
+          "document": "ao8810_aos",
+          "value": 25.0
+        }
+      },
+      "fet": {
+        "body_diode_forward_max_v": {
+          "basis": "direct",
+          "document": "ao8810_aos",
+          "value": 1.0
+        },
+        "gate_charge_max_c": {
+          "basis": "direct",
+          "document": "ao8810_aos",
+          "value": 1.4e-08
+        },
+        "rds_on_hot_ohm": {
+          "4.5": {
+            "basis": "direct",
+            "document": "ao8810_aos",
+            "note": "TJ = 125 C",
+            "value": 0.03
+          }
+        },
+        "rds_on_ohm": {
+          "2.5": {
+            "basis": "direct",
+            "document": "ao8810_aos",
+            "value": 0.023
+          },
+          "3.1": {
+            "basis": "direct",
+            "document": "ao8810_aos",
+            "value": 0.0215
+          },
+          "4.5": {
+            "basis": "direct",
+            "document": "ao8810_aos",
+            "value": 0.02
+          }
+        },
+        "vgs_threshold_max_v": {
+          "basis": "direct",
+          "document": "ao8810_aos",
+          "value": 1.1
+        }
+      },
+      "thermal": {
+        "junction_to_ambient_max_c_per_w": {
+          "basis": "direct",
+          "document": "ao8810_aos",
+          "note": "steady state, on the datasheet's own test board",
+          "value": 120.0
+        }
+      }
+    },
+    "B2P-VH(LF)(SN)": {
+      "connector": {
+        "current_rating_a": {
+          "basis": "direct",
+          "document": "jst_vh",
+          "value": 10.0
+        },
+        "pitch_mm": {
+          "basis": "direct",
+          "document": "jst_vh",
+          "value": 3.96
+        },
+        "polarised": {
+          "basis": "direct",
+          "document": "jst_vh",
+          "note": "the housing is keyed, so the mating half fits one way round",
+          "value": 1.0
+        },
+        "positions": {
+          "basis": "direct",
+          "document": "jst_vh",
+          "value": 2.0
+        },
+        "voltage_rating_v": {
+          "basis": "direct",
+          "document": "jst_vh",
+          "value": 250.0
+        }
+      }
+    },
+    "CC0603KRX7R9BB104": {
+      "capacitor": {
+        "capacitance_f": {
+          "basis": "direct",
+          "document": "mlcc_yageo_cc0603",
+          "value": 1e-07
+        },
+        "dc_bias_retained_fraction": {
+          "basis": "assumed",
+          "note": "class II ceramic loses capacitance under DC bias; the datasheet shows the effect as a curve this repository has not digitised, so this fraction is the board's own bound rather than a datasheet figure",
+          "value": 0.8
+        },
+        "dielectric": {
+          "basis": "direct",
+          "document": "mlcc_yageo_cc0603",
+          "note": "X7R",
+          "value": 1.0
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "mlcc_yageo_cc0603",
+          "value": 0.1
+        },
+        "voltage_max_v": {
+          "basis": "direct",
+          "document": "mlcc_yageo_cc0603",
+          "value": 50.0
+        }
+      }
+    },
+    "CL10A225KO8NNNC": {
+      "capacitor": {
+        "capacitance_f": {
+          "basis": "direct",
+          "document": "mlcc_samsung_cl",
+          "value": 2.2e-06
+        },
+        "dc_bias_retained_fraction": {
+          "basis": "assumed",
+          "note": "class II ceramic loses capacitance under DC bias; the datasheet shows the effect as a curve this repository has not digitised, so this fraction is the board's own bound rather than a datasheet figure",
+          "value": 0.55
+        },
+        "dielectric": {
+          "basis": "direct",
+          "document": "mlcc_samsung_cl",
+          "note": "X7R",
+          "value": 1.0
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "mlcc_samsung_cl",
+          "value": 0.1
+        },
+        "voltage_max_v": {
+          "basis": "direct",
+          "document": "mlcc_samsung_cl",
+          "value": 16.0
+        }
+      }
+    },
+    "CL21A106KAYNNNE": {
+      "capacitor": {
+        "capacitance_f": {
+          "basis": "direct",
+          "document": "mlcc_samsung_cl",
+          "value": 1e-05
+        },
+        "dc_bias_retained_fraction": {
+          "basis": "assumed",
+          "note": "class II ceramic loses capacitance under DC bias; the datasheet shows the effect as a curve this repository has not digitised, so this fraction is the board's own bound rather than a datasheet figure",
+          "value": 0.55
+        },
+        "dielectric": {
+          "basis": "direct",
+          "document": "mlcc_samsung_cl",
+          "note": "X5R",
+          "value": 1.0
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "mlcc_samsung_cl",
+          "value": 0.1
+        },
+        "voltage_max_v": {
+          "basis": "direct",
+          "document": "mlcc_samsung_cl",
+          "value": 25.0
+        }
+      }
+    },
+    "DW01A": {
+      "absolute_maximum": {
+        "operating_temperature_max_c": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "value": 85.0
+        },
+        "supply_voltage_v": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "value": 10.0
+        }
+      },
+      "protection": {
+        "overcharge_delay_max_s": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "value": 0.2
+        },
+        "overcharge_max_v": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "value": 4.35
+        },
+        "overcharge_min_v": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "value": 4.25
+        },
+        "overcharge_release_min_v": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "value": 4.05
+        },
+        "overcharge_typ_v": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "value": 4.3
+        },
+        "overcurrent_delay_max_s": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "value": 0.02
+        },
+        "overcurrent_max_v": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "value": 0.17
+        },
+        "overcurrent_min_v": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "value": 0.13
+        },
+        "overcurrent_typ_v": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "value": 0.15
+        },
+        "overdischarge_delay_max_s": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "value": 0.2
+        },
+        "overdischarge_max_v": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "value": 2.6
+        },
+        "overdischarge_min_v": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "value": 2.4
+        },
+        "overdischarge_release_max_v": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "value": 3.0
+        },
+        "short_circuit_delay_max_s": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "value": 0.0006
+        },
+        "short_circuit_max_v": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "value": 1.75
+        },
+        "short_circuit_min_v": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "value": 0.82
+        }
+      },
+      "supply": {
+        "output_high_drop_max_v": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "note": "OD output high level, stated at 10 uA of load",
+          "value": 0.4
+        },
+        "power_down_current_max_a": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "value": 4e-06
+        },
+        "quiescent_current_max_a": {
+          "basis": "direct",
+          "document": "dw01a_puolop",
+          "value": 6e-06
+        }
+      },
+      "unestablished": {
+        "gate_drive_current": "the outputs are characterised only at 10 uA, so the current available to charge or discharge a gate, and therefore the switch turn-off time, is not established"
+      }
+    },
+    "IP5306": {
+      "absolute_maximum": {
+        "ambient_temperature_c": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 70.0
+        },
+        "input_voltage_v": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 5.5
+        },
+        "junction_temperature_c": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 150.0
+        }
+      },
+      "boost": {
+        "battery_current_operating_typ_a": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 0.003
+        },
+        "battery_standby_current_typ_a": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "note": "VIN = 0 V, VBAT = 3.7 V; a typical value, no maximum stated",
+          "value": 5e-05
+        },
+        "battery_voltage_max_v": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 4.4
+        },
+        "battery_voltage_min_v": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 3.0
+        },
+        "load_overcurrent_detect_s": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 0.03
+        },
+        "load_removal_current_a": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 0.045
+        },
+        "load_removal_detect_s": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 32.0
+        },
+        "load_short_current_a": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 3.5
+        },
+        "load_short_detect_s": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 0.0002
+        },
+        "nmos_rds_on_ohm": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 0.03
+        },
+        "output_current_typ_a": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 2.1
+        },
+        "output_ripple_max_v": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 0.15
+        },
+        "output_voltage_typ_v": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "note": "stated at VBAT = 3.7 V; the datasheet gives no minimum or maximum for the regulated output",
+          "value": 5.1
+        },
+        "pmos_rds_on_ohm": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 0.035
+        },
+        "switching_frequency_hz": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 500000.0
+        }
+      },
+      "button": {
+        "ignore_below_s": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 0.05
+        },
+        "long_press_s": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 2.0
+        }
+      },
+      "charger": {
+        "charge_current_typ_a": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 2.1
+        },
+        "input_current_charging_typ_a": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 0.002
+        },
+        "input_current_standby_typ_a": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 0.0001
+        },
+        "input_uvlo_hysteresis_v": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 0.2
+        },
+        "input_uvlo_rising_v": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 4.5
+        },
+        "recharge_threshold_v": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 4.1
+        },
+        "safety_timer_hours": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 24.0
+        },
+        "target_charge_voltage_v": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 4.2
+        },
+        "trickle_current_typ_a": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 0.1
+        },
+        "trickle_stop_voltage_v": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 2.9
+        }
+      },
+      "indicator": {
+        "led_current_typ_a": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 0.004
+        },
+        "torch_current_typ_a": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 0.025
+        }
+      },
+      "recommended": {
+        "input_voltage_max_v": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 5.5
+        },
+        "input_voltage_min_v": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 4.75
+        },
+        "load_current_max_a": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 2.6
+        }
+      },
+      "thermal": {
+        "junction_to_ambient_c_per_w": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 40.0
+        },
+        "shutdown_hysteresis_c": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 40.0
+        },
+        "shutdown_rising_c": {
+          "basis": "direct",
+          "document": "ip5306_injoinic",
+          "value": 125.0
+        }
+      },
+      "unestablished": {
+        "boost_efficiency_minimum": "the datasheet states a peak efficiency and no minimum",
+        "boost_output_current_minimum": "the datasheet states a typical boost output current and a recommended maximum load current, and no minimum at any battery voltage",
+        "converter_start_up_time": "the datasheet states no time from a key press to a regulated output",
+        "power_on_output_state": "the datasheet states what a short and a long press do and does not state the converter's state when a cell is first connected, nor whether the integrated load detector enables the converter without a press"
+      }
+    },
+    "KT-0603G": {
+      "led": {
+        "forward_current_max_a": {
+          "basis": "direct",
+          "document": "kt0603g_kento",
+          "value": 0.03
+        },
+        "forward_voltage_max_v": {
+          "basis": "direct",
+          "document": "kt0603g_kento",
+          "note": "at 5 mA",
+          "value": 3.1
+        },
+        "forward_voltage_min_v": {
+          "basis": "direct",
+          "document": "kt0603g_kento",
+          "note": "at 5 mA",
+          "value": 2.6
+        },
+        "power_max_w": {
+          "basis": "direct",
+          "document": "kt0603g_kento",
+          "value": 0.1
+        },
+        "reverse_voltage_max_v": {
+          "basis": "direct",
+          "document": "kt0603g_kento",
+          "value": 5.0
+        }
+      }
+    },
+    "KT-0603R": {
+      "led": {
+        "forward_current_max_a": {
+          "basis": "direct",
+          "document": "kt0603r_kento",
+          "value": 0.025
+        },
+        "forward_voltage_max_v": {
+          "basis": "direct",
+          "document": "kt0603r_kento",
+          "note": "at 20 mA",
+          "value": 2.4
+        },
+        "forward_voltage_min_v": {
+          "basis": "direct",
+          "document": "kt0603r_kento",
+          "note": "at 20 mA",
+          "value": 1.8
+        },
+        "power_max_w": {
+          "basis": "direct",
+          "document": "kt0603r_kento",
+          "value": 0.04
+        },
+        "reverse_voltage_max_v": {
+          "basis": "direct",
+          "document": "kt0603r_kento",
+          "value": 5.0
+        }
+      }
+    },
+    "LM393DR2G": {
+      "absolute_maximum": {
+        "input_common_mode_max_v": {
+          "basis": "direct",
+          "document": "lm393_onsemi",
+          "value": 36.0
+        },
+        "input_common_mode_min_v": {
+          "basis": "direct",
+          "document": "lm393_onsemi",
+          "value": -0.3
+        },
+        "output_sink_current_a": {
+          "basis": "direct",
+          "document": "lm393_onsemi",
+          "value": 0.02
+        },
+        "output_voltage_v": {
+          "basis": "direct",
+          "document": "lm393_onsemi",
+          "value": 36.0
+        },
+        "supply_voltage_v": {
+          "basis": "direct",
+          "document": "lm393_onsemi",
+          "value": 36.0
+        }
+      },
+      "comparator": {
+        "common_mode_headroom_v": {
+          "basis": "direct",
+          "document": "lm393_onsemi",
+          "note": "the input common-mode range reaches VCC minus this over the full temperature range",
+          "value": 2.0
+        },
+        "input_bias_current_max_a": {
+          "basis": "direct",
+          "document": "lm393_onsemi",
+          "note": "TA = 25 C",
+          "value": 2.5e-07
+        },
+        "input_bias_current_over_temperature_max_a": {
+          "basis": "direct",
+          "document": "lm393_onsemi",
+          "value": 4e-07
+        },
+        "input_offset_current_max_a": {
+          "basis": "direct",
+          "document": "lm393_onsemi",
+          "value": 1.5e-07
+        },
+        "offset_voltage_max_v": {
+          "basis": "direct",
+          "document": "lm393_onsemi",
+          "note": "TA = 25 C",
+          "value": 0.005
+        },
+        "offset_voltage_over_temperature_max_v": {
+          "basis": "direct",
+          "document": "lm393_onsemi",
+          "note": "0 C to 70 C for the LM393 grade",
+          "value": 0.009
+        },
+        "output_low_max_v": {
+          "basis": "direct",
+          "document": "lm393_onsemi",
+          "note": "over the full temperature range at 4 mA of sink current",
+          "value": 0.7
+        },
+        "output_sink_min_a": {
+          "basis": "direct",
+          "document": "lm393_onsemi",
+          "value": 0.006
+        },
+        "supply_current_max_a": {
+          "basis": "direct",
+          "document": "lm393_onsemi",
+          "value": 0.001
+        }
+      }
+    },
+    "SWPA8040S1R0NT": {
+      "inductor": {
+        "dc_resistance_max_ohm": {
+          "basis": "direct",
+          "document": "swpa8040_sunlord",
+          "value": 0.01
+        },
+        "heat_rating_current_a": {
+          "basis": "direct",
+          "document": "swpa8040_sunlord",
+          "note": "the smaller of the two figures the catalogue tabulates for heat rating current, taken as the guaranteed one",
+          "value": 6.3
+        },
+        "inductance_h": {
+          "basis": "direct",
+          "document": "swpa8040_sunlord",
+          "value": 1e-06
+        },
+        "saturation_current_a": {
+          "basis": "direct",
+          "document": "swpa8040_sunlord",
+          "note": "the smaller of the two figures the catalogue tabulates for saturation current, taken as the guaranteed one",
+          "value": 9.85
+        },
+        "self_resonant_min_hz": {
+          "basis": "direct",
+          "document": "swpa8040_sunlord",
+          "value": 89000000.0
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "swpa8040_sunlord",
+          "value": 0.3
+        }
+      }
+    },
+    "TCC1206X5R226M250HT": {
+      "capacitor": {
+        "capacitance_f": {
+          "basis": "direct",
+          "document": "mlcc_cctc_1206",
+          "value": 2.2e-05
+        },
+        "dc_bias_retained_fraction": {
+          "basis": "assumed",
+          "note": "class II ceramic loses capacitance under DC bias; the datasheet shows the effect as a curve this repository has not digitised, so this fraction is the board's own bound rather than a datasheet figure",
+          "value": 0.55
+        },
+        "dielectric": {
+          "basis": "direct",
+          "document": "mlcc_cctc_1206",
+          "note": "X5R",
+          "value": 1.0
+        },
+        "temperature_change": {
+          "basis": "direct",
+          "document": "mlcc_cctc_1206",
+          "note": "X5R capacitance change over -55 C to +85 C",
+          "value": 0.15
+        },
+        "tolerance": {
+          "basis": "direct",
+          "document": "mlcc_cctc_1206",
+          "value": 0.2
+        },
+        "voltage_max_v": {
+          "basis": "direct",
+          "document": "mlcc_cctc_1206",
+          "value": 25.0
+        }
+      }
+    },
+    "TLV431AIDBZR": {
+      "reference": {
+        "cathode_current_max_a": {
+          "basis": "direct",
+          "document": "tlv431_ti",
+          "value": 0.015
+        },
+        "cathode_current_min_a": {
+          "basis": "direct",
+          "document": "tlv431_ti",
+          "note": "the minimum cathode current for regulation",
+          "value": 8e-05
+        },
+        "cathode_voltage_max_v": {
+          "basis": "direct",
+          "document": "tlv431_ti",
+          "value": 6.0
+        },
+        "reference_current_max_a": {
+          "basis": "direct",
+          "document": "tlv431_ti",
+          "value": 5e-07
+        },
+        "stable_load_capacitance_max_f": {
+          "basis": "direct",
+          "document": "tlv431_ti",
+          "note": "with the cathode tied to the reference the datasheet states stability from 1 pF to 10 uF",
+          "value": 1e-05
+        },
+        "voltage_max_v": {
+          "basis": "direct",
+          "document": "tlv431_ti",
+          "note": "TLV431AI over its full range",
+          "value": 1.265
+        },
+        "voltage_min_v": {
+          "basis": "direct",
+          "document": "tlv431_ti",
+          "note": "TLV431AI over its full range",
+          "value": 1.215
+        }
+      }
+    },
+    "TPD1E10B06DPYR": {
+      "clamp": {
+        "breakdown_min_v": {
+          "basis": "direct",
+          "document": "tpd1e10b06_ti",
+          "value": 6.0
+        },
+        "capacitance_typ_f": {
+          "basis": "direct",
+          "document": "tpd1e10b06_ti",
+          "value": 1.2e-11
+        },
+        "clamp_voltage_at_1a_v": {
+          "basis": "direct",
+          "document": "tpd1e10b06_ti",
+          "value": 10.0
+        },
+        "dynamic_resistance_typ_ohm": {
+          "basis": "direct",
+          "document": "tpd1e10b06_ti",
+          "value": 0.38
+        },
+        "leakage_max_a": {
+          "basis": "direct",
+          "document": "tpd1e10b06_ti",
+          "value": 1e-07
+        },
+        "working_voltage_max_v": {
+          "basis": "direct",
+          "document": "tpd1e10b06_ti",
+          "value": 5.5
+        }
+      }
+    },
+    "TS-1187A-B-A-B": {
+      "switch": {
+        "contact_current_max_a": {
+          "basis": "direct",
+          "document": "ts1187a_xkb",
+          "value": 0.05
+        },
+        "contact_resistance_max_ohm": {
+          "basis": "direct",
+          "document": "ts1187a_xkb",
+          "value": 0.1
+        },
+        "contact_voltage_max_v": {
+          "basis": "direct",
+          "document": "ts1187a_xkb",
+          "value": 12.0
+        },
+        "operating_temperature_max_c": {
+          "basis": "direct",
+          "document": "ts1187a_xkb",
+          "value": 85.0
+        }
+      }
+    },
+    "TYPE-C-31-M-12": {
+      "connector": {
+        "current_rating_a": {
+          "basis": "direct",
+          "document": "usbc_hro",
+          "value": 5.0
+        },
+        "durability_cycles": {
+          "basis": "direct",
+          "document": "usbc_hro",
+          "value": 10000.0
+        },
+        "operating_temperature_max_c": {
+          "basis": "direct",
+          "document": "usbc_hro",
+          "value": 80.0
+        },
+        "positions": {
+          "basis": "direct",
+          "document": "usbc_hro",
+          "value": 16.0
+        },
+        "voltage_rating_v": {
+          "basis": "direct",
+          "document": "usbc_hro",
+          "value": 20.0
+        }
+      }
+    }
+  },
+  "schema_version": 1
+}

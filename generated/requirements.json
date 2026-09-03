@@ -1,0 +1,3091 @@
+{
+  "kind": "board-requirement-evidence",
+  "results": [
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "jst_vh"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 1.0
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 3.0
+          },
+          "name": "assembly_within_declared_policy",
+          "source": "derived_requirement:jst_vh"
+        },
+        "scope": {
+          "identity": "board",
+          "level": "board"
+        },
+        "significance": "manufacturability",
+        "units": "parts"
+      },
+      "id": "assembly_within_declared_policy",
+      "identity": "board",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "usb_type_c"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.0
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.0
+          },
+          "name": "both_orientations_terminated",
+          "source": "user_requirement:BRIEF.md#interfaces-indication-and-control"
+        },
+        "scope": {
+          "identity": "J1",
+          "level": "board"
+        },
+        "significance": "interface_compliance",
+        "units": "violations"
+      },
+      "id": "both_orientations_terminated",
+      "identity": "J1",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the controller's own pull-up on its button pin is treated as if it pulled the pin to the cell rail through this board's series element, which is the largest current that path can carry; the datasheet states no value for it"
+          ],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "res_0603_uniroyal",
+              "ts1187a_xkb"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.00044378787878787874
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.05
+          },
+          "name": "button_current_below_contact_rating",
+          "source": "derived_requirement:ts1187a_xkb"
+        },
+        "scope": {
+          "identity": "SW1",
+          "level": "net"
+        },
+        "significance": "device_rating",
+        "units": "A"
+      },
+      "id": "button_current_below_contact_rating",
+      "identity": "SW1",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "settling is taken as five time constants"
+          ],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ip5306_injoinic",
+              "mlcc_yageo_cc0603",
+              "res_0603_uniroyal"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.0036360000000000003
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.05
+          },
+          "name": "button_filter_below_ignore_window",
+          "source": "derived_requirement:ip5306_injoinic"
+        },
+        "scope": {
+          "identity": "KEY",
+          "level": "net"
+        },
+        "significance": "functional_capability",
+        "units": "s"
+      },
+      "id": "button_filter_below_ignore_window",
+      "identity": "KEY",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "jst_vh"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.0
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.0
+          },
+          "name": "cell_connector_polarised",
+          "source": "derived_requirement:jst_vh"
+        },
+        "scope": {
+          "identity": "J3",
+          "level": "board"
+        },
+        "significance": "safety_margin",
+        "units": "violations"
+      },
+      "id": "cell_connector_polarised",
+      "identity": "J3",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "jst_vh"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 5.764705882352941
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 10.0
+          },
+          "name": "cell_connector_within_current_rating",
+          "source": "derived_requirement:jst_vh"
+        },
+        "scope": {
+          "identity": "J3",
+          "level": "net"
+        },
+        "significance": "device_rating",
+        "units": "A"
+      },
+      "id": "cell_connector_within_current_rating",
+      "identity": "J3",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the ceiling is the protection device's own over-charge threshold at the top of its tolerance, not the charger's termination voltage"
+          ],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [
+            "L1 was not judged here: the datasheet states no voltage rating; what bounds this part is current, and the saturation and heat-rating claims judge it"
+          ],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "dw01a_puolop"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "upper_bound",
+        "knowledge_basis": {
+          "detail": "datasheet_limit",
+          "kind": "direct"
+        },
+        "quantity": {
+          "value": 0.0
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.0
+          },
+          "name": "cell_rail_parts_rated_above_protection_ceiling",
+          "source": "derived_requirement:dw01a_puolop"
+        },
+        "scope": {
+          "identity": "BAT",
+          "level": "board"
+        },
+        "significance": "device_rating",
+        "units": "violations"
+      },
+      "id": "cell_rail_parts_rated_above_protection_ceiling",
+      "identity": "BAT",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "datasheet_limit",
+          "kind": "direct"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the switch conducts at the resistance its datasheet states for a 2.5 V gate drive, which is the weakest drive it tabulates and is below the drive this gate network gives it"
+          ],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [
+            "board copper between the receptacle and the charger is not included; it has not been laid out yet"
+          ],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ao3415a_aos",
+              "ip5306_injoinic",
+              "usb_type_c"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "lower_bound",
+        "knowledge_basis": {
+          "detail": "datasheet_limit",
+          "kind": "direct"
+        },
+        "quantity": {
+          "value": 4.569536827229978
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 4.5
+          },
+          "name": "charger_input_above_undervoltage_lockout",
+          "source": "derived_requirement:ip5306_injoinic"
+        },
+        "scope": {
+          "identity": "VIN",
+          "level": "net"
+        },
+        "significance": "power_margin",
+        "units": "V"
+      },
+      "id": "charger_input_above_undervoltage_lockout",
+      "identity": "VIN",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "datasheet_limit",
+          "kind": "direct"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "tpd1e10b06_ti"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.0
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.0
+          },
+          "name": "clamp_working_voltage_above_rail",
+          "source": "derived_requirement:tpd1e10b06_ti"
+        },
+        "scope": {
+          "identity": "VBUS",
+          "level": "board"
+        },
+        "significance": "device_rating",
+        "units": "violations"
+      },
+      "id": "clamp_working_voltage_above_rail",
+      "identity": "VBUS",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "lm393_onsemi",
+              "usb_type_c"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 1.933690533069415
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 2.75
+          },
+          "name": "comparator_input_within_common_mode_range",
+          "source": "derived_requirement:lm393_onsemi"
+        },
+        "scope": {
+          "identity": "CC1",
+          "level": "net"
+        },
+        "significance": "interface_compliance",
+        "units": "V"
+      },
+      "id": "comparator_input_within_common_mode_range",
+      "identity": "CC1",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the conductor is on an external layer in one ounce of finished copper, which is what this board's fabrication requirements declare",
+            "the temperature rise is the one this design declares",
+            "this judges the width the board declares for its power net class, not copper; there is no copper yet, and the same requirement applies again to the routed board"
+          ],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "swpa8040_sunlord"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 1.5
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 1.3137727232861407
+          },
+          "name": "conductor_width_for_cell_current",
+          "source": "derived_requirement:conductor_sizing_model"
+        },
+        "scope": {
+          "identity": "BAT",
+          "level": "net"
+        },
+        "significance": "thermal_margin",
+        "units": "mm"
+      },
+      "id": "conductor_width_for_cell_current",
+      "identity": "BAT",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "jst_vh",
+              "usbc_hro"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.0
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.0
+          },
+          "name": "connector_contract_consistent",
+          "source": "derived_requirement:usbc_hro"
+        },
+        "scope": {
+          "identity": "board",
+          "level": "board"
+        },
+        "significance": "interface_compliance",
+        "units": "violations"
+      },
+      "id": "connector_contract_consistent",
+      "identity": "board",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the whole difference between the output power and the declared efficiency floor is dissipated on this board, and what the inductor, the protection switch and the output switch dissipate is subtracted from it, so the remainder is attributed to the converter",
+            "the converter's stated junction-to-ambient resistance applies to this board's copper",
+            "the ambient is room ambient, which is the condition the brief states this requirement at"
+          ],
+          "evidence_class": "assumed-behavioral",
+          "omitted_contributions": [
+            "the capacitors' equivalent series resistance and the board's own copper losses are not separated out, so they are attributed to the converter"
+          ],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ao3415a_aos",
+              "ao8810_aos",
+              "ip5306_injoinic",
+              "swpa8040_sunlord"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "upper_bound",
+        "knowledge_basis": {
+          "detail": "assumed",
+          "kind": "assumed"
+        },
+        "quantity": {
+          "value": 71.4091955083787
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 125.0
+          },
+          "name": "converter_junction_below_thermal_shutdown",
+          "source": "derived_requirement:ip5306_injoinic"
+        },
+        "scope": {
+          "identity": "U1",
+          "level": "net"
+        },
+        "significance": "thermal_margin",
+        "units": "degC"
+      },
+      "id": "converter_junction_below_thermal_shutdown",
+      "identity": "U1",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "assumed",
+          "kind": "assumed"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "tpd1e10b06_ti"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.0
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.0
+          },
+          "name": "esd_coverage_complete",
+          "source": "user_requirement:BRIEF.md#interfaces-indication-and-control"
+        },
+        "scope": {
+          "identity": "board",
+          "level": "board"
+        },
+        "significance": "safety_margin",
+        "units": "violations"
+      },
+      "id": "esd_coverage_complete",
+      "identity": "board",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [
+            "the drop across the device in series with the indicator is not subtracted; leaving it out overstates the current"
+          ],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "kt0603r_kento",
+              "res_0603_uniroyal",
+              "usb_type_c"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "upper_bound",
+        "knowledge_basis": {
+          "detail": "datasheet_limit",
+          "kind": "direct"
+        },
+        "quantity": {
+          "value": 0.0024915824915824917
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.025
+          },
+          "name": "indicator_current_within_rating",
+          "source": "derived_requirement:kt0603g_kento+kt0603r_kento+ip5306_injoinic"
+        },
+        "scope": {
+          "identity": "FAULT_A",
+          "level": "net"
+        },
+        "significance": "device_rating",
+        "units": "A"
+      },
+      "id": "indicator_current_within_rating",
+      "identity": "FAULT_A",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "datasheet_limit",
+          "kind": "direct"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the controller's indicator drivers are current sources at the value its datasheet states; it gives one figure and no tolerance"
+          ],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ip5306_injoinic",
+              "kt0603g_kento"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.004
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.03
+          },
+          "name": "indicator_current_within_rating",
+          "source": "derived_requirement:kt0603g_kento+kt0603r_kento+ip5306_injoinic"
+        },
+        "scope": {
+          "identity": "LED1",
+          "level": "net"
+        },
+        "significance": "device_rating",
+        "units": "A"
+      },
+      "id": "indicator_current_within_rating",
+      "identity": "LED1",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "an indicator held off by its pair sees that pair's forward voltage in reverse, because the two share both drivers"
+          ],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "kt0603g_kento"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 3.1
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 5.0
+          },
+          "name": "indicator_reverse_within_rating",
+          "source": "derived_requirement:kt0603g_kento"
+        },
+        "scope": {
+          "identity": "LED3",
+          "level": "net"
+        },
+        "significance": "device_rating",
+        "units": "V"
+      },
+      "id": "indicator_reverse_within_rating",
+      "identity": "LED3",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the inductance is at the low end of its tolerance, which is where the ripple and therefore the peak is worst",
+            "the conversion efficiency is at the declared floor"
+          ],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ip5306_injoinic",
+              "swpa8040_sunlord"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 5.764705882352941
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 9.85
+          },
+          "name": "inductor_peak_below_saturation",
+          "source": "derived_requirement:swpa8040_sunlord"
+        },
+        "scope": {
+          "identity": "SW",
+          "level": "net"
+        },
+        "significance": "device_rating",
+        "units": "A"
+      },
+      "id": "inductor_peak_below_saturation",
+      "identity": "SW",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the ripple is triangular, so its contribution to the RMS is the peak-to-peak over the square root of twelve"
+          ],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "swpa8040_sunlord"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 4.127718774787961
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 6.3
+          },
+          "name": "inductor_rms_below_heat_rating",
+          "source": "derived_requirement:swpa8040_sunlord"
+        },
+        "scope": {
+          "identity": "SW",
+          "level": "net"
+        },
+        "significance": "device_rating",
+        "units": "A"
+      },
+      "id": "inductor_rms_below_heat_rating",
+      "identity": "SW",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the charger stays inside the maximum load current its recommended operating conditions state; the board carries no independent limiter between the switch and the charger"
+          ],
+          "evidence_class": "assumed-behavioral",
+          "omitted_contributions": [
+            "the datasheet states no hard input current limit for the charger, so this is a bound on specified operation rather than on the device's behaviour under fault"
+          ],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ip5306_injoinic",
+              "usb_type_c"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "upper_bound",
+        "knowledge_basis": {
+          "detail": "assumed",
+          "kind": "assumed"
+        },
+        "quantity": {
+          "value": 2.604462998782148
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 3.0
+          },
+          "name": "input_current_below_advertisement",
+          "source": "user_requirement:BRIEF.md#power-and-rails"
+        },
+        "scope": {
+          "identity": "VBUS",
+          "level": "net"
+        },
+        "significance": "interface_compliance",
+        "units": "A"
+      },
+      "id": "input_current_below_advertisement",
+      "identity": "VBUS",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "assumed",
+          "kind": "assumed"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the switch conducts at the resistance stated for the weakest gate drive the datasheet tabulates",
+            "the ambient is the maximum this board declares",
+            "the package's stated junction-to-ambient resistance applies to this board's copper"
+          ],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ao3415a_aos"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 86.92042492020559
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 150.0
+          },
+          "name": "input_switch_junction_below_maximum",
+          "source": "derived_requirement:ao3415a_aos"
+        },
+        "scope": {
+          "identity": "VIN",
+          "level": "net"
+        },
+        "significance": "thermal_margin",
+        "units": "degC"
+      },
+      "id": "input_switch_junction_below_maximum",
+      "identity": "VIN",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.0
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.0
+          },
+          "name": "kelvin_pairs_present",
+          "source": "user_requirement:BRIEF.md#test-and-bring-up"
+        },
+        "scope": {
+          "identity": "board",
+          "level": "board"
+        },
+        "significance": "functional_capability",
+        "units": "violations"
+      },
+      "id": "kelvin_pairs_present",
+      "identity": "board",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "mlcc_samsung_cl"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 16.0
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 5.1
+          },
+          "name": "latch_hold_capacitor_rated_above_set_level",
+          "source": "derived_requirement:mlcc_samsung_cl"
+        },
+        "scope": {
+          "identity": "SET",
+          "level": "net"
+        },
+        "significance": "device_rating",
+        "units": "V"
+      },
+      "id": "latch_hold_capacitor_rated_above_set_level",
+      "identity": "SET",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ao3400a_aos",
+              "ao3415a_aos",
+              "res_0603_uniroyal"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 4.627864344637947
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 1.45
+          },
+          "name": "latch_hold_level_above_threshold",
+          "source": "derived_requirement:ao3400a_aos"
+        },
+        "scope": {
+          "identity": "SET",
+          "level": "net"
+        },
+        "significance": "functional_capability",
+        "units": "V"
+      },
+      "id": "latch_hold_level_above_threshold",
+      "identity": "SET",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the hold capacitor is at the low end of its tolerance and retains only the declared fraction of that under bias",
+            "the latch releases when its gate falls to the device's highest stated threshold"
+          ],
+          "evidence_class": "assumed-behavioral",
+          "omitted_contributions": [
+            "the latch device's own gate leakage is not subtracted from the discharge"
+          ],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ao3400a_aos",
+              "mlcc_samsung_cl",
+              "res_0603_uniroyal"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "lower_bound",
+        "knowledge_basis": {
+          "detail": "assumed",
+          "kind": "assumed"
+        },
+        "quantity": {
+          "value": 0.7838385087105516
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 0.5
+          },
+          "name": "latch_hold_time_above_target",
+          "source": "derived_requirement:ip5306_injoinic"
+        },
+        "scope": {
+          "identity": "SET",
+          "level": "net"
+        },
+        "significance": "functional_capability",
+        "units": "s"
+      },
+      "id": "latch_hold_time_above_target",
+      "identity": "SET",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "assumed",
+          "kind": "assumed"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [
+            "the drop across the device that connects the cell rail to this divider is not subtracted; at this current it is microvolts"
+          ],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ao3400a_aos",
+              "ao3401a_aos",
+              "res_0603_uniroyal"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "lower_bound",
+        "knowledge_basis": {
+          "detail": "datasheet_limit",
+          "kind": "direct"
+        },
+        "quantity": {
+          "value": 2.96970302969703
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 1.45
+          },
+          "name": "latch_set_level_above_threshold",
+          "source": "derived_requirement:ao3400a_aos"
+        },
+        "scope": {
+          "identity": "SET",
+          "level": "net"
+        },
+        "significance": "functional_capability",
+        "units": "V"
+      },
+      "id": "latch_set_level_above_threshold",
+      "identity": "SET",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "datasheet_limit",
+          "kind": "direct"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.0
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.0
+          },
+          "name": "no_floating_node",
+          "source": "user_requirement:BRIEF.md#interfaces-indication-and-control"
+        },
+        "scope": {
+          "identity": "BTN",
+          "level": "board"
+        },
+        "significance": "functional_capability",
+        "units": "violations"
+      },
+      "id": "no_floating_node",
+      "identity": "BTN",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the sink terminates with the specification's nominal resistance at the loosest tolerance it permits a sink that reads advertisements"
+          ],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "res_0603_uniroyal",
+              "usb_type_c"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 1.5635296119809392
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 1.31
+          },
+          "name": "output_advertisement_lands_in_3_0A_band",
+          "source": "derived_requirement:usb_type_c"
+        },
+        "scope": {
+          "identity": "OUT_CC1",
+          "level": "net"
+        },
+        "significance": "interface_compliance",
+        "units": "V"
+      },
+      "id": "output_advertisement_lands_in_3_0A_band",
+      "identity": "OUT_CC1",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the sink terminates with the specification's nominal resistance at the loosest tolerance it permits a sink that reads advertisements"
+          ],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "res_0603_uniroyal",
+              "usb_type_c"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 1.8446808510638295
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 2.04
+          },
+          "name": "output_advertisement_lands_in_3_0A_band",
+          "source": "derived_requirement:usb_type_c"
+        },
+        "scope": {
+          "identity": "OUT_CC2",
+          "level": "net"
+        },
+        "significance": "interface_compliance",
+        "units": "V"
+      },
+      "id": "output_advertisement_lands_in_3_0A_band",
+      "identity": "OUT_CC2",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the converter contributes nothing for the whole of the declared response budget, which is the worst case its datasheet leaves open",
+            "the output capacitors are at the low end of their tolerance and retain only the declared fraction of that under bias"
+          ],
+          "evidence_class": "assumed-behavioral",
+          "omitted_contributions": [
+            "the capacitors' equivalent series resistance adds a step at the instant the load appears; it is not included, and it makes the dip deeper"
+          ],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ip5306_injoinic",
+              "mlcc_cctc_1206"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "lower_bound",
+        "knowledge_basis": {
+          "detail": "assumed",
+          "kind": "assumed"
+        },
+        "quantity": {
+          "value": 4.5834710743801645
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 4.4
+          },
+          "name": "output_holds_through_response_budget",
+          "source": "derived_requirement:ip5306_injoinic"
+        },
+        "scope": {
+          "identity": "VOUT",
+          "level": "net"
+        },
+        "significance": "power_margin",
+        "units": "V"
+      },
+      "id": "output_holds_through_response_budget",
+      "identity": "VOUT",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "assumed",
+          "kind": "assumed"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "with no charge on the latch's hold capacitor the latch device's gate is at the reference and the enable switch's gate is at its own source, so both are off"
+          ],
+          "evidence_class": "design-source",
+          "omitted_contributions": [
+            "whether the converter itself starts without a press is not established by its datasheet; this claim is about the port, which the enable switch holds off either way"
+          ],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ip5306_injoinic"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "upper_bound",
+        "knowledge_basis": {
+          "detail": "derived",
+          "kind": "derived"
+        },
+        "quantity": {
+          "value": 0.0
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.0
+          },
+          "name": "output_off_until_a_press",
+          "source": "user_requirement:BRIEF.md#functional-requirements"
+        },
+        "scope": {
+          "identity": "VOUT_SW",
+          "level": "board"
+        },
+        "significance": "functional_capability",
+        "units": "violations"
+      },
+      "id": "output_off_until_a_press",
+      "identity": "VOUT_SW",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "derived",
+          "kind": "derived"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the ambient is the maximum this board declares",
+            "the package's stated junction-to-ambient resistance applies to this board's copper"
+          ],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ao3415a_aos"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 59.20479302832244
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 150.0
+          },
+          "name": "output_switch_junction_below_maximum",
+          "source": "derived_requirement:ao3415a_aos"
+        },
+        "scope": {
+          "identity": "VOUT_SW",
+          "level": "net"
+        },
+        "significance": "thermal_margin",
+        "units": "degC"
+      },
+      "id": "output_switch_junction_below_maximum",
+      "identity": "VOUT_SW",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "usbc_hro"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.0
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.0
+          },
+          "name": "package_pins_match_land_pattern",
+          "source": "derived_requirement:usbc_hro"
+        },
+        "scope": {
+          "identity": "board",
+          "level": "board"
+        },
+        "significance": "interface_compliance",
+        "units": "violations"
+      },
+      "id": "package_pins_match_land_pattern",
+      "identity": "board",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [
+            "D5 was not judged here: an indicator's ratings are a forward current and a reverse voltage; both are judged by the indicator claims, and neither indicator on this board stands a rail across itself - each sits in series with the element that sets its current"
+          ],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "usb_type_c"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "upper_bound",
+        "knowledge_basis": {
+          "detail": "datasheet_limit",
+          "kind": "direct"
+        },
+        "quantity": {
+          "value": 0.0
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.0
+          },
+          "name": "parts_rated_above_rail_maximum",
+          "source": "derived_requirement:usb_type_c"
+        },
+        "scope": {
+          "identity": "VBUS",
+          "level": "board"
+        },
+        "significance": "device_rating",
+        "units": "violations"
+      },
+      "id": "parts_rated_above_rail_maximum",
+      "identity": "VBUS",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "datasheet_limit",
+          "kind": "direct"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "usbc_hro"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 2.6
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 5.0
+          },
+          "name": "port_connector_within_current_rating",
+          "source": "derived_requirement:usbc_hro"
+        },
+        "scope": {
+          "identity": "J1",
+          "level": "net"
+        },
+        "significance": "device_rating",
+        "units": "A"
+      },
+      "id": "port_connector_within_current_rating",
+      "identity": "J1",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "usbc_hro"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 2.0
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 5.0
+          },
+          "name": "port_connector_within_current_rating",
+          "source": "derived_requirement:usbc_hro"
+        },
+        "scope": {
+          "identity": "J2",
+          "level": "net"
+        },
+        "significance": "device_rating",
+        "units": "A"
+      },
+      "id": "port_connector_within_current_rating",
+      "identity": "J2",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [
+            "board copper between the converter and the receptacle is not included; it has not been laid out yet",
+            "the converter's regulated output is a typical figure with no tolerance stated, so the starting point of this subtraction is not bounded"
+          ],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ao3415a_aos",
+              "ip5306_injoinic",
+              "usb_type_c"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "lower_bound",
+        "knowledge_basis": {
+          "detail": "datasheet_limit",
+          "kind": "direct"
+        },
+        "quantity": {
+          "value": 5.003976034858387
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 4.75
+          },
+          "name": "port_voltage_above_source_minimum",
+          "source": "derived_requirement:usb_type_c"
+        },
+        "scope": {
+          "identity": "VOUT_SW",
+          "level": "net"
+        },
+        "significance": "interface_compliance",
+        "units": "V"
+      },
+      "id": "port_voltage_above_source_minimum",
+      "identity": "VOUT_SW",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "datasheet_limit",
+          "kind": "direct"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.0
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.0
+          },
+          "name": "probe_access_complete",
+          "source": "user_requirement:BRIEF.md#test-and-bring-up"
+        },
+        "scope": {
+          "identity": "board",
+          "level": "board"
+        },
+        "significance": "functional_capability",
+        "units": "violations"
+      },
+      "id": "probe_access_complete",
+      "identity": "board",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the conversion efficiency is at the declared floor, which is what makes the cell current worst case",
+            "the switch resistance rises with temperature at the rate the two tabulated junction temperatures give, applied to the gate drive the protection device actually provides"
+          ],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [
+            "the cell's own internal resistance is outside the board and is not included; it lowers the cell voltage under load and therefore raises this current"
+          ],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ao8810_aos",
+              "dw01a_puolop",
+              "ip5306_injoinic",
+              "swpa8040_sunlord"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "lower_bound",
+        "knowledge_basis": {
+          "detail": "datasheet_limit",
+          "kind": "direct"
+        },
+        "quantity": {
+          "value": 7.499777553083925
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 5.764705882352941
+          },
+          "name": "protection_does_not_trip_at_rated_output",
+          "source": "derived_requirement:dw01a_puolop"
+        },
+        "scope": {
+          "identity": "CELLN",
+          "level": "net"
+        },
+        "significance": "safety_margin",
+        "units": "A"
+      },
+      "id": "protection_does_not_trip_at_rated_output",
+      "identity": "CELLN",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "datasheet_limit",
+          "kind": "direct"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "dw01a_puolop",
+              "ip5306_injoinic"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 4.25
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 4.2
+          },
+          "name": "protection_overcharge_above_charge_target",
+          "source": "derived_requirement:dw01a_puolop"
+        },
+        "scope": {
+          "identity": "BAT",
+          "level": "net"
+        },
+        "significance": "safety_margin",
+        "units": "V"
+      },
+      "id": "protection_overcharge_above_charge_target",
+      "identity": "BAT",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "dw01a_puolop",
+              "ip5306_injoinic"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 2.6
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 3.0
+          },
+          "name": "protection_overdischarge_below_operating_floor",
+          "source": "derived_requirement:dw01a_puolop+ip5306_injoinic"
+        },
+        "scope": {
+          "identity": "BAT",
+          "level": "net"
+        },
+        "significance": "safety_margin",
+        "units": "V"
+      },
+      "id": "protection_overdischarge_below_operating_floor",
+      "identity": "BAT",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the ambient is the maximum this board declares",
+            "the package's stated junction-to-ambient resistance applies to this board's copper"
+          ],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [
+            "heat from the neighbouring packages is not added; each is treated as if it stood alone"
+          ],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ao8810_aos"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "upper_bound",
+        "knowledge_basis": {
+          "detail": "datasheet_limit",
+          "kind": "direct"
+        },
+        "quantity": {
+          "value": 51.09366236679753
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 150.0
+          },
+          "name": "protection_switch_junction_below_maximum",
+          "source": "derived_requirement:ao8810_aos"
+        },
+        "scope": {
+          "identity": "CELLN",
+          "level": "net"
+        },
+        "significance": "thermal_margin",
+        "units": "degC"
+      },
+      "id": "protection_switch_junction_below_maximum",
+      "identity": "CELLN",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "datasheet_limit",
+          "kind": "direct"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the packages share the cell current equally; they are the same part with their sources and drains tied together"
+          ],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ao8810_aos"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 1.3333333333333333
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 5.7
+          },
+          "name": "protection_switch_within_current_rating",
+          "source": "derived_requirement:ao8810_aos"
+        },
+        "scope": {
+          "identity": "CELLN",
+          "level": "net"
+        },
+        "significance": "device_rating",
+        "units": "A"
+      },
+      "id": "protection_switch_within_current_rating",
+      "identity": "CELLN",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [
+            "the controller's datasheet states a typical boost output current and a recommended maximum load current, and no minimum output current at any battery voltage; nothing in the frozen evidence bounds what the converter delivers at the bottom of the cell range"
+          ],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ip5306_injoinic"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "unknown",
+        "knowledge_basis": null,
+        "quantity": {},
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 2.0
+          },
+          "name": "rated_output_current_supported",
+          "source": "user_requirement:BRIEF.md#functional-requirements"
+        },
+        "scope": {
+          "identity": "VOUT",
+          "level": "net"
+        },
+        "significance": "functional_capability",
+        "units": "A"
+      },
+      "id": "rated_output_current_supported",
+      "identity": "VOUT",
+      "verdict": {
+        "basis": "unknown",
+        "exact": false,
+        "knowledge_basis": null,
+        "result": "UNKNOWN"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [
+            "the comparator inputs draw current from the reference node as well; their bias current is three orders below this and is not subtracted"
+          ],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "res_0603_uniroyal",
+              "tlv431_ti"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "lower_bound",
+        "knowledge_basis": {
+          "detail": "datasheet_limit",
+          "kind": "direct"
+        },
+        "quantity": {
+          "value": 0.0007341478828733937
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 8e-05
+          },
+          "name": "reference_bias_above_regulation_minimum",
+          "source": "derived_requirement:tlv431_ti"
+        },
+        "scope": {
+          "identity": "VREF",
+          "level": "net"
+        },
+        "significance": "interface_compliance",
+        "units": "A"
+      },
+      "id": "reference_bias_above_regulation_minimum",
+      "identity": "VREF",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "datasheet_limit",
+          "kind": "direct"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "res_0603_uniroyal",
+              "tlv431_ti"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.0009209112400601762
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.015
+          },
+          "name": "reference_bias_below_maximum",
+          "source": "derived_requirement:tlv431_ti"
+        },
+        "scope": {
+          "identity": "VREF",
+          "level": "net"
+        },
+        "significance": "interface_compliance",
+        "units": "A"
+      },
+      "id": "reference_bias_below_maximum",
+      "identity": "VREF",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "mlcc_yageo_cc0603",
+              "tlv431_ti"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 1e-07
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 1e-05
+          },
+          "name": "reference_load_capacitance_within_stable_range",
+          "source": "derived_requirement:tlv431_ti"
+        },
+        "scope": {
+          "identity": "VREF",
+          "level": "net"
+        },
+        "significance": "interface_compliance",
+        "units": "F"
+      },
+      "id": "reference_load_capacitance_within_stable_range",
+      "identity": "VREF",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "kt0603r_kento",
+              "lm393_onsemi",
+              "res_0603_uniroyal",
+              "tlv431_ti",
+              "usb_type_c"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.004462998782147719
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.5
+          },
+          "name": "rejected_source_current_below_default",
+          "source": "derived_requirement:usb_type_c"
+        },
+        "scope": {
+          "identity": "VBUS",
+          "level": "net"
+        },
+        "significance": "interface_compliance",
+        "units": "A"
+      },
+      "id": "rejected_source_current_below_default",
+      "identity": "VBUS",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "res_0603_uniroyal",
+              "usb_type_c"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.01
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.1
+          },
+          "name": "sink_termination_within_specification",
+          "source": "derived_requirement:usb_type_c"
+        },
+        "scope": {
+          "identity": "CC1",
+          "level": "net"
+        },
+        "significance": "interface_compliance",
+        "units": "fraction"
+      },
+      "id": "sink_termination_within_specification",
+      "identity": "CC1",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "res_0603_uniroyal",
+              "usb_type_c"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 0.01
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 0.1
+          },
+          "name": "sink_termination_within_specification",
+          "source": "derived_requirement:usb_type_c"
+        },
+        "scope": {
+          "identity": "CC2",
+          "level": "net"
+        },
+        "significance": "interface_compliance",
+        "units": "fraction"
+      },
+      "id": "sink_termination_within_specification",
+      "identity": "CC2",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the cell loses the declared fraction of the declared capacity per month",
+            "the pull-up on the button's node is counted as if the controller's button pin held that node at the reference, which is the most that path can take; the controller's datasheet states no bias for that pin, so the alternative reading - that it carries nothing - is not established"
+          ],
+          "evidence_class": "assumed-behavioral",
+          "omitted_contributions": [
+            "the controller's standby current is a typical figure and the datasheet states no maximum, so this sum is not bounded above",
+            "leakage through the switches and the capacitors is not included"
+          ],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "dw01a_puolop",
+              "ip5306_injoinic",
+              "res_0603_uniroyal"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "upper_bound",
+        "knowledge_basis": {
+          "detail": "assumed",
+          "kind": "assumed"
+        },
+        "quantity": {
+          "value": 6.035043504350436e-05
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 6.944444444444444e-05
+          },
+          "name": "standby_current_below_self_discharge",
+          "source": "user_requirement:BRIEF.md#power-and-rails"
+        },
+        "scope": {
+          "identity": "BAT",
+          "level": "net"
+        },
+        "significance": "power_margin",
+        "units": "A"
+      },
+      "id": "standby_current_below_self_discharge",
+      "identity": "BAT",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "assumed",
+          "kind": "assumed"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the stock figures are the ones frozen in components/jlcpcb.json, not today's"
+          ],
+          "evidence_class": "design-source",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 435.0
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 50.0
+          },
+          "name": "stock_covers_planned_build",
+          "source": "derived_requirement:jlcpcb_catalogue_snapshot"
+        },
+        "scope": {
+          "identity": "C21426",
+          "level": "board"
+        },
+        "significance": "manufacturability",
+        "units": "boards"
+      },
+      "id": "stock_covers_planned_build",
+      "identity": "C21426",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the gate capacitor is at the low end of its tolerance and retains only the declared fraction of that under bias"
+          ],
+          "evidence_class": "assumed-behavioral",
+          "omitted_contributions": [
+            "the device's own gate charge is not added; it lengthens this time rather than shortening it"
+          ],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "mlcc_yageo_cc0603",
+              "res_0603_uniroyal"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "lower_bound",
+        "knowledge_basis": {
+          "detail": "assumed",
+          "kind": "assumed"
+        },
+        "quantity": {
+          "value": 0.0007057425742574259
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 0.0005
+          },
+          "name": "switch_gate_slew_above_target",
+          "source": "derived_requirement:ao3415a_aos"
+        },
+        "scope": {
+          "identity": "OUT_G",
+          "level": "net"
+        },
+        "significance": "functional_capability",
+        "units": "s"
+      },
+      "id": "switch_gate_slew_above_target",
+      "identity": "OUT_G",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "assumed",
+          "kind": "assumed"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the gate capacitor is at the low end of its tolerance and retains only the declared fraction of that under bias"
+          ],
+          "evidence_class": "assumed-behavioral",
+          "omitted_contributions": [
+            "the device's own gate charge is not added; it lengthens this time rather than shortening it"
+          ],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "mlcc_yageo_cc0603",
+              "res_0603_uniroyal"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "lower_bound",
+        "knowledge_basis": {
+          "detail": "assumed",
+          "kind": "assumed"
+        },
+        "quantity": {
+          "value": 0.0006480000000000001
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 0.0005
+          },
+          "name": "switch_gate_slew_above_target",
+          "source": "derived_requirement:ao3415a_aos"
+        },
+        "scope": {
+          "identity": "VIN_G",
+          "level": "net"
+        },
+        "significance": "functional_capability",
+        "units": "s"
+      },
+      "id": "switch_gate_slew_above_target",
+      "identity": "VIN_G",
+      "verdict": {
+        "basis": "bound",
+        "exact": false,
+        "knowledge_basis": {
+          "detail": "assumed",
+          "kind": "assumed"
+        },
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ao3400a_aos",
+              "ao3415a_aos"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 5.1
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 8.0
+          },
+          "name": "switch_gate_within_rating",
+          "source": "derived_requirement:ao3415a_aos+ao3400a_aos+ao3401a_aos"
+        },
+        "scope": {
+          "identity": "OUT_G",
+          "level": "net"
+        },
+        "significance": "device_rating",
+        "units": "V"
+      },
+      "id": "switch_gate_within_rating",
+      "identity": "OUT_G",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ao3400a_aos",
+              "ao3415a_aos"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 4.35
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 12.0
+          },
+          "name": "switch_gate_within_rating",
+          "source": "derived_requirement:ao3415a_aos+ao3400a_aos+ao3401a_aos"
+        },
+        "scope": {
+          "identity": "SET",
+          "level": "net"
+        },
+        "significance": "device_rating",
+        "units": "V"
+      },
+      "id": "switch_gate_within_rating",
+      "identity": "SET",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "ao3400a_aos",
+              "ao3415a_aos"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 5.5
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 8.0
+          },
+          "name": "switch_gate_within_rating",
+          "source": "derived_requirement:ao3415a_aos+ao3400a_aos+ao3401a_aos"
+        },
+        "scope": {
+          "identity": "VIN_G",
+          "level": "net"
+        },
+        "significance": "device_rating",
+        "units": "V"
+      },
+      "id": "switch_gate_within_rating",
+      "identity": "VIN_G",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the highest reading a 1.5 A advertisement can produce is computed from the specification's own pull-up table at the extremes of supply, pull-up tolerance and termination tolerance"
+          ],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "lm393_onsemi",
+              "res_0603_uniroyal",
+              "tlv431_ti",
+              "usb_type_c"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 1.204640089763052
+        },
+        "requirement": {
+          "assertion": {
+            "op": ">=",
+            "value": 1.087501439484089
+          },
+          "name": "threshold_above_1_5A_advertisement",
+          "source": "derived_requirement:usb_type_c"
+        },
+        "scope": {
+          "identity": "VREF",
+          "level": "net"
+        },
+        "significance": "interface_compliance",
+        "units": "V"
+      },
+      "id": "threshold_above_1_5A_advertisement",
+      "identity": "VREF",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    },
+    {
+      "claim": {
+        "evidence": {
+          "applicability": {
+            "detail": "model applies to this scope",
+            "status": "applicable"
+          },
+          "assumptions": [
+            "the lowest reading a 3.0 A advertisement can produce is computed from the specification's own pull-up table at the extremes of supply, pull-up tolerance and termination tolerance"
+          ],
+          "evidence_class": "datasheet-behavioral",
+          "omitted_contributions": [],
+          "phenomenon": "device_electrical",
+          "provenance": {
+            "documents": [
+              "lm393_onsemi",
+              "res_0603_uniroyal",
+              "tlv431_ti",
+              "usb_type_c"
+            ],
+            "source": "components/parameters.json"
+          }
+        },
+        "kind": "claim",
+        "knowledge": "exact",
+        "knowledge_basis": null,
+        "quantity": {
+          "value": 1.275359910236948
+        },
+        "requirement": {
+          "assertion": {
+            "op": "<=",
+            "value": 1.5328764000000001
+          },
+          "name": "threshold_below_3_0A_advertisement",
+          "source": "derived_requirement:usb_type_c"
+        },
+        "scope": {
+          "identity": "VREF",
+          "level": "net"
+        },
+        "significance": "interface_compliance",
+        "units": "V"
+      },
+      "id": "threshold_below_3_0A_advertisement",
+      "identity": "VREF",
+      "verdict": {
+        "basis": "exact",
+        "exact": true,
+        "knowledge_basis": null,
+        "result": "PASS"
+      }
+    }
+  ],
+  "summary": {
+    "PASS": 58,
+    "UNKNOWN": 1
+  }
+}

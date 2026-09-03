@@ -1,0 +1,104 @@
+{
+  "analyses": [
+    {
+      "kind": "tran",
+      "step_s": 2.5e-07,
+      "stop_s": 0.0005
+    }
+  ],
+  "assumptions": {
+    "ASSERT": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the comparator's output going from open to its highest stated saturation voltage in a step; the real output takes a finite time, which only lengthens this"
+    },
+    "CGATE": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the gate capacitor at the low end of its tolerance and retaining only the declared fraction of that under bias, which is the case that slews fastest"
+    },
+    "RSER": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the series element at the low end of its tolerance"
+    },
+    "RUP": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the gate pull-up at the low end of its tolerance"
+    },
+    "VBUS": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the source at the top of the Type-C range, which is the case that moves the gate furthest and so fastest"
+    }
+  },
+  "description": "the input switch's gate from the instant the detector asserts, watched for the time the design requires the switch to take",
+  "elements": [
+    {
+      "kind": "vsource_dc",
+      "name": "VBUS",
+      "nodes": [
+        "bus",
+        "0"
+      ],
+      "value": 5.5
+    },
+    {
+      "kind": "resistor",
+      "name": "RUP",
+      "nodes": [
+        "bus",
+        "gate"
+      ],
+      "value": 99000.0
+    },
+    {
+      "kind": "capacitor",
+      "name": "CGATE",
+      "nodes": [
+        "bus",
+        "gate"
+      ],
+      "value": 7.200000000000001e-08
+    },
+    {
+      "kind": "resistor",
+      "name": "RSER",
+      "nodes": [
+        "gate",
+        "out"
+      ],
+      "value": 9900.0
+    },
+    {
+      "kind": "vsource_pulse",
+      "name": "ASSERT",
+      "nodes": [
+        "out",
+        "0"
+      ],
+      "pulse": {
+        "delay_s": 5e-06,
+        "fall_s": 5e-07,
+        "period_s": 0.002,
+        "rise_s": 5e-07,
+        "v1": 5.5,
+        "v2": 0.7,
+        "width_s": 0.001
+      }
+    }
+  ],
+  "measurements": [
+    {
+      "assertion": {
+        "op": ">=",
+        "value": 3.0
+      },
+      "kind": "tran_final_voltage",
+      "name": "gate_at_the_slew_target",
+      "node": "gate"
+    },
+    {
+      "kind": "tran_min_voltage",
+      "name": "gate_lowest_inside_the_window",
+      "node": "gate"
+    }
+  ],
+  "name": "input_switch_gate_slew_on_acceptance"
+}

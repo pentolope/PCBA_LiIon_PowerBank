@@ -1,0 +1,601 @@
+{
+  "archive": {
+    "allow": [
+      {
+        "file_function": "Copper,L1,Top",
+        "min_count": 1,
+        "require_payload": true
+      },
+      {
+        "file_function": "Copper,L2,Bot",
+        "min_count": 1,
+        "require_payload": true
+      },
+      {
+        "file_function": "Soldermask,Top",
+        "min_count": 1,
+        "require_payload": true
+      },
+      {
+        "file_function": "Soldermask,Bot",
+        "min_count": 1,
+        "require_payload": true
+      },
+      {
+        "file_function": "Legend,Top",
+        "min_count": 1,
+        "require_payload": true
+      },
+      {
+        "file_function": "Legend,Bot",
+        "min_count": 1,
+        "require_payload": false
+      },
+      {
+        "file_function": "Paste,Top",
+        "min_count": 1,
+        "require_payload": true
+      },
+      {
+        "file_function": "Profile,NP",
+        "min_count": 1,
+        "require_payload": true
+      },
+      {
+        "file_function": "Drill/plated",
+        "min_count": 1,
+        "require_payload": true
+      },
+      {
+        "file_function": "Drill/nonplated",
+        "min_count": 1,
+        "require_payload": true
+      },
+      {
+        "file_function": "JobFile",
+        "min_count": 1,
+        "require_payload": true
+      }
+    ],
+    "zip": "generated/release/liion_power_bank-fabrication.zip"
+  },
+  "artifacts": {
+    "bom": "generated/release/bom.csv",
+    "cpl": "generated/release/cpl.csv",
+    "cpl_fields": {
+      "designator": "Ref",
+      "rotation": "Rot",
+      "side": "Side",
+      "x": "PosX",
+      "y": "PosY"
+    },
+    "cpl_origin": {
+      "frame": "absolute page origin",
+      "offset_mm": [
+        0.0,
+        0.0
+      ]
+    },
+    "fabrication_manifest": "generated/release/fabrication.json",
+    "gerber_dir": "generated/release/gerbers",
+    "gerber_export_flags": [
+      "--layers",
+      "F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts",
+      "--no-protel-ext",
+      "--use-drill-file-origin",
+      "--subtract-soldermask"
+    ],
+    "position_tolerance_mm": 0.01,
+    "reports_dir": "generated/release/reports",
+    "validation_report": "generated/release/validation.json"
+  },
+  "assembly": {
+    "bom_fields": {
+      "LCSC": "LCSC Part #",
+      "designators": "Designator",
+      "footprint": "Footprint",
+      "quantity": "Quantity",
+      "value": "Comment"
+    },
+    "compared_part_fields": [
+      "LCSC",
+      "MPN",
+      "Manufacturer"
+    ],
+    "required_part_fields": [
+      "LCSC"
+    ],
+    "schematic_export": {
+      "dnp_label": "DNP",
+      "exclude_label": "ExcludeFromBOM",
+      "fields": [
+        "Reference",
+        "Value",
+        "Footprint",
+        "${DNP}",
+        "${EXCLUDE_FROM_BOM}",
+        "LCSC",
+        "MPN",
+        "Manufacturer"
+      ],
+      "flags": [],
+      "footprint_label": "Footprint",
+      "labels": [
+        "Reference",
+        "Value",
+        "Footprint",
+        "DNP",
+        "ExcludeFromBOM",
+        "LCSC",
+        "MPN",
+        "Manufacturer"
+      ],
+      "reference_label": "Reference",
+      "true_tokens": [
+        "1",
+        "true",
+        "yes",
+        "x",
+        "dnp"
+      ],
+      "value_label": "Value"
+    },
+    "schematic_fields": [
+      "LCSC",
+      "MPN",
+      "Manufacturer"
+    ]
+  },
+  "board_id": "liion_power_bank",
+  "board_origin_mm": [
+    0.0,
+    0.0
+  ],
+  "checks": {
+    "drc": {
+      "constraint_floor": {
+        "net_classes": {
+          "Default": {
+            "clearance": 0.15,
+            "track_width": 0.25,
+            "via_diameter": 0.6,
+            "via_drill": 0.3
+          },
+          "Power": {
+            "clearance": 0.15,
+            "track_width": 1.5,
+            "via_diameter": 0.8,
+            "via_drill": 0.4
+          }
+        },
+        "rules": {
+          "min_clearance": 0.15,
+          "min_copper_edge_clearance": 0.3,
+          "min_hole_clearance": 0.25,
+          "min_hole_to_hole": 0.25,
+          "min_through_hole_diameter": 0.25,
+          "min_track_width": 0.15,
+          "min_via_annular_width": 0.1,
+          "min_via_diameter": 0.45
+        }
+      },
+      "extra_flags": [],
+      "forbidden_severities": [
+        "ignore"
+      ],
+      "permitted_ignored_rules": []
+    },
+    "erc": {
+      "extra_flags": []
+    }
+  },
+  "connector_contracts": [
+    {
+      "id": "input_receptacle",
+      "pin_map": {
+        "A1": "GND",
+        "A12": "GND",
+        "A4": "VBUS",
+        "A5": "CC1",
+        "A9": "VBUS",
+        "B1": "GND",
+        "B12": "GND",
+        "B4": "VBUS",
+        "B5": "CC2",
+        "B9": "VBUS",
+        "SH": "GND"
+      },
+      "population": {
+        "dnp": false,
+        "exclude_from_bom": false
+      },
+      "reference": "J1",
+      "required_pitch_mm": 0.5,
+      "required_positions": 17,
+      "required_rows": 2,
+      "required_side": "front"
+    },
+    {
+      "id": "output_receptacle",
+      "pin_map": {
+        "A1": "GND",
+        "A12": "GND",
+        "A4": "VOUT_SW",
+        "A5": "OUT_CC1",
+        "A9": "VOUT_SW",
+        "B1": "GND",
+        "B12": "GND",
+        "B4": "VOUT_SW",
+        "B5": "OUT_CC2",
+        "B9": "VOUT_SW",
+        "SH": "GND"
+      },
+      "population": {
+        "dnp": false,
+        "exclude_from_bom": false
+      },
+      "reference": "J2",
+      "required_pitch_mm": 0.5,
+      "required_positions": 17,
+      "required_rows": 2,
+      "required_side": "front"
+    },
+    {
+      "id": "cell_connector",
+      "pin_map": {
+        "1": "BAT",
+        "2": "CELLN"
+      },
+      "population": {
+        "dnp": false,
+        "exclude_from_bom": false
+      },
+      "reference": "J3",
+      "required_pitch_mm": 3.96,
+      "required_positions": 2,
+      "required_rows": 1,
+      "required_side": "front"
+    }
+  ],
+  "connector_gender_tokens": {
+    "plug": [
+      "plug",
+      "header",
+      "male"
+    ],
+    "receptacle": [
+      "receptacle",
+      "socket",
+      "female"
+    ]
+  },
+  "constraint_version": "layout-stage-2026-09-02",
+  "documentation_globs": [
+    "BRIEF.md"
+  ],
+  "fixture": {
+    "attributes_file": ".gitattributes"
+  },
+  "geometry_profile": {
+    "tolerances": {
+      "clearance_match_mm": {
+        "units": "mm",
+        "value": 0.01
+      },
+      "contact_mm": {
+        "units": "mm",
+        "value": 1e-06
+      },
+      "coordinate_match_mm": {
+        "units": "mm",
+        "value": 0.002
+      },
+      "dimension_match_mm": {
+        "units": "mm",
+        "value": 0.002
+      },
+      "layer_symmetric_difference_mm2": {
+        "units": "mm2",
+        "value": 0.05
+      },
+      "polygon_chord_error_mm": {
+        "units": "mm",
+        "value": 0.001
+      },
+      "rotation_match_deg": {
+        "units": "deg",
+        "value": 0.1
+      },
+      "waiver_location_mm": {
+        "units": "mm",
+        "value": 0.001
+      }
+    },
+    "version": "geom-1"
+  },
+  "net_topology": {
+    "rules": [
+      {
+        "id": "CONVERTER_SWITCH_NODE",
+        "load_pad_regex": "^L1\\.1$",
+        "max_vias_per_net": 0,
+        "net_regex": "^SW$",
+        "permitted_layers": [
+          "F.Cu"
+        ],
+        "source_pad_regex": "^U1\\.7$"
+      },
+      {
+        "id": "PROTECTION_DRAINS",
+        "load_pad_regex": "^Q[3-5]\\.8$",
+        "max_vias_per_net": 0,
+        "net_regex": "^PROT_D\\d$",
+        "permitted_layers": [
+          "F.Cu"
+        ],
+        "source_pad_regex": "^Q[3-5]\\.1$"
+      }
+    ]
+  },
+  "placement_rules": [
+    {
+      "count": 2,
+      "id": "RECEPTACLES",
+      "reference_regex": "^J[12]$"
+    },
+    {
+      "count": 3,
+      "id": "PROTECTION_SWITCHES",
+      "reference_regex": "^Q[3-5]$"
+    },
+    {
+      "count": 4,
+      "id": "STATE_OF_CHARGE_INDICATORS",
+      "reference_regex": "^D[1-4]$"
+    },
+    {
+      "count": 3,
+      "id": "INPUT_CLAMPS",
+      "reference_regex": "^D[6-8]$"
+    },
+    {
+      "count": 3,
+      "id": "OUTPUT_CLAMPS",
+      "reference_regex": "^D(9|10|11)$"
+    },
+    {
+      "count": 11,
+      "id": "PROBES",
+      "reference_regex": "^TP([1-9]|1[01])$"
+    },
+    {
+      "count": 4,
+      "id": "MOUNTING",
+      "reference_regex": "^H[1-4]$"
+    }
+  ],
+  "project_root": "..",
+  "release_generation": {
+    "archive": {
+      "zip": "liion_power_bank-fabrication.zip"
+    },
+    "bom": {
+      "field_map": {
+        "LCSC": "LCSC Part #",
+        "designators": "Designator",
+        "footprint": "Footprint",
+        "quantity": "Quantity",
+        "value": "Comment"
+      },
+      "fields": [
+        "${QUANTITY}",
+        "Reference",
+        "Value",
+        "Footprint",
+        "LCSC"
+      ],
+      "flags": [
+        "--exclude-dnp",
+        "--ref-range-delimiter",
+        ""
+      ],
+      "group_by": [
+        "Value",
+        "Footprint",
+        "LCSC"
+      ],
+      "labels": [
+        "Quantity",
+        "Designator",
+        "Comment",
+        "Footprint",
+        "LCSC Part #"
+      ],
+      "output": "bom.csv"
+    },
+    "cpl": {
+      "field_map": {
+        "designator": "Ref",
+        "rotation": "Rot",
+        "side": "Side",
+        "x": "PosX",
+        "y": "PosY"
+      },
+      "flags": [
+        "--format",
+        "csv",
+        "--units",
+        "mm",
+        "--side",
+        "both",
+        "--exclude-dnp"
+      ],
+      "origin": {
+        "frame": "absolute page origin",
+        "offset_mm": [
+          0.0,
+          0.0
+        ]
+      },
+      "output": "cpl.csv"
+    },
+    "drc": {
+      "output": "drc.json"
+    },
+    "drill": {
+      "flags": [
+        "--format",
+        "excellon",
+        "--excellon-separate-th",
+        "--drill-origin",
+        "plot"
+      ]
+    },
+    "erc": {
+      "output": "erc.json"
+    },
+    "lock_file_globs": [
+      "*.lck",
+      "~*.lck",
+      ".#*",
+      "*-lock",
+      "*.kicad_prl-lock"
+    ]
+  },
+  "release_profile": {
+    "id": "jlcpcb-2layer-assembled",
+    "mandatory_gates": [
+      "ARCH.CONTENTS",
+      "ARCH.PROVENANCE",
+      "BOM.NATIVE_PARITY",
+      "CONTRACT.CONNECTOR",
+      "CONTRACT.PLACEMENT",
+      "CPL.NATIVE_PARITY",
+      "DRC.AUTHORITATIVE",
+      "DRC.CONSTRAINT_FLOOR",
+      "DRC.NO_SUPPRESSED_RULES",
+      "ERC.AUTHORITATIVE",
+      "NET.TOPOLOGY",
+      "PROV.REPORT_FRESHNESS",
+      "ROUTE.GEOMETRY_HYGIENE",
+      "ROUTE.PROVENANCE",
+      "ROUTE.TINY_SEGMENTS",
+      "SIM.SCENARIOS",
+      "SIM.STAGE_COVERAGE",
+      "STACK.GERBER_PARITY",
+      "STACK.NATIVE_VS_MANIFEST",
+      "VIA.ANNULUS_MASK_OVERLAP",
+      "VIA.IN_PAD_CONTACT",
+      "VIA.MASK_CLEARANCE_TARGET"
+    ],
+    "required_evidence": [
+      "constraints/requirements.json",
+      "evidence/index.json",
+      "fab/selection.json",
+      "generated/requirements.json",
+      "generated/routing.json"
+    ]
+  },
+  "reports": {
+    "closure_field": "source_closure_sha256",
+    "date_field": "date",
+    "files": [
+      "generated/release/reports/erc.json",
+      "generated/release/reports/drc.json"
+    ],
+    "require_source_hash": true,
+    "source_closure": [
+      "*.kicad_sch",
+      "*.kicad_pcb",
+      "*.kicad_pro",
+      "*.kicad_dru",
+      "constraints/*.json",
+      "sim/*.json",
+      "fab/*.json",
+      "components/*.json",
+      "evidence/index.json"
+    ],
+    "source_field": "source",
+    "source_hash_field": "source_sha256",
+    "tolerance_seconds": 0
+  },
+  "routing": {
+    "acceptance_gates": [
+      "ERC.AUTHORITATIVE",
+      "DRC.AUTHORITATIVE",
+      "DRC.NO_SUPPRESSED_RULES",
+      "DRC.CONSTRAINT_FLOOR",
+      "NET.TOPOLOGY",
+      "ROUTE.GEOMETRY_HYGIENE",
+      "ROUTE.TINY_SEGMENTS",
+      "ROUTE.PROVENANCE",
+      "CONTRACT.PLACEMENT",
+      "CONTRACT.CONNECTOR",
+      "STACK.NATIVE_VS_MANIFEST",
+      "VIA.ANNULUS_MASK_OVERLAP",
+      "VIA.IN_PAD_CONTACT",
+      "SIM.SCENARIOS",
+      "SIM.STAGE_COVERAGE"
+    ],
+    "hygiene": {
+      "forbid_dangling": true,
+      "forbid_duplicate_geometry": true,
+      "forbid_net_crossings": true
+    },
+    "min_segment_mm": 0.1,
+    "provenance": "generated/routing.json",
+    "short_segment_justification": {
+      "allow_pad_or_via_entry": true
+    }
+  },
+  "schema_version": 2,
+  "simulation": {
+    "required_stages": [
+      "pre_layout"
+    ],
+    "stages": {
+      "pre_layout": [
+        "sim/pre_layout_advertisement.json",
+        "sim/pre_layout_button_filter.json",
+        "sim/pre_layout_gate_slew.json",
+        "sim/pre_layout_hot_plug.json",
+        "sim/pre_layout_input_switch.json",
+        "sim/pre_layout_latch_set.json",
+        "sim/pre_layout_output_hold.json"
+      ]
+    }
+  },
+  "sources": {
+    "pcb": "liion_power_bank.kicad_pcb",
+    "project": "liion_power_bank.kicad_pro",
+    "schematic": "liion_power_bank.kicad_sch"
+  },
+  "stackup": {
+    "expected": [
+      {
+        "plane_net": "BAT",
+        "role": "plane"
+      },
+      {
+        "plane_net": "GND",
+        "role": "plane"
+      }
+    ]
+  },
+  "tools": {
+    "kicad_cli": "kicad-cli"
+  },
+  "via_mask": {
+    "contact_semantics": "annulus_contacts counts zero-distance tangency as contact; annulus_strict_overlaps counts positive shared area only",
+    "design_target_mm": 0.15,
+    "mask_dam_rule": "contact",
+    "metric": "annulus_to_opening_mm",
+    "pad_contact": {
+      "populated_pad_attributes": [
+        "SMD"
+      ],
+      "require_paste": true
+    }
+  },
+  "waivers": []
+}

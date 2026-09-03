@@ -1,0 +1,1369 @@
+(kicad_symbol_lib
+	(version 20251024)
+	(generator "liion-power-bank-design-source")
+	(generator_version "10.0")
+	(symbol "AO3415A"
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "Q"
+			(at 0 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AO3415A"
+			(at 0 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 0 12.70 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/4fe5043a2c3149108be834737fd7b448.pdf"
+			(at 0 10.16 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "-20 V P-channel MOSFET"
+			(at 0 7.62 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "SOT?23*"
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "AO3415A_0_1"
+			(rectangle
+				(start -6.35 3.81)
+				(end 6.35 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "AO3415A_1_1"
+			(pin input line
+				(at -8.89 1.27 0)
+				(length 2.54)
+				(name "G"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "1"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin passive line
+				(at -3.81 6.35 270)
+				(length 2.54)
+				(name "S"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "2"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin passive line
+				(at -3.81 -6.35 90)
+				(length 2.54)
+				(name "D"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "3"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+		)
+	)
+	(symbol "AO8810"
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "Q"
+			(at 0 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AO8810"
+			(at 0 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-8_3x3mm_P0.65mm"
+			(at 0 12.70 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/26d8ed0c631e45aaacbd4f8082ccbf0c.pdf"
+			(at 0 10.16 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "20 V common-drain dual N-channel MOSFET"
+			(at 0 7.62 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "TSSOP*3x3mm*P0.65mm*"
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "AO8810_0_1"
+			(rectangle
+				(start -6.35 6.35)
+				(end 6.35 -6.35)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "AO8810_1_1"
+			(pin input line
+				(at -8.89 3.81 0)
+				(length 2.54)
+				(name "G1"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "4"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin input line
+				(at -8.89 1.27 0)
+				(length 2.54)
+				(name "G2"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "5"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin passive line
+				(at -8.89 -1.27 0)
+				(length 2.54)
+				(name "S1"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "2"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin passive line
+				(at -8.89 -3.81 0)
+				(length 2.54)
+				(name "S1"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "3"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin passive line
+				(at 8.89 3.81 180)
+				(length 2.54)
+				(name "S2"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "6"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin passive line
+				(at 8.89 1.27 180)
+				(length 2.54)
+				(name "S2"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "7"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin passive line
+				(at 8.89 -1.27 180)
+				(length 2.54)
+				(name "D"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "1"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin passive line
+				(at 8.89 -3.81 180)
+				(length 2.54)
+				(name "D"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "8"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+		)
+	)
+	(symbol "DW01A"
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at 0 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DW01A"
+			(at 0 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+			(at 0 12.70 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/0d2b2b5e8d1207bf276387cb4ff3a495.pdf"
+			(at 0 10.16 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "One-cell lithium-ion protection controller"
+			(at 0 7.62 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "SOT?23*"
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "DW01A_0_1"
+			(rectangle
+				(start -6.35 5.08)
+				(end 6.35 -5.08)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "DW01A_1_1"
+			(pin power_in line
+				(at -8.89 2.54 0)
+				(length 2.54)
+				(name "VCC"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "5"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin input line
+				(at -8.89 0.00 0)
+				(length 2.54)
+				(name "VM"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "2"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin input line
+				(at -8.89 -2.54 0)
+				(length 2.54)
+				(name "TD"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "4"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin output line
+				(at 8.89 2.54 180)
+				(length 2.54)
+				(name "OD"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "1"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin output line
+				(at 8.89 0.00 180)
+				(length 2.54)
+				(name "OC"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "3"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin power_in line
+				(at -3.81 -7.62 90)
+				(length 2.54)
+				(name "GND"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "6"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+		)
+	)
+	(symbol "IP5306"
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at 0 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "IP5306"
+			(at 0 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LiIonPowerBank:ESOP-8_3.9x4.9mm_P1.27mm_EP2.09x2.09mm"
+			(at 0 12.70 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/309666add984eaea02a8f06d99102496.pdf"
+			(at 0 10.16 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power bank controller: switching charger, boost converter and state-of-charge indicator driver"
+			(at 0 7.62 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "IP5306_0_1"
+			(rectangle
+				(start -6.35 7.62)
+				(end 6.35 -7.62)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "IP5306_1_1"
+			(pin power_in line
+				(at -8.89 5.08 0)
+				(length 2.54)
+				(name "VIN"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "1"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin power_in line
+				(at -8.89 2.54 0)
+				(length 2.54)
+				(name "BAT"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "6"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin passive line
+				(at 8.89 5.08 180)
+				(length 2.54)
+				(name "SW"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "7"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin power_out line
+				(at 8.89 2.54 180)
+				(length 2.54)
+				(name "VOUT"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "8"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin output line
+				(at 8.89 0.00 180)
+				(length 2.54)
+				(name "LED1"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "2"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin output line
+				(at 8.89 -2.54 180)
+				(length 2.54)
+				(name "LED2"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "3"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin output line
+				(at 8.89 -5.08 180)
+				(length 2.54)
+				(name "LED3"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "4"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin input line
+				(at -8.89 0.00 0)
+				(length 2.54)
+				(name "KEY"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "5"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin power_in line
+				(at -3.81 -10.16 90)
+				(length 2.54)
+				(name "GND"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "9"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+		)
+	)
+	(symbol "LM393"
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at 0 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LM393"
+			(at 0 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(at 0 12.70 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/0a7f69005bd54ef2bf3e8b1a5a2f8965.pdf"
+			(at 0 10.16 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dual differential comparator with open-collector outputs"
+			(at 0 7.62 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm*"
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "LM393_0_1"
+			(rectangle
+				(start -6.35 6.35)
+				(end 6.35 -6.35)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "LM393_1_1"
+			(pin input line
+				(at -8.89 3.81 0)
+				(length 2.54)
+				(name "INA+"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "3"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin input line
+				(at -8.89 1.27 0)
+				(length 2.54)
+				(name "INA-"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "2"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin input line
+				(at -8.89 -1.27 0)
+				(length 2.54)
+				(name "INB+"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "5"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin input line
+				(at -8.89 -3.81 0)
+				(length 2.54)
+				(name "INB-"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "6"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin open_collector line
+				(at 8.89 3.81 180)
+				(length 2.54)
+				(name "OUTA"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "1"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin open_collector line
+				(at 8.89 1.27 180)
+				(length 2.54)
+				(name "OUTB"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "7"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin power_in line
+				(at -3.81 8.89 270)
+				(length 2.54)
+				(name "V+"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "8"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin power_in line
+				(at -3.81 -8.89 90)
+				(length 2.54)
+				(name "V-"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "4"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+		)
+	)
+	(symbol "SW_Push_4P"
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "SW"
+			(at 0 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 0 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LiIonPowerBank:SW_TS-1187A_5.1x5.1mm"
+			(at 0 12.70 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/56c8799ae5193945a16a1ffbe378246a.pdf"
+			(at 0 10.16 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Momentary push button, one throw, two pads per terminal"
+			(at 0 7.62 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "SW_Push_4P_0_1"
+			(rectangle
+				(start -6.35 3.81)
+				(end 6.35 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "SW_Push_4P_1_1"
+			(pin passive line
+				(at -8.89 1.27 0)
+				(length 2.54)
+				(name "A"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "1"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin passive line
+				(at -8.89 -1.27 0)
+				(length 2.54)
+				(name "A"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "2"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin passive line
+				(at 8.89 1.27 180)
+				(length 2.54)
+				(name "B"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "3"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin passive line
+				(at 8.89 -1.27 180)
+				(length 2.54)
+				(name "B"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "4"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+		)
+	)
+	(symbol "TLV431A"
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at 0 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLV431A"
+			(at 0 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 0 12.70 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/datasheet/pdf/1f0b6b30afca4cb79b547decc5f49aec.pdf"
+			(at 0 10.16 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "1.24 V adjustable precision shunt regulator"
+			(at 0 7.62 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "SOT?23*"
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "TLV431A_0_1"
+			(rectangle
+				(start -6.35 3.81)
+				(end 6.35 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "TLV431A_1_1"
+			(pin input line
+				(at -8.89 1.27 0)
+				(length 2.54)
+				(name "REF"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "1"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin passive line
+				(at -3.81 6.35 270)
+				(length 2.54)
+				(name "K"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "2"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin passive line
+				(at -3.81 -6.35 90)
+				(length 2.54)
+				(name "A"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "3"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+		)
+	)
+	(symbol "TPD1E10B06"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "D"
+			(at 0 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TPD1E10B06"
+			(at 0 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LiIonPowerBank:TI_X1SON-2_1.0x0.6mm_P0.65mm"
+			(at 0 12.70 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd1e10b06.pdf"
+			(at 0 10.16 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Single-line 6 V ESD clamp, unidirectional, X1SON-2"
+			(at 0 7.62 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "TPD1E10B06_0_1"
+			(polyline
+				(pts
+					(xy -1.27 1.27) (xy -1.27 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "TPD1E10B06_1_1"
+			(pin passive line
+				(at -3.81 0.00 0)
+				(length 2.54)
+				(name "K"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "1"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+			(pin passive line
+				(at 3.81 0.00 180)
+				(length 2.54)
+				(name "A"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+				(number "2"
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+				)
+			)
+		)
+	)
+)

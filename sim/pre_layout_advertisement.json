@@ -1,0 +1,129 @@
+{
+  "analyses": [
+    {
+      "kind": "op"
+    }
+  ],
+  "assumptions": {
+    "RDSTRONG": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "this board's termination at the low end of its tolerance, which lowers the reading again"
+    },
+    "RDWEAK": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "this board's termination at the high end of its tolerance, which raises the reading again"
+    },
+    "RPSTRONG": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "a 3.0 A advertisement at the high end of its tolerance, which lowers what a sink reads"
+    },
+    "RPWEAK": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "a 1.5 A advertisement as the specification's own resistor value at the low end of its tolerance, which is the value that raises what a sink reads"
+    },
+    "VHIGH": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "a source at the top of the range the specification permits a resistor pull-up to be referenced to"
+    },
+    "VLOW": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "a source at the bottom of that range"
+    },
+    "VSHUNT": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the shunt reference as an ideal source at the lowest voltage its datasheet permits over temperature; the assertions carry the comparator's own offset"
+    }
+  },
+  "description": "what this board's termination reads from a 1.5 A advertisement at every tolerance that raises the reading, and from a 3.0 A advertisement at every tolerance that lowers it, against the reference they are compared with",
+  "elements": [
+    {
+      "kind": "vsource_dc",
+      "name": "VHIGH",
+      "nodes": [
+        "hi",
+        "0"
+      ],
+      "value": 5.5
+    },
+    {
+      "kind": "resistor",
+      "name": "RPWEAK",
+      "nodes": [
+        "hi",
+        "ccweak"
+      ],
+      "value": 20900.0
+    },
+    {
+      "kind": "resistor",
+      "name": "RDWEAK",
+      "nodes": [
+        "ccweak",
+        "0"
+      ],
+      "value": 5151.0
+    },
+    {
+      "kind": "vsource_dc",
+      "name": "VLOW",
+      "nodes": [
+        "lo",
+        "0"
+      ],
+      "value": 4.75
+    },
+    {
+      "kind": "resistor",
+      "name": "RPSTRONG",
+      "nodes": [
+        "lo",
+        "ccstrong"
+      ],
+      "value": 10500.0
+    },
+    {
+      "kind": "resistor",
+      "name": "RDSTRONG",
+      "nodes": [
+        "ccstrong",
+        "0"
+      ],
+      "value": 5049.0
+    },
+    {
+      "kind": "vsource_dc",
+      "name": "VSHUNT",
+      "nodes": [
+        "ref",
+        "0"
+      ],
+      "value": 1.215
+    }
+  ],
+  "measurements": [
+    {
+      "assertion": {
+        "op": "<=",
+        "value": 1.2060000000000002
+      },
+      "kind": "op_voltage",
+      "name": "weak_advertisement_below_reference",
+      "node": "ccweak"
+    },
+    {
+      "assertion": {
+        "op": ">=",
+        "value": 1.2739999999999998
+      },
+      "kind": "op_voltage",
+      "name": "strong_advertisement_above_reference",
+      "node": "ccstrong"
+    },
+    {
+      "kind": "op_voltage",
+      "name": "reference_level",
+      "node": "ref"
+    }
+  ],
+  "name": "advertisement_thresholds_at_both_extremes"
+}

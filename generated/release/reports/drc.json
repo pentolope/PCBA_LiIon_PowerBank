@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schemas.kicad.org/drc.v1.json",
+  "coordinate_units": "mm",
+  "date": "2026-09-02T21:23:01",
+  "ignored_checks": [],
+  "included_severities": [
+    "error",
+    "warning",
+    "exclusion"
+  ],
+  "kicad_version": "10.0.5",
+  "schematic_parity": [],
+  "source": "liion_power_bank.kicad_pcb",
+  "unconnected_items": [],
+  "violations": [],
+  "source_sha256": "93416fe7794d938e4199cabadec93cd810fb1c1d26940c24a5ed99df89b7bc0d",
+  "source_closure_sha256": "b1d1a3ea65549d4743e3033d565b18d70da487bd2c4eb62036998d8c4e98bc25"
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schemas.kicad.org/erc.v1.json",
+  "coordinate_units": "mm",
+  "date": "2026-09-02T21:22:58",
+  "ignored_checks": [],
+  "included_severities": [
+    "error",
+    "warning",
+    "exclusion"
+  ],
+  "kicad_version": "10.0.5",
+  "sheets": [
+    {
+      "path": "/",
+      "uuid_path": "/fdcbce6b-273d-5e93-9058-2008e0424f46",
+      "violations": []
+    }
+  ],
+  "source": "liion_power_bank.kicad_sch",
+  "source_sha256": "e98d86e6e9936ba0d3c723ff2f3c6679470cea8de59ad29a82997c404f484349",
+  "source_closure_sha256": "b1d1a3ea65549d4743e3033d565b18d70da487bd2c4eb62036998d8c4e98bc25"
+}

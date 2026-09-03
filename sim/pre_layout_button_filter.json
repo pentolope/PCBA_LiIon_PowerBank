@@ -1,0 +1,73 @@
+{
+  "analyses": [
+    {
+      "kind": "tran",
+      "step_s": 1.25e-05,
+      "stop_s": 0.05
+    }
+  ],
+  "assumptions": {
+    "BUTTON": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the button as an ideal switch, and the node it pulls down as starting at the top of the cell rail"
+    },
+    "CFILTER": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the filter capacitor at its nominal value with no derating, which is the largest it can be and so the slowest this settles"
+    },
+    "RSERIES": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the series element at the high end of its tolerance"
+    }
+  },
+  "description": "the controller's button node when the button closes, watched for the window the controller ignores a press shorter than",
+  "elements": [
+    {
+      "kind": "vsource_pulse",
+      "name": "BUTTON",
+      "nodes": [
+        "btn",
+        "0"
+      ],
+      "pulse": {
+        "delay_s": 0.0005,
+        "fall_s": 5e-05,
+        "period_s": 0.2,
+        "rise_s": 5e-05,
+        "v1": 4.35,
+        "v2": 0.0,
+        "width_s": 0.1
+      }
+    },
+    {
+      "kind": "resistor",
+      "name": "RSERIES",
+      "nodes": [
+        "btn",
+        "key"
+      ],
+      "value": 10100.0
+    },
+    {
+      "kind": "capacitor",
+      "name": "CFILTER",
+      "nodes": [
+        "key",
+        "0"
+      ],
+      "value": 1e-07
+    }
+  ],
+  "measurements": [
+    {
+      "assertion": {
+        "op": "<=",
+        "value": 0.2175
+      },
+      "kind": "tran_final_voltage",
+      "name": "button_node_at_the_ignore_window",
+      "node": "key"
+    }
+  ],
+  "name": "button_filter_settles_inside_the_ignore_window"
+}

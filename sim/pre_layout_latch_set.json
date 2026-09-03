@@ -1,0 +1,104 @@
+{
+  "analyses": [
+    {
+      "kind": "tran",
+      "step_s": 1.25e-05,
+      "stop_s": 0.05
+    }
+  ],
+  "assumptions": {
+    "CHOLD": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the hold capacitor at the low end of its tolerance and retaining only the declared fraction of that under bias; less capacitance charges faster, so this is the optimistic direction for this measurement and the pessimistic one for the hold time, which is claimed analytically instead"
+    },
+    "PRESS": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the button and the device it drives as an ideal switch onto the cell rail at the lowest voltage the converter operates from"
+    },
+    "RHOLD": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the latch's hold resistor at the low end of its tolerance, which is the value that charges the node to the lowest level"
+    },
+    "RSET": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the latch's series element at the high end of its tolerance"
+    },
+    "RSETFET": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "that device as its conduction resistance at the weakest gate drive its datasheet tabulates"
+    }
+  },
+  "description": "the enable latch's gate over one press of the shortest duration the controller does not ignore, at the lowest cell voltage",
+  "elements": [
+    {
+      "kind": "vsource_pulse",
+      "name": "PRESS",
+      "nodes": [
+        "src",
+        "0"
+      ],
+      "pulse": {
+        "delay_s": 0.0005,
+        "fall_s": 5e-05,
+        "period_s": 0.2,
+        "rise_s": 5e-05,
+        "v1": 0.0,
+        "v2": 3.0,
+        "width_s": 0.1
+      }
+    },
+    {
+      "kind": "resistor",
+      "name": "RSETFET",
+      "nodes": [
+        "src",
+        "drain"
+      ],
+      "value": 0.085
+    },
+    {
+      "kind": "resistor",
+      "name": "RSET",
+      "nodes": [
+        "drain",
+        "set"
+      ],
+      "value": 10100.0
+    },
+    {
+      "kind": "resistor",
+      "name": "RHOLD",
+      "nodes": [
+        "set",
+        "0"
+      ],
+      "value": 990000.0
+    },
+    {
+      "kind": "capacitor",
+      "name": "CHOLD",
+      "nodes": [
+        "set",
+        "0"
+      ],
+      "value": 1.089e-06
+    }
+  ],
+  "measurements": [
+    {
+      "assertion": {
+        "op": ">=",
+        "value": 1.45
+      },
+      "kind": "tran_final_voltage",
+      "name": "latch_gate_at_the_end_of_the_press",
+      "node": "set"
+    },
+    {
+      "kind": "tran_max_voltage",
+      "name": "latch_gate_peak",
+      "node": "set"
+    }
+  ],
+  "name": "enable_latch_set_by_the_shortest_recognised_press"
+}

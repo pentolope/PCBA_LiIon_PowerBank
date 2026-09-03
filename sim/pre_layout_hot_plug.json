@@ -1,0 +1,117 @@
+{
+  "analyses": [
+    {
+      "kind": "tran",
+      "step_s": 2e-09,
+      "stop_s": 4e-05
+    }
+  ],
+  "assumptions": {
+    "CBUS": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the input capacitance at the low end of its tolerance and retaining only the declared fraction of that under bias, which is the case that rings highest"
+    },
+    "CDAMP": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the damper's capacitance on the same basis"
+    },
+    "LCABLE": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the cable and the connector as one inductance, a declared budget rather than a measurement"
+    },
+    "RDAMP": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the damper's resistance at the high end of its tolerance"
+    },
+    "RDETECT": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "everything the detector draws from the input, as one resistance; the switch is open at this instant so the charger is not connected"
+    },
+    "SOURCE": {
+      "accepted_for_design_decision": true,
+      "stands_in_for": "the source as an ideal step to the top of the Type-C range, which is the largest step a compliant source can present"
+    }
+  },
+  "description": "a live source connected through a cable's inductance to the board's input capacitance, with the damper the design carries",
+  "elements": [
+    {
+      "kind": "vsource_pulse",
+      "name": "SOURCE",
+      "nodes": [
+        "src",
+        "0"
+      ],
+      "pulse": {
+        "delay_s": 2.0000000000000003e-06,
+        "fall_s": 1e-08,
+        "period_s": 0.00016,
+        "rise_s": 1e-08,
+        "v1": 0.0,
+        "v2": 5.5,
+        "width_s": 8e-05
+      }
+    },
+    {
+      "kind": "inductor",
+      "name": "LCABLE",
+      "nodes": [
+        "src",
+        "bus"
+      ],
+      "value": 1e-06
+    },
+    {
+      "kind": "capacitor",
+      "name": "CBUS",
+      "nodes": [
+        "bus",
+        "0"
+      ],
+      "value": 7.200000000000001e-08
+    },
+    {
+      "kind": "resistor",
+      "name": "RDAMP",
+      "nodes": [
+        "bus",
+        "damp"
+      ],
+      "value": 2.3100000000000005
+    },
+    {
+      "kind": "capacitor",
+      "name": "CDAMP",
+      "nodes": [
+        "damp",
+        "0"
+      ],
+      "value": 9.68e-06
+    },
+    {
+      "kind": "resistor",
+      "name": "RDETECT",
+      "nodes": [
+        "bus",
+        "0"
+      ],
+      "value": 4462.336530078466
+    }
+  ],
+  "measurements": [
+    {
+      "assertion": {
+        "op": "<=",
+        "value": 6.0
+      },
+      "kind": "tran_max_voltage",
+      "name": "input_peak",
+      "node": "bus"
+    },
+    {
+      "kind": "tran_final_voltage",
+      "name": "input_settled",
+      "node": "bus"
+    }
+  ],
+  "name": "hot_plug_ring_at_the_input_receptacle"
+}
