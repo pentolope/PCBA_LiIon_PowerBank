@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "generated_utc": "2026-09-03T03:23:14.940174+00:00",
-  "source_closure_sha256": "b1d1a3ea65549d4743e3033d565b18d70da487bd2c4eb62036998d8c4e98bc25",
+  "generated_utc": "2026-09-03T07:16:23.079483+00:00",
+  "source_closure_sha256": "883077c93f0ca3828c7bd43d2ff775dee65fe136b15aaa5e17cb91177e06393a",
   "manifest": {
     "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/board/manifest.json",
-    "sha256": "570f1e52d9ca8c377a62dcbeba70b8c6bd8864277143bea27b719e17e636ff31",
+    "sha256": "38c7255d77345ebf8d389b5f12f523d42f25f72be4b304f73e9682f3e57b2b08",
     "board_id": "liion_power_bank",
     "constraint_version": "layout-stage-2026-09-02"
   },
@@ -13,7 +13,7 @@
     "kicad_cli": "/usr/bin/kicad-cli",
     "validation_implementation": {
       "toolkit_root": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/tooling/PCBA_AutoDesignAndTest",
-      "commit": "3516aa6fceecbcb8bcd5147ac4b6fabe5524512e",
+      "commit": "f4d39047427f111b5c9f58b884e400c7536f05e0",
       "working_tree_dirty": false,
       "detail": "git HEAD of the toolkit checkout that executed this validation"
     },
@@ -151,7 +151,7 @@
           "units": "file function",
           "kind": "policy",
           "manifest_key": "archive.allow",
-          "provenance": "manifest.json#archive.allow@570f1e52d9ca"
+          "provenance": "manifest.json#archive.allow@38c7255d7734"
         }
       },
       "finding_count": 0,
@@ -160,7 +160,7 @@
         {
           "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/generated/release/liion_power_bank-fabrication.zip",
           "name": "liion_power_bank-fabrication.zip",
-          "sha256": "fe239cf53e944781165c398cf68345a8a16165af1bcc15a427b1f15c0b27bead"
+          "sha256": "4fcf698b209a83d525240df2c12ccadf9f56d15a46563fe34af7efe1226548af"
         }
       ]
     },
@@ -173,8 +173,8 @@
         "fabrication_manifest": "fabrication.json",
         "artifacts_recorded": 16,
         "artifacts_present": 16,
-        "source_closure_sha256": "b1d1a3ea65549d4743e3033d565b18d70da487bd2c4eb62036998d8c4e98bc25",
-        "recorded_source_closure_sha256": "b1d1a3ea65549d4743e3033d565b18d70da487bd2c4eb62036998d8c4e98bc25"
+        "source_closure_sha256": "883077c93f0ca3828c7bd43d2ff775dee65fe136b15aaa5e17cb91177e06393a",
+        "recorded_source_closure_sha256": "883077c93f0ca3828c7bd43d2ff775dee65fe136b15aaa5e17cb91177e06393a"
       },
       "limits": {},
       "finding_count": 0,
@@ -183,7 +183,7 @@
         {
           "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/generated/release/fabrication.json",
           "name": "fabrication.json",
-          "sha256": "e75547f7a3944192e0cfd6f662b92825653d2a7bb245c5571a483b2a99b50c43"
+          "sha256": "9442a13ed3fb3cb94b5787a3e05c4eea63885c2890f5b135403c6dc9c18b9f43"
         }
       ]
     },
@@ -228,7 +228,7 @@
           "units": "field name",
           "kind": "policy",
           "manifest_key": "assembly.required_part_fields",
-          "provenance": "manifest.json#assembly.required_part_fields@570f1e52d9ca"
+          "provenance": "manifest.json#assembly.required_part_fields@38c7255d7734"
         },
         "assembly.compared_part_fields": {
           "id": "assembly.compared_part_fields",
@@ -240,7 +240,7 @@
           "units": "field name",
           "kind": "policy",
           "manifest_key": "assembly.compared_part_fields",
-          "provenance": "manifest.json#assembly.compared_part_fields@570f1e52d9ca"
+          "provenance": "manifest.json#assembly.compared_part_fields@38c7255d7734"
         }
       },
       "finding_count": 0,
@@ -388,7 +388,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "artifacts.position_tolerance_mm",
-          "provenance": "manifest.json#artifacts.position_tolerance_mm@570f1e52d9ca"
+          "provenance": "manifest.json#artifacts.position_tolerance_mm@38c7255d7734"
         },
         "geometry.rotation_match_deg": {
           "id": "geometry.rotation_match_deg",
@@ -396,7 +396,7 @@
           "units": "deg",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.rotation_match_deg.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.rotation_match_deg.value@570f1e52d9ca"
+          "provenance": "manifest.json#geometry_profile.tolerances.rotation_match_deg.value@38c7255d7734"
         },
         "artifacts.cpl_origin": {
           "id": "artifacts.cpl_origin",
@@ -410,7 +410,7 @@
           "units": "frame",
           "kind": "policy",
           "manifest_key": "artifacts.cpl_origin",
-          "provenance": "manifest.json#artifacts.cpl_origin@570f1e52d9ca"
+          "provenance": "manifest.json#artifacts.cpl_origin@38c7255d7734"
         }
       },
       "finding_count": 0,
@@ -457,12 +457,12 @@
         "source_sha256": "93416fe7794d938e4199cabadec93cd810fb1c1d26940c24a5ed99df89b7bc0d",
         "checked_copy_sha256": "3a4d7c2b774f746cc515ee8ad60af8f29f07c91a7e936bed0b15341644b4df14",
         "rules_sha256": "54c3042197d8b3cbad54e1a41b529ebd3ec9594e7c2338e1d4e03c1ae9ef253e",
-        "constraint_manifest_sha256": "570f1e52d9ca8c377a62dcbeba70b8c6bd8864277143bea27b719e17e636ff31",
+        "constraint_manifest_sha256": "38c7255d77345ebf8d389b5f12f523d42f25f72be4b304f73e9682f3e57b2b08",
         "kicad_version": "10.0.5",
-        "generated_utc": "2026-09-03T03:23:05.354938+00:00",
+        "generated_utc": "2026-09-03T07:16:12.754727+00:00",
         "report_meta": {
           "schema": "https://schemas.kicad.org/drc.v1.json",
-          "date": "2026-09-02T21:23:05",
+          "date": "2026-09-03T01:16:12",
           "kicad_version": "10.0.5",
           "source": "liion_power_bank.kicad_pcb",
           "ignored_checks": [],
@@ -489,16 +489,16 @@
           "units": "mm",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.waiver_location_mm.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.waiver_location_mm.value@570f1e52d9ca"
+          "provenance": "manifest.json#geometry_profile.tolerances.waiver_location_mm.value@38c7255d7734"
         }
       },
       "finding_count": 0,
       "findings": [],
       "evidence": [
         {
-          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260903T032302Z-acfa685d/work/drc_authoritative.json",
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260903T071609Z-d0d3c507/work/drc_authoritative.json",
           "name": "drc_authoritative.json",
-          "sha256": "fd55a43fbf49726a88ee064da719d727e9f4d263289af09cc5d89084e3de9b78"
+          "sha256": "ef7964c1df0c408dfebe336f1e4731c1cd33a393fb22ed79f030ccc015a15b7b"
         }
       ]
     },
@@ -518,7 +518,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_clearance",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_clearance@570f1e52d9ca"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_clearance@38c7255d7734"
         },
         "drc.floor.min_copper_edge_clearance": {
           "id": "drc.floor.min_copper_edge_clearance",
@@ -526,7 +526,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_copper_edge_clearance",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_copper_edge_clearance@570f1e52d9ca"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_copper_edge_clearance@38c7255d7734"
         },
         "drc.floor.min_hole_clearance": {
           "id": "drc.floor.min_hole_clearance",
@@ -534,7 +534,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_hole_clearance",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_hole_clearance@570f1e52d9ca"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_hole_clearance@38c7255d7734"
         },
         "drc.floor.min_hole_to_hole": {
           "id": "drc.floor.min_hole_to_hole",
@@ -542,7 +542,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_hole_to_hole",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_hole_to_hole@570f1e52d9ca"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_hole_to_hole@38c7255d7734"
         },
         "drc.floor.min_through_hole_diameter": {
           "id": "drc.floor.min_through_hole_diameter",
@@ -550,7 +550,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_through_hole_diameter",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_through_hole_diameter@570f1e52d9ca"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_through_hole_diameter@38c7255d7734"
         },
         "drc.floor.min_track_width": {
           "id": "drc.floor.min_track_width",
@@ -558,7 +558,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_track_width",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_track_width@570f1e52d9ca"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_track_width@38c7255d7734"
         },
         "drc.floor.min_via_annular_width": {
           "id": "drc.floor.min_via_annular_width",
@@ -566,7 +566,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_via_annular_width",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_via_annular_width@570f1e52d9ca"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_via_annular_width@38c7255d7734"
         },
         "drc.floor.min_via_diameter": {
           "id": "drc.floor.min_via_diameter",
@@ -574,7 +574,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.rules.min_via_diameter",
-          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_via_diameter@570f1e52d9ca"
+          "provenance": "manifest.json#checks.drc.constraint_floor.rules.min_via_diameter@38c7255d7734"
         },
         "drc.floor.Default.clearance": {
           "id": "drc.floor.Default.clearance",
@@ -582,7 +582,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.net_classes.Default.clearance",
-          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.clearance@570f1e52d9ca"
+          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.clearance@38c7255d7734"
         },
         "drc.floor.Default.track_width": {
           "id": "drc.floor.Default.track_width",
@@ -590,7 +590,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.net_classes.Default.track_width",
-          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.track_width@570f1e52d9ca"
+          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.track_width@38c7255d7734"
         },
         "drc.floor.Default.via_diameter": {
           "id": "drc.floor.Default.via_diameter",
@@ -598,7 +598,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.net_classes.Default.via_diameter",
-          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.via_diameter@570f1e52d9ca"
+          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.via_diameter@38c7255d7734"
         },
         "drc.floor.Default.via_drill": {
           "id": "drc.floor.Default.via_drill",
@@ -606,7 +606,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.net_classes.Default.via_drill",
-          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.via_drill@570f1e52d9ca"
+          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Default.via_drill@38c7255d7734"
         },
         "drc.floor.Power.clearance": {
           "id": "drc.floor.Power.clearance",
@@ -614,7 +614,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.net_classes.Power.clearance",
-          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Power.clearance@570f1e52d9ca"
+          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Power.clearance@38c7255d7734"
         },
         "drc.floor.Power.track_width": {
           "id": "drc.floor.Power.track_width",
@@ -622,7 +622,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.net_classes.Power.track_width",
-          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Power.track_width@570f1e52d9ca"
+          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Power.track_width@38c7255d7734"
         },
         "drc.floor.Power.via_diameter": {
           "id": "drc.floor.Power.via_diameter",
@@ -630,7 +630,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.net_classes.Power.via_diameter",
-          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Power.via_diameter@570f1e52d9ca"
+          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Power.via_diameter@38c7255d7734"
         },
         "drc.floor.Power.via_drill": {
           "id": "drc.floor.Power.via_drill",
@@ -638,7 +638,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "checks.drc.constraint_floor.net_classes.Power.via_drill",
-          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Power.via_drill@570f1e52d9ca"
+          "provenance": "manifest.json#checks.drc.constraint_floor.net_classes.Power.via_drill@38c7255d7734"
         }
       },
       "finding_count": 0,
@@ -665,7 +665,7 @@
           "units": "severity",
           "kind": "policy",
           "manifest_key": "checks.drc.forbidden_severities",
-          "provenance": "manifest.json#checks.drc.forbidden_severities@570f1e52d9ca"
+          "provenance": "manifest.json#checks.drc.forbidden_severities@38c7255d7734"
         }
       },
       "finding_count": 0,
@@ -697,12 +697,12 @@
         "source_sha256": "e98d86e6e9936ba0d3c723ff2f3c6679470cea8de59ad29a82997c404f484349",
         "checked_copy_sha256": "e98d86e6e9936ba0d3c723ff2f3c6679470cea8de59ad29a82997c404f484349",
         "rules_sha256": "54c3042197d8b3cbad54e1a41b529ebd3ec9594e7c2338e1d4e03c1ae9ef253e",
-        "constraint_manifest_sha256": "570f1e52d9ca8c377a62dcbeba70b8c6bd8864277143bea27b719e17e636ff31",
+        "constraint_manifest_sha256": "38c7255d77345ebf8d389b5f12f523d42f25f72be4b304f73e9682f3e57b2b08",
         "kicad_version": "10.0.5",
-        "generated_utc": "2026-09-03T03:23:07.110612+00:00",
+        "generated_utc": "2026-09-03T07:16:14.795877+00:00",
         "report_meta": {
           "schema": "https://schemas.kicad.org/erc.v1.json",
-          "date": "2026-09-02T21:23:07",
+          "date": "2026-09-03T01:16:14",
           "kicad_version": "10.0.5",
           "source": "liion_power_bank.kicad_sch",
           "ignored_checks": [],
@@ -729,16 +729,16 @@
           "units": "mm",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.waiver_location_mm.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.waiver_location_mm.value@570f1e52d9ca"
+          "provenance": "manifest.json#geometry_profile.tolerances.waiver_location_mm.value@38c7255d7734"
         }
       },
       "finding_count": 0,
       "findings": [],
       "evidence": [
         {
-          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260903T032302Z-acfa685d/work/erc_authoritative.json",
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260903T071609Z-d0d3c507/work/erc_authoritative.json",
           "name": "erc_authoritative.json",
-          "sha256": "4cce9af08c4d490da0de03fb1d0ce1ac8589b5a6f9c72b3d19b08d55ccd428b3"
+          "sha256": "0a5401dc0ca9ce4b9ecace1792ec9a3f51eccf2257fe2f0514b56731655d1f04"
         }
       ]
     },
@@ -823,7 +823,7 @@
           "units": "mm",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.polygon_chord_error_mm.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.polygon_chord_error_mm.value@570f1e52d9ca"
+          "provenance": "manifest.json#geometry_profile.tolerances.polygon_chord_error_mm.value@38c7255d7734"
         },
         "net_topology.CONVERTER_SWITCH_NODE.max_vias_per_net": {
           "id": "net_topology.CONVERTER_SWITCH_NODE.max_vias_per_net",
@@ -831,7 +831,7 @@
           "units": "vias",
           "kind": "policy",
           "manifest_key": "net_topology.rules.0.max_vias_per_net",
-          "provenance": "manifest.json#net_topology.rules.0.max_vias_per_net@570f1e52d9ca"
+          "provenance": "manifest.json#net_topology.rules.0.max_vias_per_net@38c7255d7734"
         },
         "net_topology.PROTECTION_DRAINS.max_vias_per_net": {
           "id": "net_topology.PROTECTION_DRAINS.max_vias_per_net",
@@ -839,7 +839,7 @@
           "units": "vias",
           "kind": "policy",
           "manifest_key": "net_topology.rules.1.max_vias_per_net",
-          "provenance": "manifest.json#net_topology.rules.1.max_vias_per_net@570f1e52d9ca"
+          "provenance": "manifest.json#net_topology.rules.1.max_vias_per_net@38c7255d7734"
         }
       },
       "finding_count": 0,
@@ -864,7 +864,7 @@
       "reason": "all 2 committed report(s) bind the canonical digest of all 19 source inputs, and every one still matches",
       "measurements": {
         "source_closure_files": 19,
-        "source_closure_sha256": "b1d1a3ea65549d4743e3033d565b18d70da487bd2c4eb62036998d8c4e98bc25",
+        "source_closure_sha256": "883077c93f0ca3828c7bd43d2ff775dee65fe136b15aaa5e17cb91177e06393a",
         "source_sha256": {
           "pcb": "93416fe7794d938e",
           "schematic": "e98d86e6e9936ba0"
@@ -893,7 +893,7 @@
           "units": "path glob",
           "kind": "policy",
           "manifest_key": "reports.source_closure",
-          "provenance": "manifest.json#reports.source_closure@570f1e52d9ca"
+          "provenance": "manifest.json#reports.source_closure@38c7255d7734"
         }
       },
       "finding_count": 0,
@@ -972,7 +972,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "routing.min_segment_mm",
-          "provenance": "manifest.json#routing.min_segment_mm@570f1e52d9ca"
+          "provenance": "manifest.json#routing.min_segment_mm@38c7255d7734"
         }
       },
       "finding_count": 0,
@@ -1028,7 +1028,7 @@
           "units": "stage name",
           "kind": "policy",
           "manifest_key": "simulation.required_stages",
-          "provenance": "manifest.json#simulation.required_stages@570f1e52d9ca"
+          "provenance": "manifest.json#simulation.required_stages@38c7255d7734"
         }
       },
       "finding_count": 0,
@@ -1041,7 +1041,7 @@
       "status": "PASS",
       "reason": "2 shipped copper layers match a fresh export by geometric symmetric difference (limit 0.05 mm2)",
       "measurements": {
-        "fresh_export_command": "pcb export gerbers --output /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260903T032302Z-acfa685d/work/fresh_gerbers --layers F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts --no-protel-ext --use-drill-file-origin --subtract-soldermask /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260903T032302Z-acfa685d/work/design/liion_power_bank.kicad_pcb",
+        "fresh_export_command": "pcb export gerbers --output /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260903T071609Z-d0d3c507/work/fresh_gerbers --layers F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts --no-protel-ext --use-drill-file-origin --subtract-soldermask /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260903T071609Z-d0d3c507/work/design/liion_power_bank.kicad_pcb",
         "fresh_export_exit": 0,
         "shipped_copper_layers": [
           "copper,l1,top",
@@ -1079,7 +1079,7 @@
           "units": "cli option",
           "kind": "policy",
           "manifest_key": "artifacts.gerber_export_flags",
-          "provenance": "manifest.json#artifacts.gerber_export_flags@570f1e52d9ca"
+          "provenance": "manifest.json#artifacts.gerber_export_flags@38c7255d7734"
         },
         "geometry.layer_symmetric_difference_mm2": {
           "id": "geometry.layer_symmetric_difference_mm2",
@@ -1087,7 +1087,7 @@
           "units": "mm2",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.layer_symmetric_difference_mm2.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.layer_symmetric_difference_mm2.value@570f1e52d9ca"
+          "provenance": "manifest.json#geometry_profile.tolerances.layer_symmetric_difference_mm2.value@38c7255d7734"
         }
       },
       "finding_count": 0,
@@ -1140,7 +1140,7 @@
           "units": "layer roles",
           "kind": "policy",
           "manifest_key": "stackup.expected",
-          "provenance": "manifest.json#stackup.expected@570f1e52d9ca"
+          "provenance": "manifest.json#stackup.expected@38c7255d7734"
         }
       },
       "finding_count": 0,
@@ -1165,7 +1165,7 @@
           "units": "mm",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.contact_mm.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.contact_mm.value@570f1e52d9ca"
+          "provenance": "manifest.json#geometry_profile.tolerances.contact_mm.value@38c7255d7734"
         },
         "geometry.polygon_chord_error_mm": {
           "id": "geometry.polygon_chord_error_mm",
@@ -1173,7 +1173,7 @@
           "units": "mm",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.polygon_chord_error_mm.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.polygon_chord_error_mm.value@570f1e52d9ca"
+          "provenance": "manifest.json#geometry_profile.tolerances.polygon_chord_error_mm.value@38c7255d7734"
         }
       },
       "finding_count": 0,
@@ -1203,7 +1203,7 @@
           "units": "pad attribute",
           "kind": "policy",
           "manifest_key": "via_mask.pad_contact.populated_pad_attributes",
-          "provenance": "manifest.json#via_mask.pad_contact.populated_pad_attributes@570f1e52d9ca"
+          "provenance": "manifest.json#via_mask.pad_contact.populated_pad_attributes@38c7255d7734"
         },
         "via_mask.mask_dam_rule": {
           "id": "via_mask.mask_dam_rule",
@@ -1211,7 +1211,7 @@
           "units": "policy",
           "kind": "policy",
           "manifest_key": "via_mask.mask_dam_rule",
-          "provenance": "manifest.json#via_mask.mask_dam_rule@570f1e52d9ca"
+          "provenance": "manifest.json#via_mask.mask_dam_rule@38c7255d7734"
         }
       },
       "finding_count": 0,
@@ -1245,7 +1245,7 @@
           "units": "mm",
           "kind": "policy",
           "manifest_key": "via_mask.design_target_mm",
-          "provenance": "manifest.json#via_mask.design_target_mm@570f1e52d9ca"
+          "provenance": "manifest.json#via_mask.design_target_mm@38c7255d7734"
         },
         "geometry.polygon_chord_error_mm": {
           "id": "geometry.polygon_chord_error_mm",
@@ -1253,7 +1253,7 @@
           "units": "mm",
           "kind": "tolerance",
           "manifest_key": "geometry_profile.tolerances.polygon_chord_error_mm.value",
-          "provenance": "manifest.json#geometry_profile.tolerances.polygon_chord_error_mm.value@570f1e52d9ca"
+          "provenance": "manifest.json#geometry_profile.tolerances.polygon_chord_error_mm.value@38c7255d7734"
         },
         "via_mask.metric": {
           "id": "via_mask.metric",
@@ -1261,7 +1261,7 @@
           "units": "field name",
           "kind": "policy",
           "manifest_key": "via_mask.metric",
-          "provenance": "manifest.json#via_mask.metric@570f1e52d9ca"
+          "provenance": "manifest.json#via_mask.metric@38c7255d7734"
         }
       },
       "finding_count": 0,

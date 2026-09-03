@@ -1,7 +1,7 @@
 {
   "$schema": "https://schemas.kicad.org/drc.v1.json",
   "coordinate_units": "mm",
-  "date": "2026-09-02T21:23:01",
+  "date": "2026-09-03T01:16:07",
   "ignored_checks": [],
   "included_severities": [
     "error",
@@ -14,5 +14,26 @@
   "unconnected_items": [],
   "violations": [],
   "source_sha256": "93416fe7794d938e4199cabadec93cd810fb1c1d26940c24a5ed99df89b7bc0d",
-  "source_closure_sha256": "b1d1a3ea65549d4743e3033d565b18d70da487bd2c4eb62036998d8c4e98bc25"
+  "source_closure_sha256": "883077c93f0ca3828c7bd43d2ff775dee65fe136b15aaa5e17cb91177e06393a",
+  "source_closure": {
+    "<configuration>": "9cb17e2c8eaeef55f44a8140c40be2ca867cd89900e6c038e87d80a05f22e6a7",
+    "<toolkit>": "f4d39047427f111b5c9f58b884e400c7536f05e0+clean",
+    "components/jlcpcb.json": "f1274e18f33fbc9eee97a4baaa3aed690daa31f0f2e6aef6255e5f0aecf0c626",
+    "components/parameters.json": "f6ac84c3ff75f8b19b23638715d093521c5f55d40e7f7549a8e91df4dcfeb656",
+    "constraints/requirements.json": "120f2d175350372bc9c49a168c28dcc38bb09aab7b8ddb736999b9d5fdb37fc3",
+    "evidence/index.json": "b4205ae915509e019fa0abbcb85c93530238e4bedd135a327099c33db7daf05b",
+    "fab/physical_inputs.json": "c112fe4b3bb350ec4151be931c0ba149e1481cb678215da1f2d7e6d197729dd2",
+    "fab/requirements.json": "903c0e7d893cb5e95a33850cda14b3eb565698ff4195fc23b234f269ad2aeeb9",
+    "fab/selection.json": "a6743c97c605b44abf2a4a3baa309c09598b6970faebb0b7d0c1cd3158061f5e",
+    "liion_power_bank.kicad_pcb": "93416fe7794d938e4199cabadec93cd810fb1c1d26940c24a5ed99df89b7bc0d",
+    "liion_power_bank.kicad_pro": "54c3042197d8b3cbad54e1a41b529ebd3ec9594e7c2338e1d4e03c1ae9ef253e",
+    "liion_power_bank.kicad_sch": "e98d86e6e9936ba0d3c723ff2f3c6679470cea8de59ad29a82997c404f484349",
+    "sim/pre_layout_advertisement.json": "a2d0415cb9c1c808419895a61486c71f6ee1d0101b2e6b00c6bb6ae317eb8e49",
+    "sim/pre_layout_button_filter.json": "48327d79757c49a944cb315656cd267b6ad12b1bf27932e5a741c49773e5204d",
+    "sim/pre_layout_gate_slew.json": "30a9bb2dde00a33e93a42311b2d132d3e73cc1c5909174f9da132a45463ceb63",
+    "sim/pre_layout_hot_plug.json": "dff02b61117754882357f778af64d64eeced463d195dd7d59935ba595feba3f1",
+    "sim/pre_layout_input_switch.json": "6e35004659d7888f4f727cfa3a615ed52c4ffdc2084be2723907215f60bcedb3",
+    "sim/pre_layout_latch_set.json": "29740b97babff383c94a7584cce47a3017aa4a1ec9f3894dbb6db7dd7e5cad9c",
+    "sim/pre_layout_output_hold.json": "e1f2c2184d35fb2a4e92b2ed16a0c4dbb11c78341c32c09445d7141fac84797e"
+  }
 }
