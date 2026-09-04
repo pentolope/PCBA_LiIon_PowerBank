@@ -1,7 +1,7 @@
 {
   "$schema": "https://schemas.kicad.org/erc.v1.json",
   "coordinate_units": "mm",
-  "date": "2026-09-04T05:08:10",
+  "date": "2026-09-04T10:31:51",
   "ignored_checks": [],
   "included_severities": [
     "error",
@@ -18,10 +18,10 @@
   ],
   "source": "liion_power_bank.kicad_sch",
   "source_sha256": "e98d86e6e9936ba0d3c723ff2f3c6679470cea8de59ad29a82997c404f484349",
-  "source_closure_sha256": "0602dc8fec36cc2013202a90102cadc3b2ef32fda4cee162845e348de855f96d",
+  "source_closure_sha256": "d9b36fdfbed66c5919b105fcb66e1eff9140093f4e039867940e70c7169cc857",
   "source_closure": {
-    "<configuration>": "054d1792e651a718e64f24cc214e2eecff5c3b19b926f657b695b5e590952028",
-    "<toolkit>": "bd0ad78d84983c4907944f30d31c1bc53897e4b5+clean",
+    "<configuration>": "996ed62b400f62d24dab6aaba3741d719ee25986b3e80b0f7d4b34d797e8944d",
+    "<toolkit>": "7fa035ead507892a9f3ad1b451d36fd4fef28537+clean",
     "components/jlcpcb.json": "f1274e18f33fbc9eee97a4baaa3aed690daa31f0f2e6aef6255e5f0aecf0c626",
     "components/parameters.json": "f6ac84c3ff75f8b19b23638715d093521c5f55d40e7f7549a8e91df4dcfeb656",
     "constraints/requirements.json": "120f2d175350372bc9c49a168c28dcc38bb09aab7b8ddb736999b9d5fdb37fc3",

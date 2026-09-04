@@ -172,7 +172,7 @@ def routing_search():
                  "offered": list(layout.FRONT_POUR_NETS)},
         "orderings": ["inside_out", "original", "mps"],
         "clearances_mm": [0.30],
-        "attempts": 9,
+        "attempts": 3,
         "grid_step_mm": 0.1,
         "options": {
             "track_width_mm": layout.TRACK_WIDTH_MM,
