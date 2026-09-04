@@ -631,8 +631,9 @@ def _add_track(board, start, end, layer, net, width_mm):
             continue
         if existing.GetLayer() != layer or existing.GetNet() != net:
             continue
-        ends = {(existing.GetStart().x, existing.GetStart().y),
-                (existing.GetEnd().x, existing.GetEnd().y)}
+        found_start, found_end = pcbqa_board.endpoints(existing)
+        ends = {(found_start.x, found_start.y),
+                (found_end.x, found_end.y)}
         if ends == {(start.x, start.y), (end.x, end.y)}:
             return existing
     track = pcbnew.PCB_TRACK(board)

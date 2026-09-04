@@ -337,6 +337,14 @@
       }
     ]
   },
+  "placement": {
+    "courtyard": {
+      "sides": [
+        "front",
+        "back"
+      ]
+    }
+  },
   "placement_rules": [
     {
       "count": 2,
@@ -529,6 +537,7 @@
     "search": {
       "acceptance": {
         "gates": [
+          "design",
           "VIA.MASK_CLEARANCE_TARGET"
         ],
         "require_zero": [
