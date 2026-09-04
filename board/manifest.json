@@ -526,8 +526,73 @@
     },
     "min_segment_mm": 0.1,
     "provenance": "generated/routing.json",
+    "search": {
+      "acceptance": {
+        "gates": [
+          "VIA.MASK_CLEARANCE_TARGET"
+        ],
+        "require_zero": [
+          "errors",
+          "warnings",
+          "unconnected",
+          "schematic_parity"
+        ]
+      },
+      "attempts": 9,
+      "clearances_mm": [
+        0.3
+      ],
+      "grid_step_mm": 0.1,
+      "nets": {
+        "offered": [
+          "VBUS",
+          "VIN",
+          "VOUT",
+          "BAT",
+          "CELLN"
+        ],
+        "reserved": [
+          "GND",
+          "SW",
+          "PROT_D3",
+          "PROT_D4",
+          "PROT_D5"
+        ]
+      },
+      "options": {
+        "board_edge_clearance_mm": 0.45,
+        "hole_to_hole_clearance_mm": 0.3,
+        "no_power_tap_neckdown": true,
+        "note": "same_net_pad_clearance_mm is deliberately the board's own via-to-opening distance (via_mask.design_target_mm): the search's ordinary clearance holds its vias off every other net's pads, and this holds them off the mask openings of the net it is routing, which the assembly's paste feeds",
+        "same_net_pad_clearance_mm": 0.15,
+        "track_width_mm": 0.25,
+        "via_drill_mm": 0.3,
+        "via_size_mm": 0.6
+      },
+      "orderings": [
+        "inside_out",
+        "original",
+        "mps"
+      ]
+    },
     "short_segment_justification": {
       "allow_pad_or_via_entry": true
+    },
+    "transforms": {
+      "passes": [
+        "snap_to_via",
+        "snap_to_pad_anchor",
+        "collapse_degenerate",
+        "fold_subfloor",
+        "restore_widths",
+        "restore_vias",
+        "dedupe",
+        "lift_via_off_mask",
+        "carry_into_pour",
+        "split_tees",
+        "prune_router_vias",
+        "prune"
+      ]
     }
   },
   "schema_version": 2,

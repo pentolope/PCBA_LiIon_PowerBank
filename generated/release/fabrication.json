@@ -3,12 +3,12 @@
   "board_id": "liion_power_bank",
   "constraint_version": "layout-stage-2026-09-02",
   "release_profile": "jlcpcb-2layer-assembled",
-  "generated_utc": "2026-09-03T21:13:03.589565+00:00",
-  "source_closure_sha256": "e047e39360858e0a440f783e601db1a3a83ac8e706e34b63f5261eb1d80f2308",
+  "generated_utc": "2026-09-04T11:08:14.506456+00:00",
+  "source_closure_sha256": "0602dc8fec36cc2013202a90102cadc3b2ef32fda4cee162845e348de855f96d",
   "source_closure_files": 27,
   "source_closure": {
-    "<configuration>": "4485dd9862e6d28e3af0ed4590a51c3a22d088caee8957b96bf6b5e143497c4a",
-    "<toolkit>": "7f51066b4095042726be2be3824c3b9ff2f5158a+clean",
+    "<configuration>": "054d1792e651a718e64f24cc214e2eecff5c3b19b926f657b695b5e590952028",
+    "<toolkit>": "bd0ad78d84983c4907944f30d31c1bc53897e4b5+clean",
     "components/jlcpcb.json": "f1274e18f33fbc9eee97a4baaa3aed690daa31f0f2e6aef6255e5f0aecf0c626",
     "components/parameters.json": "f6ac84c3ff75f8b19b23638715d093521c5f55d40e7f7549a8e91df4dcfeb656",
     "constraints/requirements.json": "120f2d175350372bc9c49a168c28dcc38bb09aab7b8ddb736999b9d5fdb37fc3",
@@ -40,7 +40,7 @@
     "kicad_cli": "kicad-cli"
   },
   "toolkit": {
-    "commit": "7f51066b4095042726be2be3824c3b9ff2f5158a",
+    "commit": "bd0ad78d84983c4907944f30d31c1bc53897e4b5",
     "working_tree_dirty": false,
     "detail": "git HEAD of the toolkit checkout that executed this validation"
   },
@@ -51,25 +51,26 @@
     "kicad-cli pcb export drill --output export --format excellon --excellon-separate-th --drill-origin plot liion_power_bank.kicad_pcb",
     "kicad-cli pcb export pos --output cpl.csv --format csv --units mm --side both --exclude-dnp liion_power_bank.kicad_pcb",
     "kicad-cli sch export bom --output bom.csv --fields ${QUANTITY},Reference,Value,Footprint,LCSC --labels Quantity,Designator,Comment,Footprint,LCSC Part # --group-by Value,Footprint,LCSC --exclude-dnp --ref-range-delimiter  liion_power_bank.kicad_sch",
+    "strip-volatile export",
     "zip liion_power_bank-fabrication.zip"
   ],
   "artifacts": {
     "bom.csv": "7dbf829d18b3ca64305aa7254dcea124cc6ec9e80c67df3c5a15dad0bb34fb13",
     "cpl.csv": "e11f4222ab422db04ee535bf6c0b7a4cfcfaad0dd412eadf1d118b260abaa033",
-    "gerbers/liion_power_bank-B_Cu.gbr": "3982330685f35f99993b6f195ee7971462ee45fe77750fa6d5d2fd280158da2e",
-    "gerbers/liion_power_bank-B_Mask.gbr": "49c4d28c0a3f6943143345bb536358dc98a1a6618841533a3ba7962321c9284c",
-    "gerbers/liion_power_bank-B_Silkscreen.gbr": "607cd63df1d270da745c7bdc6da40568fff3f914a5b3dbd70f6429910a565956",
-    "gerbers/liion_power_bank-Edge_Cuts.gbr": "502d896f4ca9bf11102bef49e6a2de53455275ec3f43cce9128661359c6bfab6",
-    "gerbers/liion_power_bank-F_Cu.gbr": "dbb609b0b0b9f0829b660d9719aef4b338f59f33bb1c0c616172f20705981032",
-    "gerbers/liion_power_bank-F_Mask.gbr": "00b3e764c5f044251941c7f7083f7d7031f3660d62da146e198296e2682676b0",
-    "gerbers/liion_power_bank-F_Paste.gbr": "126dce66247813cfbc8cc578fe8086a86cbc867e79d01210fec97b978214d036",
-    "gerbers/liion_power_bank-F_Silkscreen.gbr": "4a0b18037f5f766f7e40427ac80fd69a5ed5c814ea10da64b98319a9fd017187",
-    "gerbers/liion_power_bank-NPTH.drl": "24884e48d51f5bbf9116354cc6b19a9fec65f7a60861d0a21dab3769874b5a0b",
-    "gerbers/liion_power_bank-PTH.drl": "755059a54e7c3fabb11396cbf1ec8f2b966275006c8b6b00aa4db341e266aea6",
-    "gerbers/liion_power_bank-job.gbrjob": "4dc64009ae4c202d4c72e16e37a54862474caac5b6d1d8189722b09e3cdbe716",
-    "liion_power_bank-fabrication.zip": "2fa1fcec1a73680e289fb13e3413accd4eb8f7b9a2873545efcd2634cf051acf",
-    "reports/drc.json": "fe08a56780176f2b0029caa25874601b1eb69c9848acd180c96f6b33d1f73c1e",
-    "reports/erc.json": "e06d824dc4f7ab6e0be4c487623049da65cefc8fad41d741ac10079834c0cadd"
+    "gerbers/liion_power_bank-B_Cu.gbr": "d1a399e8d5a566e6a66040695456c16c08c7f2b6852b473afafa8b0046b2e2eb",
+    "gerbers/liion_power_bank-B_Mask.gbr": "7cd829fc1193a133c3a992c7eb42d5ec6600508df1c772033e7766cb531283df",
+    "gerbers/liion_power_bank-B_Silkscreen.gbr": "d6650a36f754a3ce6bed5d8b5fb34c6373beaa1fe00e43eea2a2be8d4f2ac325",
+    "gerbers/liion_power_bank-Edge_Cuts.gbr": "252b10f93c20b9c7d904ecb385a81b8f20657295cab9320ef7a77f44759b84ed",
+    "gerbers/liion_power_bank-F_Cu.gbr": "e42ecb5aa88a01dd23b80ee2e7426b97e96026bf0ad3a8fa65883dac2222e709",
+    "gerbers/liion_power_bank-F_Mask.gbr": "8deeb1298aec05aced14fa1e818d4da65af3cdb704a14aeb3823e5bd7ef9e23e",
+    "gerbers/liion_power_bank-F_Paste.gbr": "38d93ba3742db98d1d6eeede4a9c6be25a7c2329fea030ef7e359f0043d5082a",
+    "gerbers/liion_power_bank-F_Silkscreen.gbr": "ba4c6655550d8c7c4699aae10e1a3fdb9ce8abdbd91d3f89e79b1aafb0f612b9",
+    "gerbers/liion_power_bank-NPTH.drl": "0daea6a2f27ea807126667bd5ccc6c6d4798ebecac3a79a41ae770228d63d154",
+    "gerbers/liion_power_bank-PTH.drl": "4867995d4bd9588164bce97eaa1fcdfe7224bdac62cffb25b5ef25de558c5677",
+    "gerbers/liion_power_bank-job.gbrjob": "baf905010445992e2480e286e4930d93371401e8c0a30be88ad043a1259c7185",
+    "liion_power_bank-fabrication.zip": "c38869f74ba77ce28c6f19c5e450adbb710dc69621af7ced459024959e80dc02",
+    "reports/drc.json": "343367255de25818c697e2dfe87f958fe6b24f1086897d26bfbf0323f755b4d8",
+    "reports/erc.json": "5bc1f7b17e0a9a4114c990fa650300a5d3833f8cf954255bf5eb79e61cff0350"
   },
   "excluded_layers": []
 }

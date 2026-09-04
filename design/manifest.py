@@ -150,6 +150,63 @@ def net_topology_rules():
     ]
 
 
+def routing_search():
+    """What the toolkit's candidate search is told about this board.
+
+    The reserved nets are the ones the search may not draw: the reference
+    is a pour with a via at every surface pad, and the converter's switch
+    node and each protection package's drain are generated copper whose
+    shape is a requirement rather than a result. The poured nets are
+    offered even where the placement already joined them, because the
+    search repairs a pour its own copper cut in two - and it only does
+    that for a pour whose net is in scope. Acceptance counts warnings as
+    well as errors, because the gate that judges the routed board counts
+    them too, and it names the mask-clearance gate so a candidate that
+    leaves a via on a solder-mask opening is never adopted.
+    """
+    reserved = [netlist.SYSTEM_GROUND_NET, "SW"] + [
+        "PROT_D%d" % index
+        for index in range(3, 3 + netlist.PROTECTION_PACKAGES)]
+    return {
+        "nets": {"reserved": reserved,
+                 "offered": list(layout.FRONT_POUR_NETS)},
+        "orderings": ["inside_out", "original", "mps"],
+        "clearances_mm": [0.30],
+        "attempts": 9,
+        "grid_step_mm": 0.1,
+        "options": {
+            "track_width_mm": layout.TRACK_WIDTH_MM,
+            "via_size_mm": layout.VIA_DIAMETER_MM,
+            "via_drill_mm": layout.VIA_DRILL_MM,
+            "board_edge_clearance_mm": 0.45,
+            "hole_to_hole_clearance_mm": 0.3,
+            "same_net_pad_clearance_mm": layout.VIA_MASK_CLEARANCE_MM,
+            "no_power_tap_neckdown": True,
+            "note": "same_net_pad_clearance_mm is deliberately the "
+                    "board's own via-to-opening distance "
+                    "(via_mask.design_target_mm): the search's ordinary "
+                    "clearance holds its vias off every other net's "
+                    "pads, and this holds them off the mask openings of "
+                    "the net it is routing, which the assembly's paste "
+                    "feeds",
+        },
+        "acceptance": {
+            "require_zero": ["errors", "warnings", "unconnected",
+                             "schematic_parity"],
+            "gates": ["VIA.MASK_CLEARANCE_TARGET"],
+        },
+    }
+
+
+def routing_transforms():
+    """The normalization passes a routed candidate is put through."""
+    return {"passes": ["snap_to_via", "snap_to_pad_anchor",
+                       "collapse_degenerate", "fold_subfloor",
+                       "restore_widths", "restore_vias", "dedupe",
+                       "lift_via_off_mask", "carry_into_pour",
+                       "split_tees", "prune_router_vias", "prune"]}
+
+
 def stackup_expected():
     """What each copper layer is for.
 
@@ -223,6 +280,8 @@ def document():
                         "forbid_net_crossings": True,
                         "forbid_dangling": True},
             "provenance": "generated/routing.json",
+            "search": routing_search(),
+            "transforms": routing_transforms(),
         },
         "via_mask": {
             "pad_contact": {"populated_pad_attributes": ["SMD"],

@@ -33,6 +33,7 @@ _TOOLKIT = os.path.join(
 if _TOOLKIT not in sys.path:
     sys.path.insert(0, _TOOLKIT)
 
+from pcbqa import board as pcbqa_board  # noqa: E402
 from pcbqa import headless  # noqa: E402
 
 headless.suppress_blocking_ui()
@@ -735,8 +736,8 @@ def _front_segments(board):
             continue
         if item.GetLayer() != pcbnew.F_Cu:
             continue
-        found.append((item.GetStart(), item.GetEnd(),
-                      item.GetWidth() / 2.0, item.GetNetCode()))
+        start, end = pcbqa_board.endpoints(item)
+        found.append((start, end, item.GetWidth() / 2.0, item.GetNetCode()))
     return found
 
 
@@ -1378,21 +1379,18 @@ def _add_silkscreen(board, footprints):
 
 
 def write(path=None):
-    """Write the board, then rewrite the project it belongs to.
+    """Write the board, leaving the project it belongs to alone.
 
     Saving a board rewrites the project file beside it with KiCad's own
     defaults, which is how the rule severities this board declares as
-    warnings would become ignores. The project is therefore regenerated from
-    the design source afterwards, every time, rather than left as whatever
-    the save left behind.
+    warnings would become ignores. The save therefore goes through the
+    toolkit, which restores the project documents' own bytes rather than
+    leaving whatever the save left behind.
     """
-    from . import build as _build
     board, _ = build()
     fill_zones(board)
     target = BOARD_PATH if path is None else path
-    pcbnew.SaveBoard(target, board)
-    if path is None:
-        _build.write_project()
+    pcbqa_board.save(board, target)
     return target
 
 

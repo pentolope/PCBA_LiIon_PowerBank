@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import re
@@ -14,7 +15,7 @@ if REPO_ROOT not in sys.path:
     sys.path.insert(0, REPO_ROOT)
 
 from design import (build, cost, evidence, ksym, layout,  # noqa: E402
-                    libraries, manifest, netlist, requirements, route, rules,
+                    libraries, manifest, netlist, requirements, rules,
                     simulation)
 
 TOOLKIT_ROOT = os.path.join(REPO_ROOT, "tooling", "PCBA_AutoDesignAndTest")
@@ -381,6 +382,11 @@ class Manifest(unittest.TestCase):
 
 
 class Board(unittest.TestCase):
+    def _declared_routing(self):
+        with open(os.path.join(REPO_ROOT, "board", "manifest.json"),
+                  "r", encoding="utf-8") as handle:
+            return json.load(handle)["routing"]
+
     def test_the_board_in_the_tree_is_the_routed_one(self):
         """The tree carries the board the routing run accepted.
 
@@ -388,16 +394,24 @@ class Board(unittest.TestCase):
         is generated from the file in the tree, so a placement rebuilt after
         routing would ship a board nothing ever routed.
         """
-        with open(route.PROVENANCE_PATH, "r", encoding="utf-8") as handle:
+        provenance = os.path.join(REPO_ROOT,
+                                  self._declared_routing()["provenance"])
+        with open(provenance, "r", encoding="utf-8") as handle:
             record = json.load(handle)
         self.assertIsNotNone(record["accepted_attempt"])
-        self.assertEqual(record["adopted_sha256"],
-                         route.digest(layout.BOARD_PATH))
+        hasher = hashlib.sha256()
+        with open(layout.BOARD_PATH, "rb") as handle:
+            hasher.update(handle.read())
+        self.assertEqual(record["adopted_sha256"], hasher.hexdigest())
 
     def test_no_via_stands_on_a_solder_mask_opening(self):
         """A via on an opening cannot be tented, and on a pasted one it
-        wicks the joint into its barrel."""
-        self.assertEqual(route._vias_on_openings(layout.BOARD_PATH), 0)
+        wicks the joint into its barrel. The measurement is the toolkit's
+        mask-clearance gate, so the routing acceptance must name it: a
+        candidate that leaves a via on an opening is then never adopted."""
+        self.assertIn(
+            "VIA.MASK_CLEARANCE_TARGET",
+            self._declared_routing()["search"]["acceptance"]["gates"])
 
     def test_every_part_with_a_footprint_has_a_seed_pose(self):
         placed = layout.seed_placement()
