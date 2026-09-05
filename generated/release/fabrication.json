@@ -3,12 +3,12 @@
   "board_id": "liion_power_bank",
   "constraint_version": "layout-stage-2026-09-02",
   "release_profile": "jlcpcb-2layer-assembled",
-  "generated_utc": "2026-09-05T02:03:49.484065+00:00",
-  "source_closure_sha256": "f57d7c81b84fbd26fdee724713743c1243f1d176c92ea4507bebdcba64d44184",
+  "generated_utc": "2026-09-05T03:00:20.404495+00:00",
+  "source_closure_sha256": "f35fee5df84bff8137014e7d1cce7ed7620dede4d8338bfefc5b3c8b987a5440",
   "source_closure_files": 27,
   "source_closure": {
     "<configuration>": "6e656829338119d63c17b93a918facf64b5b2bda3544675a2fda309f0b6fdc69",
-    "<toolkit>": "0f1bf363be9676227f6a3fa42037ff78521463e0+clean",
+    "<toolkit>": "11b6d8a9d516f82a84194c0c0bdbf8bf979f5da6+clean",
     "components/jlcpcb.json": "f1274e18f33fbc9eee97a4baaa3aed690daa31f0f2e6aef6255e5f0aecf0c626",
     "components/parameters.json": "f6ac84c3ff75f8b19b23638715d093521c5f55d40e7f7549a8e91df4dcfeb656",
     "constraints/requirements.json": "120f2d175350372bc9c49a168c28dcc38bb09aab7b8ddb736999b9d5fdb37fc3",
@@ -40,7 +40,7 @@
     "kicad_cli": "kicad-cli"
   },
   "toolkit": {
-    "commit": "0f1bf363be9676227f6a3fa42037ff78521463e0",
+    "commit": "11b6d8a9d516f82a84194c0c0bdbf8bf979f5da6",
     "working_tree_dirty": false,
     "detail": "git HEAD of the toolkit checkout that executed this validation"
   },
@@ -69,8 +69,8 @@
     "gerbers/liion_power_bank-PTH.drl": "4867995d4bd9588164bce97eaa1fcdfe7224bdac62cffb25b5ef25de558c5677",
     "gerbers/liion_power_bank-job.gbrjob": "baf905010445992e2480e286e4930d93371401e8c0a30be88ad043a1259c7185",
     "liion_power_bank-fabrication.zip": "c38869f74ba77ce28c6f19c5e450adbb710dc69621af7ced459024959e80dc02",
-    "reports/drc.json": "0cdd84647746043ed377ea113f54257c898a3f2c087ff5e7d157c39786dc0fd3",
-    "reports/erc.json": "dcfc2de2751a49059dd68cb486bb3a56e5cdd32e4e14965831c6b2d45911cfb9"
+    "reports/drc.json": "ff29d644e96fa6ec49cd55e7c67553fef66348803e1a48081343f33ce9bf204b",
+    "reports/erc.json": "6cc76a40cf9c0db8818bf24da023348ce51e48def3bdde9c905237287d66b194"
   },
   "excluded_layers": []
 }
