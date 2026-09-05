@@ -1,7 +1,7 @@
 {
   "$schema": "https://schemas.kicad.org/drc.v1.json",
   "coordinate_units": "mm",
-  "date": "2026-09-05T03:39:06",
+  "date": "2026-09-05T04:45:39",
   "ignored_checks": [],
   "included_severities": [
     "error",
@@ -14,10 +14,10 @@
   "unconnected_items": [],
   "violations": [],
   "source_sha256": "93416fe7794d938e4199cabadec93cd810fb1c1d26940c24a5ed99df89b7bc0d",
-  "source_closure_sha256": "6464da4b73f50e06cad1a60310f78643f591604ceb52e38f8d34df2b1d8875a5",
+  "source_closure_sha256": "9fa612e54a50a6822c5dd396e95e04cbe6d610d7392fa8b15097c69aed09d84c",
   "source_closure": {
-    "<configuration>": "f6507538ea2c27de9422ed894f7b85aa14e191f4f0e0b64b248100c6f4de2765",
-    "<toolkit>": "49c830212ae5bb44e7f161de7ba78103841de55c+clean",
+    "<configuration>": "ddeb042f4ea67124beb2f7dd3dbf1dd95c5e783bb0c25e1397720d0ac5e685e1",
+    "<toolkit>": "049c12af9efb8dbb7e8e42d650fc87c1ce448329+clean",
     "components/jlcpcb.json": "f1274e18f33fbc9eee97a4baaa3aed690daa31f0f2e6aef6255e5f0aecf0c626",
     "components/parameters.json": "f6ac84c3ff75f8b19b23638715d093521c5f55d40e7f7549a8e91df4dcfeb656",
     "constraints/requirements.json": "c4c3f0f4e9c131548b8f7ca5bb5f2ddbc923c2649a53194e1af43a6350ce9b99",
@@ -46,6 +46,7 @@
     "fab/requirements.json": "903c0e7d893cb5e95a33850cda14b3eb565698ff4195fc23b234f269ad2aeeb9",
     "fab/selection.json": "a6743c97c605b44abf2a4a3baa309c09598b6970faebb0b7d0c1cd3158061f5e",
     "fp-lib-table": "f51e6783154510ef1b06f072e0b6e910875ee96977c1671ac0510fcd44a2bd89",
+    "generated/requirements.json": "fa607aa877c59a03a2c552a38b2d6feca6c112b0ae5e4d29bd10fa00b51915fe",
     "library/LiIonPowerBank.kicad_sym": "ae339ce013abd7cc6e05bf9c8f5c151ae951f44b45a91a2966f8edd2437e09f9",
     "library/LiIonPowerBank.pretty/ESOP-8_3.9x4.9mm_P1.27mm_EP2.09x2.09mm.kicad_mod": "5e2af29c96c3f9413fe5d4e15dd044ce245e3c2c64dde99c1fd540ed18a92dfc",
     "library/LiIonPowerBank.pretty/L_Sunlord_SWPA8040S.kicad_mod": "2bf971a4b215ff395ccb62ac8c373644f9a65d29f5effad4b42808bb5c662a27",
