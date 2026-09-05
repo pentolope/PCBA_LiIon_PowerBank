@@ -11,6 +11,7 @@ import unittest
 import pcbnew
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MANIFEST_PATH = os.path.join(REPO_ROOT, "board", "manifest.json")
 if REPO_ROOT not in sys.path:
     sys.path.insert(0, REPO_ROOT)
 
@@ -22,7 +23,8 @@ TOOLKIT_ROOT = os.path.join(REPO_ROOT, "tooling", "PCBA_AutoDesignAndTest")
 if TOOLKIT_ROOT not in sys.path:
     sys.path.insert(0, TOOLKIT_ROOT)
 
-from pcbqa.sim import model_registry, ngspice  # noqa: E402
+from pcbqa import core  # noqa: E402
+from pcbqa.sim import assemble, model_registry, ngspice  # noqa: E402
 from pcbqa.sim import scenario as sim_scenario  # noqa: E402
 
 
@@ -289,7 +291,8 @@ class Scenarios(unittest.TestCase):
         backend = ngspice.backend_identity()
         if not backend["available"]:
             self.skipTest("no ngspice backend: " + backend["detail"])
-        registry = model_registry.ModelRegistry([])
+        registry = assemble.registry_for(core.load_manifest(
+            MANIFEST_PATH))
         work = os.path.join(REPO_ROOT, "out", "sim")
         for name, document in sorted(self.documents.items()):
             result = ngspice.run_scenario(
@@ -308,7 +311,8 @@ class Scenarios(unittest.TestCase):
         backend = ngspice.backend_identity()
         if not backend["available"]:
             self.skipTest("no ngspice backend: " + backend["detail"])
-        registry = model_registry.ModelRegistry([])
+        registry = assemble.registry_for(core.load_manifest(
+            MANIFEST_PATH))
         document = self.documents["pre_layout_advertisement.json"]
         result = ngspice.run_scenario(
             registry, document,

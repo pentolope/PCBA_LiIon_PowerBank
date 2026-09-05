@@ -371,6 +371,7 @@
       "method": "PHYSICAL_TEST",
       "owner": "bench bring-up",
       "requirement": "rated_output_current_supported",
+      "review_by": "2027-03-01",
       "statement": "the assembled board delivers the rated 2.1 A at 5 V across the usable cell range; no conductor-sizing basis is frozen in this repository, so the copper's share is measured, not derived",
       "status": "open"
     }
@@ -579,7 +580,7 @@
     "declined_domains": [
       {
         "domain": "device_parameters",
-        "reason": "device figures live in components/parameters.json with per-figure document citations; none is a typical-only figure a knowledge level would demote"
+        "reason": "the assumed figures this board leans on (regulator dropout beyond its 1 mA characterisation, DC-bias fractions) enter the claim set as BOUNDS with stated assumptions, never as exact knowledge; the toolkit-shaped records land when an exact claim needs one demoted"
       },
       {
         "domain": "orientation",

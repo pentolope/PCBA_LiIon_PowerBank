@@ -55,13 +55,15 @@ TOP = {'claims': {'approximate': {'default': 'permitted-with-label'},
                             'method': 'PHYSICAL_TEST',
                             'owner': 'bench bring-up',
                             'requirement': 'rated_output_current_supported',
+                            'review_by': '2027-03-01',
                             'statement': 'the assembled board delivers '
-                                         'the rated 2.1 A at 5 V across '
-                                         'the usable cell range; no '
-                                         'conductor-sizing basis is '
-                                         'frozen in this repository, so '
-                                         "the copper's share is "
-                                         'measured, not derived',
+                                         'the rated 2.1 A at 5 V '
+                                         'across the usable cell '
+                                         'range; no conductor-sizing '
+                                         'basis is frozen in this '
+                                         "repository, so the copper's "
+                                         'share is measured, not '
+                                         'derived',
                             'status': 'open'}],
  'provenance': {'evidence_index': 'evidence/index.json'},
  'requirements': {'register': 'constraints/requirements.json'}}
@@ -79,16 +81,18 @@ EXTRA_REQUIRED_EVIDENCE = []
 REQUIRED_DOMAINS = ['claims', 'requirements', 'simulation', 'external_dependencies']
 
 DECLINED_DOMAINS = [{'domain': 'device_parameters',
-  'reason': 'device figures live in components/parameters.json with '
-            'per-figure document citations; none is a typical-only '
-            'figure a knowledge level would demote'},
+  'reason': 'the assumed figures this board leans on (regulator '
+            'dropout beyond its 1 mA characterisation, DC-bias '
+            'fractions) enter the claim set as BOUNDS with stated '
+            'assumptions, never as exact knowledge; the toolkit-shaped '
+            'records land when an exact claim needs one demoted'},
  {'domain': 'orientation',
-  'reason': 'no part on this board needs a rotation correction; the CPL '
-            'ships library angles and the fabrication order review '
+  'reason': 'no part on this board needs a rotation correction; the '
+            'CPL ships library angles and the fabrication order review '
             'checks the preview'},
  {'domain': 'timing',
-  'reason': "no timing interfaces are declared; the board's buses are DC "
-            'control lines with no budget to state'}]
+  'reason': "no timing interfaces are declared; the board's buses are "
+            'DC control lines with no budget to state'}]
 
 EXTRA_SOURCE_CLOSURE = ['evidence/datasheets/*']
 
