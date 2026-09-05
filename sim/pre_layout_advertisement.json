@@ -108,7 +108,8 @@
       },
       "kind": "op_voltage",
       "name": "weak_advertisement_below_reference",
-      "node": "ccweak"
+      "node": "ccweak",
+      "requirement": "threshold_above_1_5A_advertisement"
     },
     {
       "assertion": {
@@ -117,7 +118,8 @@
       },
       "kind": "op_voltage",
       "name": "strong_advertisement_above_reference",
-      "node": "ccstrong"
+      "node": "ccstrong",
+      "requirement": "threshold_below_3_0A_advertisement"
     },
     {
       "kind": "op_voltage",

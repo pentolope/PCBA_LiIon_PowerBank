@@ -92,7 +92,8 @@
       },
       "kind": "tran_final_voltage",
       "name": "latch_gate_at_the_end_of_the_press",
-      "node": "set"
+      "node": "set",
+      "requirement": "latch_set_level_above_threshold"
     },
     {
       "kind": "tran_max_voltage",

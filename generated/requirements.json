@@ -1,5 +1,6 @@
 {
   "kind": "board-requirement-evidence",
+  "register": "constraints/requirements.json",
   "results": [
     {
       "claim": {
@@ -3084,6 +3085,7 @@
       }
     }
   ],
+  "schema": 1,
   "summary": {
     "PASS": 58,
     "UNKNOWN": 1

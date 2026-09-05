@@ -92,7 +92,8 @@
       },
       "kind": "tran_final_voltage",
       "name": "gate_at_the_slew_target",
-      "node": "gate"
+      "node": "gate",
+      "requirement": "switch_gate_slew_above_target"
     },
     {
       "kind": "tran_min_voltage",

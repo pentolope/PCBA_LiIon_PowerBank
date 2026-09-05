@@ -1568,30 +1568,26 @@ def judged_requirements(results=None):
     return {result["claim"]["requirement"]["name"] for result in results}
 
 
-def write_report():
+def write_report(path=None):
     """The whole claim set, as an artifact rather than a console report.
 
-    Each entry carries what was measured, the evidence class it rests on, the
-    documents behind it, the assumptions it was evaluated under and the
-    verdict - so a later reader can see not only that the board passed but
-    what "passed" was allowed to mean.
+    Built through the toolkit's claim-document constructor, so every claim
+    is validated and every verdict re-derived at write time; CLAIM.MATRIX
+    accepts at release exactly what was written here, and
+    PROV.DERIVED_DOCUMENTS proves the committed copy fresh through this
+    same entry point.
     """
+    from pcbqa import evidence as toolkit_evidence
+
     evaluated = evaluate_all()
-    document = {
-        "kind": "board-requirement-evidence",
-        "summary": summarise(evaluated),
-        "results": [
-            {"id": result["id"], "identity": result["identity"],
-             "claim": result["claim"], "verdict": result["verdict"]}
-            for result in sorted(evaluated,
-                                 key=lambda item: (item["id"],
-                                                   item["identity"]))],
-    }
-    os.makedirs(os.path.dirname(REPORT_PATH), exist_ok=True)
-    with open(REPORT_PATH, "w", encoding="utf-8", newline="\n") as handle:
-        json.dump(document, handle, indent=2, sort_keys=True)
-        handle.write("\n")
-    return REPORT_PATH
+    document = toolkit_evidence.claim_document(
+        [toolkit_evidence.claim_result(result["id"], result["identity"],
+                                       result["claim"])
+         for result in evaluated],
+        register=os.path.relpath(requirements.REGISTER_PATH, REPO_ROOT))
+    target = path or os.environ.get("PCBQA_OUT") or REPORT_PATH
+    os.makedirs(os.path.dirname(target) or ".", exist_ok=True)
+    return toolkit_evidence.write_document(target, document)
 
 
 def summarise(results):

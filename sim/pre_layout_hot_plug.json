@@ -105,7 +105,8 @@
       },
       "kind": "tran_max_voltage",
       "name": "input_peak",
-      "node": "bus"
+      "node": "bus",
+      "requirement": "input_ring_below_clamp_breakdown"
     },
     {
       "kind": "tran_final_voltage",

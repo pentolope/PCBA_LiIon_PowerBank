@@ -225,21 +225,22 @@ class Requirements(unittest.TestCase):
         with open(rules.REPORT_PATH, "r", encoding="utf-8") as handle:
             self.assertEqual(committed, json.load(handle))
 
-    def test_every_requirement_is_registered_and_every_register_entry_used(
-            self):
-        judged = {result["claim"]["requirement"]["name"]
-                  for result in self.results}
-        judged |= set(simulation.MEASUREMENT_REQUIREMENTS.values())
-        self.assertEqual(sorted(judged - set(requirements.REGISTER)), [])
-        self.assertEqual(sorted(set(requirements.REGISTER) - judged), [])
-
     def test_every_simulated_assertion_answers_a_registered_requirement(self):
-        mapped = set(simulation.MEASUREMENT_REQUIREMENTS)
-        self.assertEqual(sorted(simulation.asserted_measurements() - mapped),
-                         [])
+        # The measurement-to-requirement mapping lives in the scenario
+        # documents themselves now; REQ.CLAIM_JOIN enforces the full join
+        # both ways at every validate and release, reading the same
+        # declarations. What stays here is the generator-side guarantee:
+        # every asserting measurement names a registered requirement.
+        for document in simulation.documents().values():
+            for measurement in document["measurements"]:
+                if "assertion" in measurement:
+                    self.assertIn(measurement.get("requirement"),
+                                  requirements.REGISTER,
+                                  measurement["name"])
 
-    def test_the_register_is_well_formed_and_its_sources_resolve(self):
-        self.assertTrue(requirements.check())
+    def test_the_register_is_well_formed(self):
+        from pcbqa import evidence as toolkit_evidence
+        toolkit_evidence.load_register(requirements.document(), "register")
 
     def test_the_committed_register_is_the_generated_one(self):
         with open(requirements.REGISTER_PATH, "r", encoding="utf-8") as handle:

@@ -69,12 +69,19 @@ def _ideal(records):
             for name, detail in records.items()}
 
 
-def _measurement(name, kind, node, op=None, value=None, knowledge=None):
+def _measurement(name, kind, node, op=None, value=None, knowledge=None,
+                 requirement=None):
     record = {"name": name, "kind": kind, "node": node}
     if op is not None:
         record["assertion"] = {"op": op, "value": value}
     if knowledge is not None:
         record["knowledge"] = knowledge
+    if requirement is not None:
+        # The register requirement this assertion establishes, declared on
+        # the measurement itself so the simulation-to-register join is in
+        # the scenario document rather than in a side table only this
+        # board's tests could read.
+        record["requirement"] = requirement
     return record
 
 
@@ -131,10 +138,12 @@ def advertisement_scenario(parameters):
         "measurements": [
             _measurement("weak_advertisement_below_reference", "op_voltage",
                          "ccweak", "<=",
-                         reference["voltage_min_v"]["value"] - offset),
+                         reference["voltage_min_v"]["value"] - offset,
+                         requirement="threshold_above_1_5A_advertisement"),
             _measurement("strong_advertisement_above_reference", "op_voltage",
                          "ccstrong", ">=",
-                         reference["voltage_max_v"]["value"] + offset),
+                         reference["voltage_max_v"]["value"] + offset,
+                         requirement="threshold_below_3_0A_advertisement"),
             _measurement("reference_level", "op_voltage", "ref"),
         ],
         "assumptions": _ideal({
@@ -194,9 +203,11 @@ def input_switch_scenario(parameters):
         "analyses": [{"kind": "op"}],
         "measurements": [
             _measurement("gate_with_detector_open", "op_voltage", "goff",
-                         ">=", supply - switch["vgs_threshold_max_v"]["value"]),
+                         ">=", supply - switch["vgs_threshold_max_v"]["value"],
+                         requirement="output_off_until_a_press"),
             _measurement("gate_with_detector_asserting", "op_voltage", "gon",
-                         "<=", supply - SWITCH_RATED_DRIVE_V),
+                         "<=", supply - SWITCH_RATED_DRIVE_V,
+                         requirement="charger_input_above_undervoltage_lockout"),
         ],
         "assumptions": _ideal({
             "VBUS": "the source at the bottom of the Type-C range, as an "
@@ -253,7 +264,8 @@ def gate_slew_scenario(parameters):
                       "stop_s": GATE_WINDOW_S}],
         "measurements": [
             _measurement("gate_at_the_slew_target", "tran_final_voltage",
-                         "gate", ">=", supply - SWITCH_RATED_DRIVE_V),
+                         "gate", ">=", supply - SWITCH_RATED_DRIVE_V,
+                         requirement="switch_gate_slew_above_target"),
             _measurement("gate_lowest_inside_the_window", "tran_min_voltage",
                          "gate"),
         ],
@@ -306,7 +318,8 @@ def latch_set_scenario(parameters):
                       "stop_s": window}],
         "measurements": [
             _measurement("latch_gate_at_the_end_of_the_press",
-                         "tran_final_voltage", "set", ">=", threshold),
+                         "tran_final_voltage", "set", ">=", threshold,
+                         requirement="latch_set_level_above_threshold"),
             _measurement("latch_gate_peak", "tran_max_voltage", "set"),
         ],
         "assumptions": _ideal({
@@ -354,7 +367,8 @@ def button_filter_scenario(parameters):
         "measurements": [
             _measurement("button_node_at_the_ignore_window",
                          "tran_final_voltage", "key", "<=",
-                         FILTER_SETTLED_FRACTION * cell),
+                         FILTER_SETTLED_FRACTION * cell,
+                         requirement="button_filter_below_ignore_window"),
         ],
         "assumptions": _ideal({
             "BUTTON": "the button as an ideal switch, and the node it pulls "
@@ -404,7 +418,8 @@ def hot_plug_scenario(parameters):
                       "stop_s": window}],
         "measurements": [
             _measurement("input_peak", "tran_max_voltage", "bus", "<=",
-                         clamp["breakdown_min_v"]["value"]),
+                         clamp["breakdown_min_v"]["value"],
+                         requirement="input_ring_below_clamp_breakdown"),
             _measurement("input_settled", "tran_final_voltage", "bus"),
         ],
         "assumptions": _ideal({
@@ -465,7 +480,8 @@ def output_hold_scenario(parameters):
                       "stop_s": 301.0 * window}],
         "measurements": [
             _measurement("output_minimum", "tran_min_voltage", "out", ">=",
-                         floor),
+                         floor,
+                         requirement="output_holds_through_response_budget"),
             _measurement("output_at_the_response_budget",
                          "tran_final_voltage", "out"),
         ],
@@ -486,29 +502,6 @@ def output_hold_scenario(parameters):
             "STEP": "the load appearing in a step, as an ideal switch",
         }),
     }
-
-
-#: Which registered requirement each asserted measurement establishes.
-#: The requirement register is joined to the claim set and to this mapping
-#: together, so a requirement whose only verification is a simulation is
-#: still registered, and a simulated assertion that answers no registered
-#: requirement is an error.
-MEASUREMENT_REQUIREMENTS = {
-    "weak_advertisement_below_reference":
-        "threshold_above_1_5A_advertisement",
-    "strong_advertisement_above_reference":
-        "threshold_below_3_0A_advertisement",
-    "gate_with_detector_open": "output_off_until_a_press",
-    "gate_with_detector_asserting":
-        "charger_input_above_undervoltage_lockout",
-    "gate_at_the_slew_target": "switch_gate_slew_above_target",
-    "latch_gate_at_the_end_of_the_press":
-        "latch_set_level_above_threshold",
-    "button_node_at_the_ignore_window":
-        "button_filter_below_ignore_window",
-    "input_peak": "input_ring_below_clamp_breakdown",
-    "output_minimum": "output_holds_through_response_budget",
-}
 
 
 def asserted_measurements():
@@ -551,5 +544,13 @@ def write():
 
 
 if __name__ == "__main__":
-    for path in write():
-        sys.stdout.write(path + "\n")
+    if len(sys.argv) > 1:
+        # One declared document, honoring PCBQA_OUT: the form the
+        # manifest's derived_documents entries invoke, so
+        # PROV.DERIVED_DOCUMENTS can prove each committed scenario fresh.
+        name = sys.argv[1]
+        target = os.environ.get("PCBQA_OUT") or os.path.join(SIM_DIR, name)
+        sys.stdout.write(_write(target, documents()[name]) + "\n")
+    else:
+        for path in write():
+            sys.stdout.write(path + "\n")

@@ -24,39 +24,34 @@ and a registered requirement nothing is judged against, are both errors.
 """
 from __future__ import annotations
 
-import json
 import os
 import sys
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REGISTER_PATH = os.path.join(REPO_ROOT, "constraints", "requirements.json")
+TOOLKIT_ROOT = os.path.join(REPO_ROOT, "tooling", "PCBA_AutoDesignAndTest")
+if TOOLKIT_ROOT not in sys.path:
+    sys.path.insert(0, TOOLKIT_ROOT)
+
+from pcbqa import evidence  # noqa: E402
 
 BRIEF = "BRIEF.md"
 
 # ---------------------------------------------------------------------------
-# statement kinds
+# statement kinds and verification methods: the toolkit's vocabularies. The
+# per-kind validation, the origin resolution and the join both ways are
+# REQ.REGISTER's and REQ.CLAIM_JOIN's to enforce now.
 
-USER = "user_requirement"
-DERIVED = "derived_requirement"
-ASSUMPTION = "assumption"
-DECISION = "design_decision"
-KINDS = (USER, DERIVED, ASSUMPTION, DECISION)
+USER = evidence.USER_REQUIREMENT
+DERIVED = evidence.DERIVED_REQUIREMENT
+ASSUMPTION = evidence.ASSUMPTION
+DECISION = evidence.DESIGN_DECISION
+KINDS = evidence.STATEMENT_KINDS
 
-# ---------------------------------------------------------------------------
-# verification methods
-
-STATIC = "STATIC"
-GEOMETRY = "GEOMETRY"
-ANALYTIC = "ANALYTIC"
-CIRCUIT_SIM = "CIRCUIT_SIM"
-EXTRACTED = "EXTRACTED"
-THERMAL_SIM = "THERMAL_SIM"
-MANUFACTURING_CHECK = "MANUFACTURING_CHECK"
-PHYSICAL_TEST = "PHYSICAL_TEST"
-DOCUMENTATION = "DOCUMENTATION"
-
-METHODS = (STATIC, GEOMETRY, ANALYTIC, CIRCUIT_SIM, EXTRACTED, THERMAL_SIM,
-           MANUFACTURING_CHECK, PHYSICAL_TEST, DOCUMENTATION)
+(STATIC, GEOMETRY, ANALYTIC, CIRCUIT_SIM, DIGITAL_SIM, EXTRACTED,
+ EM_SIM, THERMAL_SIM, MANUFACTURING_CHECK, PHYSICAL_TEST,
+ DOCUMENTATION) = evidence.VERIFICATION_METHODS
+METHODS = evidence.VERIFICATION_METHODS
 
 #: Brief clauses, as anchors a reader can follow.
 FUNCTION = BRIEF + "#functional-requirements"
@@ -71,7 +66,8 @@ OPEN = BRIEF + "#open-choices"
 def _user(statement, clause, verified_by, physical_test=False):
     return {"kind": USER, "statement": statement, "derived_from": (clause,),
             "origin": clause, "verified_by": verified_by,
-            "physical_test_still_required": physical_test}
+            "still_required":
+                ("PHYSICAL_TEST",) if physical_test else ()}
 
 
 def _derived(statement, clause, origin, rationale, verified_by,
@@ -81,7 +77,8 @@ def _derived(statement, clause, origin, rationale, verified_by,
             else tuple(clause),
             "origin": origin, "rationale": rationale,
             "verified_by": verified_by,
-            "physical_test_still_required": physical_test}
+            "still_required":
+                ("PHYSICAL_TEST",) if physical_test else ()}
 
 
 def _decision(statement, rationale, alternatives, verified_by,
@@ -89,7 +86,8 @@ def _decision(statement, rationale, alternatives, verified_by,
     return {"kind": DECISION, "statement": statement, "rationale": rationale,
             "alternatives_considered": tuple(alternatives),
             "verified_by": verified_by,
-            "physical_test_still_required": physical_test}
+            "still_required":
+                ("PHYSICAL_TEST",) if physical_test else ()}
 
 
 def _assumption(statement, reason, invalidated_by, verified_by,
@@ -97,7 +95,8 @@ def _assumption(statement, reason, invalidated_by, verified_by,
     return {"kind": ASSUMPTION, "statement": statement, "reason": reason,
             "revisable": True, "invalidated_by": invalidated_by,
             "verified_by": verified_by,
-            "physical_test_still_required": physical_test}
+            "still_required":
+                ("PHYSICAL_TEST",) if physical_test else ()}
 
 
 # ---------------------------------------------------------------------------
@@ -852,67 +851,6 @@ NON_DOCUMENT_ORIGINS = {
 }
 
 
-def _brief_anchors():
-    """The anchors BRIEF.md actually offers, from its own headings."""
-    anchors = set()
-    with open(os.path.join(REPO_ROOT, BRIEF), encoding="utf-8") as handle:
-        for line in handle:
-            if not line.startswith("#"):
-                continue
-            title = line.lstrip("#").strip().lower()
-            anchors.add("".join(character for character in
-                                title.replace(" ", "-").replace("—", "")
-                                if character.isalnum() or character == "-"))
-    return anchors
-
-
-def _evidence_ids():
-    with open(os.path.join(REPO_ROOT, "evidence", "index.json"),
-              encoding="utf-8") as handle:
-        return set(json.load(handle)["documents"])
-
-
-def check_origins():
-    """Every citation resolves: a brief anchor, a frozen document, or a file.
-
-    A register whose sources point at headings the brief does not have, or
-    datasheets the repository never froze, reads exactly like one whose
-    sources are real - which is why this is checked rather than reviewed.
-    """
-    anchors = _brief_anchors()
-    documents = _evidence_ids()
-    problems = []
-    for name, record in sorted(list(REGISTER.items())
-                               + list(STATEMENTS.items())):
-        origins = record.get("origin", ())
-        origins = (origins,) if isinstance(origins, str) else tuple(origins)
-        cited = list(origins) + list(record.get("derived_from", ()))
-        for origin in cited:
-            if origin == name:
-                continue
-            if origin.startswith(BRIEF + "#"):
-                anchor = origin.split("#", 1)[1]
-                if anchor not in anchors:
-                    problems.append("%s: %s has no such heading in %s"
-                                    % (name, origin, BRIEF))
-                continue
-            if origin in documents:
-                continue
-            path = NON_DOCUMENT_ORIGINS.get(origin)
-            if path is None:
-                problems.append(
-                    "%s: origin %r is neither a brief anchor, a frozen "
-                    "evidence document, nor a declared file origin"
-                    % (name, origin))
-            elif not os.path.isfile(os.path.join(REPO_ROOT, path)):
-                problems.append("%s: origin %r names %s, which does not exist"
-                                % (name, origin, path))
-    if problems:
-        raise ValueError("requirement register cites sources that do not "
-                         "resolve:\n  " + "\n  ".join(problems))
-    return True
-
-
 def entry(name):
     try:
         return REGISTER[name]
@@ -936,100 +874,29 @@ def source_of(name):
     return "%s:%s" % (record["kind"], origin)
 
 
-def _serialise(name, record):
-    out = {"name": name}
-    for key, value in sorted(record.items()):
-        out[key] = list(value) if isinstance(value, tuple) else value
-    return out
-
-
-def check():
-    """Every entry is well formed for the kind it declares."""
-    problems = []
-    for name, record in sorted(list(REGISTER.items())
-                               + list(STATEMENTS.items())):
-        kind = record.get("kind")
-        if kind not in KINDS:
-            problems.append("%s: kind %r is not one of %s"
-                            % (name, kind, list(KINDS)))
-            continue
-        if not str(record.get("statement", "")).strip():
-            problems.append("%s: no statement" % name)
-        methods = record.get("verified_by") or ()
-        if not methods:
-            problems.append("%s: names no verification method" % name)
-        for method in methods:
-            if method not in METHODS:
-                problems.append("%s: %r is not a verification method"
-                                % (name, method))
-        if kind == USER and not record.get("derived_from"):
-            problems.append("%s: a user requirement cites its brief clause"
-                            % name)
-        if kind == DERIVED:
-            if not record.get("derived_from"):
-                problems.append("%s: a derived requirement states what it "
-                                "was derived from" % name)
-            if not str(record.get("rationale", "")).strip():
-                problems.append("%s: a derived requirement states its "
-                                "rationale" % name)
-        if kind == DECISION:
-            if not record.get("alternatives_considered"):
-                problems.append("%s: a design decision states the "
-                                "alternatives it was chosen over" % name)
-            if not str(record.get("rationale", "")).strip():
-                problems.append("%s: a design decision states its rationale"
-                                % name)
-        if kind == ASSUMPTION:
-            if record.get("revisable") is not True:
-                problems.append("%s: an assumption is revisable" % name)
-            for field in ("reason", "invalidated_by"):
-                if not str(record.get(field, "")).strip():
-                    problems.append("%s: an assumption states its %s"
-                                    % (name, field))
-    if problems:
-        raise ValueError("requirement register is malformed:\n  "
-                         + "\n  ".join(problems))
-    return check_origins()
-
-
-def counts():
-    tally = {}
-    for record in list(REGISTER.values()) + list(STATEMENTS.values()):
-        tally[record["kind"]] = tally.get(record["kind"], 0) + 1
-    return tally
+def _entry(name, record):
+    fields = dict(record)
+    return evidence.requirement_entry(
+        name, fields.pop("kind"), fields.pop("statement"),
+        fields.pop("verified_by"),
+        still_required=fields.pop("still_required", ()), **fields)
 
 
 def document():
-    check()
-    return {
-        "kind": "requirement-register",
-        "schema": 1,
-        "vocabulary": {"statement_kinds": list(KINDS),
-                       "verification_methods": list(METHODS)},
-        "requirements": [_serialise(name, record)
-                         for name, record in sorted(REGISTER.items())],
-        "statements": [_serialise(name, record)
-                       for name, record in sorted(STATEMENTS.items())],
-        "summary": counts(),
-        "context": {
-            "generated_by": "design/requirements.py",
-            "join": "requirements[].name is the requirement name every claim "
-                    "in generated/requirements.json is judged against; the "
-                    "join is total in both directions",
-            "statements": "statements[] are the design decisions and "
-                          "assumptions no numeric claim is judged against, "
-                          "including the choices that close the brief's open "
-                          "questions",
-        },
-    }
+    """The register document, built through the toolkit's validating
+    constructors; REQ.REGISTER re-validates the committed file, origins
+    included, at every validate and release."""
+    return evidence.register_document(
+        [_entry(name, record) for name, record in sorted(REGISTER.items())],
+        [_entry(name, record)
+         for name, record in sorted(STATEMENTS.items())],
+        file_origins=NON_DOCUMENT_ORIGINS)
 
 
-def write():
-    os.makedirs(os.path.dirname(REGISTER_PATH), exist_ok=True)
-    with open(REGISTER_PATH, "w", encoding="utf-8", newline="\n") as handle:
-        json.dump(document(), handle, indent=2, sort_keys=True)
-        handle.write("\n")
-    return REGISTER_PATH
+def write(path=None):
+    target = path or os.environ.get("PCBQA_OUT") or REGISTER_PATH
+    os.makedirs(os.path.dirname(target) or ".", exist_ok=True)
+    return evidence.write_document(target, document())
 
 
 if __name__ == "__main__":

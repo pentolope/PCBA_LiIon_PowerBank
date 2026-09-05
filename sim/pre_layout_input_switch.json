@@ -108,7 +108,8 @@
       },
       "kind": "op_voltage",
       "name": "gate_with_detector_open",
-      "node": "goff"
+      "node": "goff",
+      "requirement": "output_off_until_a_press"
     },
     {
       "assertion": {
@@ -117,7 +118,8 @@
       },
       "kind": "op_voltage",
       "name": "gate_with_detector_asserting",
-      "node": "gon"
+      "node": "gon",
+      "requirement": "charger_input_above_undervoltage_lockout"
     }
   ],
   "name": "input_switch_gate_in_both_detector_states"

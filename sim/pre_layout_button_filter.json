@@ -66,7 +66,8 @@
       },
       "kind": "tran_final_voltage",
       "name": "button_node_at_the_ignore_window",
-      "node": "key"
+      "node": "key",
+      "requirement": "button_filter_below_ignore_window"
     }
   ],
   "name": "button_filter_settles_inside_the_ignore_window"
