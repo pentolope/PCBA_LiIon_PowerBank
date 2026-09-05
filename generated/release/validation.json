@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_utc": "2026-09-05T16:27:17.848997+00:00",
-  "source_closure_sha256": "928e621d7d169b3133a5a480103771c5a0a92f010774f0550a1e048887054865",
+  "generated_utc": "2026-09-05T20:16:09.565325+00:00",
+  "source_closure_sha256": "1e84b76847cde202d377b3ce1c574cdba8454ee1d62030f4b5b94449aad9e2fc",
   "manifest": {
     "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/board/manifest.json",
     "sha256": "ebc82f2e635c2dc267dd16e165d705eb27ebaebf65cc0de7b93c121e41b3b2a2",
@@ -13,7 +13,7 @@
     "kicad_cli": "/usr/bin/kicad-cli",
     "validation_implementation": {
       "toolkit_root": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/tooling/PCBA_AutoDesignAndTest",
-      "commit": "be3c718edb053353445e3296f6f2482aa8b9949e",
+      "commit": "cb03fa0fc091cbd8af36a42e6b288d32f61ceeb2",
       "working_tree_dirty": false,
       "detail": "git HEAD of the toolkit checkout that executed this validation"
     },
@@ -61,7 +61,7 @@
   "summary": {
     "counts": {
       "PASS": 30,
-      "NOT_APPLICABLE": 16
+      "NOT_APPLICABLE": 27
     },
     "blocking": [],
     "verdict": "ACCEPTED"
@@ -173,8 +173,8 @@
         "fabrication_manifest": "fabrication.json",
         "artifacts_recorded": 16,
         "artifacts_present": 16,
-        "source_closure_sha256": "928e621d7d169b3133a5a480103771c5a0a92f010774f0550a1e048887054865",
-        "recorded_source_closure_sha256": "928e621d7d169b3133a5a480103771c5a0a92f010774f0550a1e048887054865"
+        "source_closure_sha256": "1e84b76847cde202d377b3ce1c574cdba8454ee1d62030f4b5b94449aad9e2fc",
+        "recorded_source_closure_sha256": "1e84b76847cde202d377b3ce1c574cdba8454ee1d62030f4b5b94449aad9e2fc"
       },
       "limits": {},
       "finding_count": 0,
@@ -183,7 +183,7 @@
         {
           "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/generated/release/fabrication.json",
           "name": "fabrication.json",
-          "sha256": "823911ef601b55e66e95b6969283ae20e9db714b4b44ab7f092fee9ca96b53e8"
+          "sha256": "867bbdc47570a3cebb4524f97efb39a00753ed32cb36f2e559a8467bfd96d594"
         }
       ]
     },
@@ -525,10 +525,10 @@
         "rules_sha256": "54c3042197d8b3cbad54e1a41b529ebd3ec9594e7c2338e1d4e03c1ae9ef253e",
         "constraint_manifest_sha256": "ebc82f2e635c2dc267dd16e165d705eb27ebaebf65cc0de7b93c121e41b3b2a2",
         "kicad_version": "10.0.5",
-        "generated_utc": "2026-09-05T16:27:00.113443+00:00",
+        "generated_utc": "2026-09-05T20:15:52.559214+00:00",
         "report_meta": {
           "schema": "https://schemas.kicad.org/drc.v1.json",
-          "date": "2026-09-05T10:26:59",
+          "date": "2026-09-05T14:15:52",
           "kicad_version": "10.0.5",
           "source": "liion_power_bank.kicad_pcb",
           "ignored_checks": [],
@@ -562,9 +562,9 @@
       "findings": [],
       "evidence": [
         {
-          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260905T162657Z-eac873f0/work/drc_authoritative.json",
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260905T201549Z-94dead6d/work/drc_authoritative.json",
           "name": "drc_authoritative.json",
-          "sha256": "35a69ee9f40de2ac4afa699c86d42b5a0ea633cfb280d8c4f678500b178a33cf"
+          "sha256": "ecb895f510d900caf14604ed8c5d6006b0badb5147dd2e0430f75f65922d2935"
         }
       ]
     },
@@ -765,10 +765,10 @@
         "rules_sha256": "54c3042197d8b3cbad54e1a41b529ebd3ec9594e7c2338e1d4e03c1ae9ef253e",
         "constraint_manifest_sha256": "ebc82f2e635c2dc267dd16e165d705eb27ebaebf65cc0de7b93c121e41b3b2a2",
         "kicad_version": "10.0.5",
-        "generated_utc": "2026-09-05T16:27:02.282253+00:00",
+        "generated_utc": "2026-09-05T20:15:54.673609+00:00",
         "report_meta": {
           "schema": "https://schemas.kicad.org/erc.v1.json",
-          "date": "2026-09-05T10:27:02",
+          "date": "2026-09-05T14:15:54",
           "kicad_version": "10.0.5",
           "source": "liion_power_bank.kicad_sch",
           "ignored_checks": [],
@@ -802,9 +802,9 @@
       "findings": [],
       "evidence": [
         {
-          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260905T162657Z-eac873f0/work/erc_authoritative.json",
+          "path": "/home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260905T201549Z-94dead6d/work/erc_authoritative.json",
           "name": "erc_authoritative.json",
-          "sha256": "93a5e9ea086fc1758cc4155d227ff61ae5a53298df283d81f5aed2ececf7cff8"
+          "sha256": "9c3d5a23c7cc0cf7e3427a180fded19bb3953c1bfca5f55a2ec7189a72b6dc21"
         }
       ]
     },
@@ -1173,7 +1173,7 @@
       "reason": "all 2 committed report(s) bind the canonical digest of all 48 source inputs, and every one still matches",
       "measurements": {
         "source_closure_files": 48,
-        "source_closure_sha256": "928e621d7d169b3133a5a480103771c5a0a92f010774f0550a1e048887054865",
+        "source_closure_sha256": "1e84b76847cde202d377b3ce1c574cdba8454ee1d62030f4b5b94449aad9e2fc",
         "source_sha256": {
           "pcb": "93416fe7794d938e",
           "schematic": "e98d86e6e9936ba0"
@@ -1761,7 +1761,7 @@
       "status": "PASS",
       "reason": "2 shipped copper layers match a fresh export by geometric symmetric difference (limit 0.05 mm2)",
       "measurements": {
-        "fresh_export_command": "pcb export gerbers --output /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260905T162657Z-eac873f0/work/fresh_gerbers --layers F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts --no-protel-ext --use-drill-file-origin --subtract-soldermask /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260905T162657Z-eac873f0/work/design/liion_power_bank.kicad_pcb",
+        "fresh_export_command": "pcb export gerbers --output /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260905T201549Z-94dead6d/work/fresh_gerbers --layers F.Cu,B.Cu,F.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts --no-protel-ext --use-drill-file-origin --subtract-soldermask /home/pentolope/github/PCBA_AutoDesignAndTest_Bench/boards/07_PCBA_LiIon_PowerBank/out/liion_power_bank/20260905T201549Z-94dead6d/work/design/liion_power_bank.kicad_pcb",
         "fresh_export_exit": 0,
         "shipped_copper_layers": [
           "copper,l1,top",
@@ -1942,7 +1942,7 @@
       "gate": "VIA.MASK_CLEARANCE_PROCESS",
       "title": "Via to mask opening meets the fab process limit",
       "status": "NOT_APPLICABLE",
-      "reason": "manifest does not declare via_mask.process.limit_mm; this board does not opt in to this gate",
+      "reason": "manifest does not declare via_mask.process.limit_mm or via_mask.process.limit_from_catalog; this board does not opt in to this gate",
       "measurements": {},
       "limits": {},
       "finding_count": 0,
@@ -1992,7 +1992,7 @@
       "gate": "VIA.NATIVE_GERBER_AGREEMENT",
       "title": "Every via agrees between the native board and the export",
       "status": "NOT_APPLICABLE",
-      "reason": "manifest does not declare via_mask.process.limit_mm; this board does not opt in to this gate",
+      "reason": "manifest does not declare via_mask.process.limit_mm or via_mask.process.limit_from_catalog; this board does not opt in to this gate",
       "measurements": {},
       "limits": {},
       "finding_count": 0,
@@ -2011,10 +2011,43 @@
       "evidence": []
     },
     {
+      "gate": "CURRENT.CAPACITY",
+      "title": "Every declared current-carrying conductor is wide enough",
+      "status": "NOT_APPLICABLE",
+      "reason": "manifest does not declare current.allowed_rise_c, current.basis, current.paths, current.physical_inputs; this board does not opt in to this gate",
+      "measurements": {},
+      "limits": {},
+      "finding_count": 0,
+      "findings": [],
+      "evidence": []
+    },
+    {
       "gate": "TIMING.PATH_INTEGRITY",
       "title": "Declared electrical paths exist, end to end, across every component",
       "status": "NOT_APPLICABLE",
       "reason": "manifest does not declare timing.interfaces; this board does not opt in to this gate",
+      "measurements": {},
+      "limits": {},
+      "finding_count": 0,
+      "findings": [],
+      "evidence": []
+    },
+    {
+      "gate": "CURRENT.VIA_TRANSITION",
+      "title": "Every layer change on a current path carries the current too",
+      "status": "NOT_APPLICABLE",
+      "reason": "manifest does not declare current.allowed_rise_c, current.basis, current.paths, current.physical_inputs; this board does not opt in to this gate",
+      "measurements": {},
+      "limits": {},
+      "finding_count": 0,
+      "findings": [],
+      "evidence": []
+    },
+    {
+      "gate": "THERMAL.DISSIPATION",
+      "title": "Every declared dissipation source is accounted for",
+      "status": "NOT_APPLICABLE",
+      "reason": "manifest does not declare thermal.ambient_c, thermal.parts; this board does not opt in to this gate",
       "measurements": {},
       "limits": {},
       "finding_count": 0,
@@ -2033,6 +2066,50 @@
       "evidence": []
     },
     {
+      "gate": "THERMAL.DERATING",
+      "title": "Each part may dissipate its share continuously at the ambient",
+      "status": "NOT_APPLICABLE",
+      "reason": "manifest does not declare thermal.ambient_c, thermal.parts; this board does not opt in to this gate",
+      "measurements": {},
+      "limits": {},
+      "finding_count": 0,
+      "findings": [],
+      "evidence": []
+    },
+    {
+      "gate": "THERMAL.JUNCTION",
+      "title": "Junction claims take the form their evidence supports",
+      "status": "NOT_APPLICABLE",
+      "reason": "manifest does not declare thermal.ambient_c, thermal.parts; this board does not opt in to this gate",
+      "measurements": {},
+      "limits": {},
+      "finding_count": 0,
+      "findings": [],
+      "evidence": []
+    },
+    {
+      "gate": "THERMAL.BOARD_RISE",
+      "title": "The board's own copper carries the heat it is given",
+      "status": "NOT_APPLICABLE",
+      "reason": "manifest does not declare thermal.ambient_c, thermal.board_rise, thermal.parts; this board does not opt in to this gate",
+      "measurements": {},
+      "limits": {},
+      "finding_count": 0,
+      "findings": [],
+      "evidence": []
+    },
+    {
+      "gate": "PDN.DC_DROP",
+      "title": "Every declared rail delivers inside its drop budget",
+      "status": "NOT_APPLICABLE",
+      "reason": "manifest does not declare pdn.copper_thickness_mm, pdn.fill_match_fraction, pdn.grid, pdn.rails, pdn.via_resistance_ohm; this board does not opt in to this gate",
+      "measurements": {},
+      "limits": {},
+      "finding_count": 0,
+      "findings": [],
+      "evidence": []
+    },
+    {
       "gate": "TIMING.INTERCONNECT_SKEW",
       "title": "Passive PCB arrival spread within each declared endpoint group",
       "status": "NOT_APPLICABLE",
@@ -2044,10 +2121,54 @@
       "evidence": []
     },
     {
+      "gate": "PDN.RETURN_PATH",
+      "title": "Every declared rail's return carries its current back",
+      "status": "NOT_APPLICABLE",
+      "reason": "manifest does not declare pdn.copper_thickness_mm, pdn.fill_match_fraction, pdn.grid, pdn.rails, pdn.via_resistance_ohm; this board does not opt in to this gate",
+      "measurements": {},
+      "limits": {},
+      "finding_count": 0,
+      "findings": [],
+      "evidence": []
+    },
+    {
+      "gate": "SI.PAIR_IMPEDANCE",
+      "title": "Every declared differential pair meets its impedance target",
+      "status": "NOT_APPLICABLE",
+      "reason": "manifest does not declare differential.coupling_threshold_mm, differential.pairs; this board does not opt in to this gate",
+      "measurements": {},
+      "limits": {},
+      "finding_count": 0,
+      "findings": [],
+      "evidence": []
+    },
+    {
       "gate": "TIMING.SETUP_HOLD",
       "title": "Device-aware setup and hold margin at each declared receiver",
       "status": "NOT_APPLICABLE",
       "reason": "manifest does not declare timing.device_timing; this board does not opt in to this gate",
+      "measurements": {},
+      "limits": {},
+      "finding_count": 0,
+      "findings": [],
+      "evidence": []
+    },
+    {
+      "gate": "SIM.STAGE_DELTA",
+      "title": "What layout cost each superseded measurement, as an artifact",
+      "status": "NOT_APPLICABLE",
+      "reason": "no scenario declares that it supersedes a pre-layout twin, so there is no stage delta to report",
+      "measurements": {},
+      "limits": {},
+      "finding_count": 0,
+      "findings": [],
+      "evidence": []
+    },
+    {
+      "gate": "NET.REFERENCE_CONTINUITY",
+      "title": "Declared routes run over a reference conductor",
+      "status": "NOT_APPLICABLE",
+      "reason": "manifest does not declare reference_continuity.paths, reference_continuity.reference_nets; this board does not opt in to this gate",
       "measurements": {},
       "limits": {},
       "finding_count": 0,

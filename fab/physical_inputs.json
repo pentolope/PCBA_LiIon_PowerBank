@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "title": "Physical stackup composed from the approved jlcpcb catalog",
-  "provenance": "jlcpcb approved catalog 953f02eab19f, source capabilities, retrieved 2026-08-25, stackup Composed 2L 1.6 mm 1 oz (composed from stated values, not a published construction)",
+  "provenance": "jlcpcb approved catalog e504b0de30d4, source capabilities, retrieved 2026-08-25, stackup Composed 2L 1.6 mm 1 oz (composed from stated values, not a published construction)",
   "generated_from": {
     "fabricator": "jlcpcb",
     "stackup": "Composed 2L 1.6 mm 1 oz",
-    "approved_normalized_sha256": "953f02eab19f914ef0017b2ebb614de43d16ebc857a424d6cce2afdc09e5da65",
+    "approved_normalized_sha256": "e504b0de30d419179ecef39b27a688fa09b89a8e83cdfeec4d4eec95dbe73258",
     "retrieved_utc": "2026-08-25T21:09:17.739495+00:00",
     "sources": [
       {
