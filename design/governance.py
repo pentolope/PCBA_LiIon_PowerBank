@@ -92,7 +92,17 @@ DECLINED_DOMAINS = [{'domain': 'device_parameters',
             'checks the preview'},
  {'domain': 'timing',
   'reason': "no timing interfaces are declared; the board's buses are "
-            'DC control lines with no budget to state'}]
+            'DC control lines with no budget to state'},
+ {'domain': 'thermal',
+  'reason': 'the converter junction temperatures and the switch dissipations are judged as claims against their stated maxima, several of them awaiting a bench measurement that the register records as still required; no theta record has been frozen, so THERMAL.* has nothing to derate against'},
+ {'domain': 'current_capacity',
+  'reason': 'this board carries the largest currents on the bench and its conductor widths are judged as claims rather than against a capacity curve; declaring current.paths needs a capacity basis with its own source and edition, and putting an unsourced curve behind a several-amp conductor is exactly what this toolkit refuses'},
+ {'domain': 'power_integrity',
+  'reason': 'the cell and output paths are judged as claims over the declared conductor geometry; a rail mesh has not been declared, and the drops that matter here are dominated by the switches rather than by the copper'},
+ {'domain': 'differential_pairs',
+  'reason': 'this board routes no differential pair; every net on it is single-ended and there is no pair impedance to hold'},
+ {'domain': 'reference_continuity',
+  'reason': 'no interface on this board declares a return-path requirement; the currents that matter are DC and their return is judged by the same claims that judge the outbound path'}]
 
 EXTRA_SOURCE_CLOSURE = ['evidence/datasheets/*', 'generated/requirements.json']
 

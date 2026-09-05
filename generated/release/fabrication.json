@@ -3,12 +3,12 @@
   "board_id": "liion_power_bank",
   "constraint_version": "layout-stage-2026-09-02",
   "release_profile": "jlcpcb-2layer-assembled",
-  "generated_utc": "2026-09-05T20:15:48.870099+00:00",
-  "source_closure_sha256": "1e84b76847cde202d377b3ce1c574cdba8454ee1d62030f4b5b94449aad9e2fc",
+  "generated_utc": "2026-09-05T22:09:16.802524+00:00",
+  "source_closure_sha256": "e406ae93d8761564b61bd909df4c9c33700ebef8de7398ab57a020566142eb6e",
   "source_closure_files": 48,
   "source_closure": {
-    "<configuration>": "ddeb042f4ea67124beb2f7dd3dbf1dd95c5e783bb0c25e1397720d0ac5e685e1",
-    "<toolkit>": "cb03fa0fc091cbd8af36a42e6b288d32f61ceeb2+clean",
+    "<configuration>": "ce84406c3ff6cc46adc3f71abd21782cc662d61365184aca595428de49f45992",
+    "<toolkit>": "4f371f6385932e68d10b6781dfc4ef5b0020ff40+clean",
     "components/jlcpcb.json": "f1274e18f33fbc9eee97a4baaa3aed690daa31f0f2e6aef6255e5f0aecf0c626",
     "components/parameters.json": "f6ac84c3ff75f8b19b23638715d093521c5f55d40e7f7549a8e91df4dcfeb656",
     "constraints/requirements.json": "c4c3f0f4e9c131548b8f7ca5bb5f2ddbc923c2649a53194e1af43a6350ce9b99",
@@ -61,7 +61,7 @@
     "kicad_cli": "kicad-cli"
   },
   "toolkit": {
-    "commit": "cb03fa0fc091cbd8af36a42e6b288d32f61ceeb2",
+    "commit": "4f371f6385932e68d10b6781dfc4ef5b0020ff40",
     "working_tree_dirty": false,
     "detail": "git HEAD of the toolkit checkout that executed this validation"
   },
@@ -90,8 +90,8 @@
     "gerbers/liion_power_bank-PTH.drl": "4867995d4bd9588164bce97eaa1fcdfe7224bdac62cffb25b5ef25de558c5677",
     "gerbers/liion_power_bank-job.gbrjob": "baf905010445992e2480e286e4930d93371401e8c0a30be88ad043a1259c7185",
     "liion_power_bank-fabrication.zip": "c38869f74ba77ce28c6f19c5e450adbb710dc69621af7ced459024959e80dc02",
-    "reports/drc.json": "008d34f24aa75a589811fa9a8af744aac5af373adfe734e14edcc4d94614b80a",
-    "reports/erc.json": "468f82f90f9c74853f4e01f525bc77597dce2dc8ccc5459a20cf312244a3c2bf"
+    "reports/drc.json": "acd64e56c0b92ec8b3ea23343dad97e2bb598d7e08cbe61262163f5bdf73ab70",
+    "reports/erc.json": "cd96a06b8011a3d7c9e7389ec022ad131ddf7d32f994b6e7966415929c36534a"
   },
   "excluded_layers": []
 }
