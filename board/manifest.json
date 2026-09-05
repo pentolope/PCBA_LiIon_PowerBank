@@ -655,7 +655,8 @@
       "fab/*.json",
       "components/*.json",
       "evidence/index.json",
-      "evidence/datasheets/*"
+      "evidence/datasheets/*",
+      "generated/requirements.json"
     ],
     "source_field": "source",
     "source_hash_field": "source_sha256"

@@ -94,8 +94,7 @@ DECLINED_DOMAINS = [{'domain': 'device_parameters',
   'reason': "no timing interfaces are declared; the board's buses are "
             'DC control lines with no budget to state'}]
 
-EXTRA_SOURCE_CLOSURE = ['evidence/datasheets/*']
-
+EXTRA_SOURCE_CLOSURE = ['evidence/datasheets/*', 'generated/requirements.json']
 
 
 def merged(document):
