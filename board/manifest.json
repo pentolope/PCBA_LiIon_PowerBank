@@ -189,6 +189,16 @@
       "extra_flags": []
     }
   },
+  "claims": {
+    "approximate": {
+      "default": "permitted-with-label"
+    },
+    "document": "generated/requirements.json",
+    "unsupported": {
+      "default": "blocking",
+      "permitted": []
+    }
+  },
   "connector_contracts": [
     {
       "id": "input_receptacle",
@@ -270,8 +280,100 @@
     ]
   },
   "constraint_version": "layout-stage-2026-09-02",
+  "derived_documents": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "design.requirements"
+      ],
+      "path": "constraints/requirements.json"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "design.rules"
+      ],
+      "path": "generated/requirements.json"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "design.simulation",
+        "pre_layout_advertisement.json"
+      ],
+      "path": "sim/pre_layout_advertisement.json"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "design.simulation",
+        "pre_layout_button_filter.json"
+      ],
+      "path": "sim/pre_layout_button_filter.json"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "design.simulation",
+        "pre_layout_gate_slew.json"
+      ],
+      "path": "sim/pre_layout_gate_slew.json"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "design.simulation",
+        "pre_layout_hot_plug.json"
+      ],
+      "path": "sim/pre_layout_hot_plug.json"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "design.simulation",
+        "pre_layout_input_switch.json"
+      ],
+      "path": "sim/pre_layout_input_switch.json"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "design.simulation",
+        "pre_layout_latch_set.json"
+      ],
+      "path": "sim/pre_layout_latch_set.json"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "design.simulation",
+        "pre_layout_output_hold.json"
+      ],
+      "path": "sim/pre_layout_output_hold.json"
+    }
+  ],
   "documentation_globs": [
     "BRIEF.md"
+  ],
+  "external_dependencies": [
+    {
+      "blocking": false,
+      "id": "rated-output-bench",
+      "method": "PHYSICAL_TEST",
+      "owner": "bench bring-up",
+      "requirement": "rated_output_current_supported",
+      "statement": "the assembled board delivers the rated 2.1 A at 5 V across the usable cell range; no conductor-sizing basis is frozen in this repository, so the copper's share is measured, not derived",
+      "status": "open"
+    }
   ],
   "fixture": {
     "attributes_file": ".gitattributes"
@@ -383,6 +485,9 @@
     }
   ],
   "project_root": "..",
+  "provenance": {
+    "evidence_index": "evidence/index.json"
+  },
   "release_generation": {
     "archive": {
       "zip": "liion_power_bank-fabrication.zip"
@@ -471,6 +576,20 @@
     ]
   },
   "release_profile": {
+    "declined_domains": [
+      {
+        "domain": "device_parameters",
+        "reason": "device figures live in components/parameters.json with per-figure document citations; none is a typical-only figure a knowledge level would demote"
+      },
+      {
+        "domain": "orientation",
+        "reason": "no part on this board needs a rotation correction; the CPL ships library angles and the fabrication order review checks the preview"
+      },
+      {
+        "domain": "timing",
+        "reason": "no timing interfaces are declared; the board's buses are DC control lines with no budget to state"
+      }
+    ],
     "id": "jlcpcb-2layer-assembled",
     "mandatory_gates": [
       "ARCH.CONTENTS",
@@ -503,32 +622,18 @@
       "VIA.IN_PAD_CONTACT",
       "VIA.MASK_CLEARANCE_TARGET"
     ],
-    "required_evidence": [
-      "constraints/requirements.json",
-      "evidence/index.json",
-      "fab/selection.json",
-      "generated/requirements.json",
-      "generated/routing.json"
-    ],
     "required_domains": [
       "claims",
       "requirements",
       "simulation",
       "external_dependencies"
     ],
-    "declined_domains": [
-      {
-        "domain": "device_parameters",
-        "reason": "device figures live in components/parameters.json with per-figure document citations; none is a typical-only figure a knowledge level would demote"
-      },
-      {
-        "domain": "orientation",
-        "reason": "no part on this board needs a rotation correction; the CPL ships library angles and the fabrication order review checks the preview"
-      },
-      {
-        "domain": "timing",
-        "reason": "no timing interfaces are declared; the board's buses are DC control lines with no budget to state"
-      }
+    "required_evidence": [
+      "constraints/requirements.json",
+      "evidence/index.json",
+      "fab/selection.json",
+      "generated/requirements.json",
+      "generated/routing.json"
     ]
   },
   "reports": {
@@ -553,6 +658,9 @@
     ],
     "source_field": "source",
     "source_hash_field": "source_sha256"
+  },
+  "requirements": {
+    "register": "constraints/requirements.json"
   },
   "routing": {
     "hygiene": {
@@ -681,113 +789,5 @@
       "require_paste": true
     }
   },
-  "waivers": [],
-  "claims": {
-    "document": "generated/requirements.json",
-    "unsupported": {
-      "default": "blocking",
-      "permitted": []
-    },
-    "approximate": {
-      "default": "permitted-with-label"
-    }
-  },
-  "requirements": {
-    "register": "constraints/requirements.json"
-  },
-  "external_dependencies": [
-    {
-      "id": "rated-output-bench",
-      "statement": "the assembled board delivers the rated 2.1 A at 5 V across the usable cell range; no conductor-sizing basis is frozen in this repository, so the copper's share is measured, not derived",
-      "method": "PHYSICAL_TEST",
-      "owner": "bench bring-up",
-      "status": "open",
-      "blocking": false,
-      "requirement": "rated_output_current_supported"
-    }
-  ],
-  "provenance": {
-    "evidence_index": "evidence/index.json"
-  },
-  "derived_documents": [
-    {
-      "path": "constraints/requirements.json",
-      "command": [
-        "python3",
-        "-m",
-        "design.requirements"
-      ]
-    },
-    {
-      "path": "generated/requirements.json",
-      "command": [
-        "python3",
-        "-m",
-        "design.rules"
-      ]
-    },
-    {
-      "path": "sim/pre_layout_advertisement.json",
-      "command": [
-        "python3",
-        "-m",
-        "design.simulation",
-        "pre_layout_advertisement.json"
-      ]
-    },
-    {
-      "path": "sim/pre_layout_button_filter.json",
-      "command": [
-        "python3",
-        "-m",
-        "design.simulation",
-        "pre_layout_button_filter.json"
-      ]
-    },
-    {
-      "path": "sim/pre_layout_gate_slew.json",
-      "command": [
-        "python3",
-        "-m",
-        "design.simulation",
-        "pre_layout_gate_slew.json"
-      ]
-    },
-    {
-      "path": "sim/pre_layout_hot_plug.json",
-      "command": [
-        "python3",
-        "-m",
-        "design.simulation",
-        "pre_layout_hot_plug.json"
-      ]
-    },
-    {
-      "path": "sim/pre_layout_input_switch.json",
-      "command": [
-        "python3",
-        "-m",
-        "design.simulation",
-        "pre_layout_input_switch.json"
-      ]
-    },
-    {
-      "path": "sim/pre_layout_latch_set.json",
-      "command": [
-        "python3",
-        "-m",
-        "design.simulation",
-        "pre_layout_latch_set.json"
-      ]
-    },
-    {
-      "path": "sim/pre_layout_output_hold.json",
-      "command": [
-        "python3",
-        "-m",
-        "design.simulation",
-        "pre_layout_output_hold.json"
-      ]
-    }
-  ]
+  "waivers": []
 }
