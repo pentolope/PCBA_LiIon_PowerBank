@@ -3,12 +3,12 @@
   "board_id": "liion_power_bank",
   "constraint_version": "layout-stage-2026-09-02",
   "release_profile": "jlcpcb-2layer-assembled",
-  "generated_utc": "2026-09-06T05:38:32.287532+00:00",
-  "source_closure_sha256": "6202e45766f36d5606421dcc175343d5be7df15205a89a48449a05af16652822",
+  "generated_utc": "2026-09-06T07:37:11.204669+00:00",
+  "source_closure_sha256": "5200627b2d21a812473c8fabc70be2405b319a904f1343cdabf9e91386d079b1",
   "source_closure_files": 48,
   "source_closure": {
     "<configuration>": "61991082ae972ed1d333be55902d2985453fa5c2d520ee6e2b267e7ad186968c",
-    "<toolkit>": "0130082a979a9a27959cc3410fefaa22fe329a51+clean",
+    "<toolkit>": "9e5df2ed6bc878680f7e2525242ddb5de591b946+clean",
     "components/jlcpcb.json": "f1274e18f33fbc9eee97a4baaa3aed690daa31f0f2e6aef6255e5f0aecf0c626",
     "components/parameters.json": "f6ac84c3ff75f8b19b23638715d093521c5f55d40e7f7549a8e91df4dcfeb656",
     "constraints/requirements.json": "c4c3f0f4e9c131548b8f7ca5bb5f2ddbc923c2649a53194e1af43a6350ce9b99",
@@ -61,7 +61,7 @@
     "kicad_cli": "kicad-cli"
   },
   "toolkit": {
-    "commit": "0130082a979a9a27959cc3410fefaa22fe329a51",
+    "commit": "9e5df2ed6bc878680f7e2525242ddb5de591b946",
     "working_tree_dirty": false,
     "detail": "git HEAD of the toolkit checkout that executed this validation"
   },
@@ -90,8 +90,8 @@
     "gerbers/liion_power_bank-PTH.drl": "4867995d4bd9588164bce97eaa1fcdfe7224bdac62cffb25b5ef25de558c5677",
     "gerbers/liion_power_bank-job.gbrjob": "baf905010445992e2480e286e4930d93371401e8c0a30be88ad043a1259c7185",
     "liion_power_bank-fabrication.zip": "c38869f74ba77ce28c6f19c5e450adbb710dc69621af7ced459024959e80dc02",
-    "reports/drc.json": "2ac0adaf968e214cc73bae5fa3146610ec4b6bf471920a7d9bb64af4a9d1534e",
-    "reports/erc.json": "230f5b4f9934bd57a4f741fce411a86357934683ba6b08833680bc2655f37c10"
+    "reports/drc.json": "41767cd66769bbcc76a609154379fc191c42f632f83f73379b8484ed3fcbd6d5",
+    "reports/erc.json": "602e6f46abda6f4183103ac07ad19c66ec5d68b1a2e48466a321b2004097a157"
   },
   "excluded_layers": []
 }
