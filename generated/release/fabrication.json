@@ -3,8 +3,8 @@
   "board_id": "liion_power_bank",
   "constraint_version": "layout-stage-2026-09-02",
   "release_profile": "jlcpcb-2layer-assembled",
-  "generated_utc": "2026-09-06T01:14:16.628808+00:00",
-  "source_closure_sha256": "d9f042c5f97cab3d55a60dd5f37181ed503c2f74e8903c40d0a70061f95722e8",
+  "generated_utc": "2026-09-06T02:10:50.670214+00:00",
+  "source_closure_sha256": "91175fdb72ad8107f1c9a2298b69f1e292335bf28242138f426f12b5a0f64c89",
   "source_closure_files": 48,
   "source_closure": {
     "<configuration>": "ce84406c3ff6cc46adc3f71abd21782cc662d61365184aca595428de49f45992",
@@ -37,7 +37,7 @@
     "fab/requirements.json": "903c0e7d893cb5e95a33850cda14b3eb565698ff4195fc23b234f269ad2aeeb9",
     "fab/selection.json": "482b28d7ce72b9832864565eec8568a4641585870a2acc68bffa6f6b4f1c3727",
     "fp-lib-table": "f51e6783154510ef1b06f072e0b6e910875ee96977c1671ac0510fcd44a2bd89",
-    "generated/requirements.json": "fa607aa877c59a03a2c552a38b2d6feca6c112b0ae5e4d29bd10fa00b51915fe",
+    "generated/requirements.json": "863ac52b9345b0d002d9fac13c82b091acbd1bb4a416574dfb6c75677e089804",
     "library/LiIonPowerBank.kicad_sym": "ae339ce013abd7cc6e05bf9c8f5c151ae951f44b45a91a2966f8edd2437e09f9",
     "library/LiIonPowerBank.pretty/ESOP-8_3.9x4.9mm_P1.27mm_EP2.09x2.09mm.kicad_mod": "5e2af29c96c3f9413fe5d4e15dd044ce245e3c2c64dde99c1fd540ed18a92dfc",
     "library/LiIonPowerBank.pretty/L_Sunlord_SWPA8040S.kicad_mod": "2bf971a4b215ff395ccb62ac8c373644f9a65d29f5effad4b42808bb5c662a27",
@@ -90,8 +90,8 @@
     "gerbers/liion_power_bank-PTH.drl": "4867995d4bd9588164bce97eaa1fcdfe7224bdac62cffb25b5ef25de558c5677",
     "gerbers/liion_power_bank-job.gbrjob": "baf905010445992e2480e286e4930d93371401e8c0a30be88ad043a1259c7185",
     "liion_power_bank-fabrication.zip": "c38869f74ba77ce28c6f19c5e450adbb710dc69621af7ced459024959e80dc02",
-    "reports/drc.json": "3884df0235dff6f8a706bb03a6421104db37360e01f2bcbf4a1f9a80228296c9",
-    "reports/erc.json": "0bcb0424a098f995dd569396fbbaa976475024f9df2064a9ad0a2697824fe286"
+    "reports/drc.json": "eaf7da9033689ca05d0256a7d542e5a85674d1f85e97951bae3defe71948540e",
+    "reports/erc.json": "cca1b839287a54e8c4d2bb0d702b7057ed2542a9353258949f3a6531c6de9933"
   },
   "excluded_layers": []
 }

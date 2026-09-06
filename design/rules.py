@@ -537,7 +537,11 @@ def evaluate_input_current(parameters):
                 "tabulates and is below the drive this gate network gives "
                 "it",),
             omissions=("board copper between the receptacle and the charger "
-                       "is not included; it has not been laid out yet",)),
+                       "is not included; the board is routed and that "
+                       "copper now exists, but no extraction has been run "
+                       "over it, so its resistance is absent from this "
+                       "subtraction rather than known to be small, and it "
+                       "can only lower this voltage",)),
     })
     return results
 
@@ -871,7 +875,10 @@ def evaluate_converter(parameters):
                          netlist.INPUT_SUPPLY["min_v"]),
             omissions=(
                 "board copper between the converter and the receptacle is "
-                "not included; it has not been laid out yet",
+                "not included; the board is routed and that copper now "
+                "exists, but no extraction has been run over it, so its "
+                "resistance is absent from this subtraction rather than "
+                "known to be small, and it can only lower this voltage",
                 "the converter's regulated output is a typical figure with "
                 "no tolerance stated, so the starting point of this "
                 "subtraction is not bounded",)),
