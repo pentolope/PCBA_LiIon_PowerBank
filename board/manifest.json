@@ -613,6 +613,14 @@
       {
         "domain": "reference_continuity",
         "reason": "no interface on this board declares a return-path requirement; the currents that matter are DC and their return is judged by the same claims that judge the outbound path"
+      },
+      {
+        "domain": "lifecycle",
+        "reason": "no lifecycle snapshot has been frozen for this board; the domain wants a status for each fitted part, the basis it rests on, and evidence bytes behind a digest, and what this board holds is the stock and price in components/jlcpcb.json retrieved 2026-09-02 - no status for any of its 29 part numbers, no catalogue page frozen, and nobody named as having reviewed one. The gap is already on the record as the supply claim's own stated assumption, that the stock figures are the frozen ones rather than today's; closing it is an acquisition and a human review, not a manifest edit"
+      },
+      {
+        "domain": "assembly_process",
+        "reason": "the process block asks for four figures at once and this board can source two of them: all 81 footprints sit on the front, and the three through-hole operations are already measured against ASSEMBLY_POLICY by the assembly_within_declared_policy claim. The other two are established nowhere here - no reflow profile and no cleaning step is frozen for the assembler this board orders from, and that order is still an open external dependency. The per-part half is worse: of 29 part numbers, 9 have frozen datasheets stating no soldering temperature at all (three of the four AOS switches, DW01A, IP5306, SWPA8040, TS-1187A, the HRO receptacle, and LM393DR2G, which mentions soldering only to point at a reference manual this board has not frozen), the fourth AOS part gives 260 degC only as a JESD22-A113 precondition row rather than a rating, and most of what the others state - 260 degC for 10 s, 270 +/- 5 degC - are solder-bath and immersion tests, which are solderability rather than a reflow ceiling. An empty record means reviewed-and-needs-nothing; nine of them resting on silence would say that falsely"
       }
     ],
     "id": "jlcpcb-2layer-assembled",
