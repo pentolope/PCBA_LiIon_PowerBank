@@ -44,7 +44,9 @@ MANDATORY_GATES = (
     "STACK.NATIVE_VS_MANIFEST",
     "VIA.ANNULUS_MASK_OVERLAP",
     "VIA.IN_PAD_CONTACT",
+    "VIA.MASK_CLEARANCE_PROCESS",
     "VIA.MASK_CLEARANCE_TARGET",
+    "VIA.NATIVE_GERBER_AGREEMENT",
 )
 
 REQUIRED_EVIDENCE = (
@@ -228,6 +230,27 @@ def simulation_stages():
         simulation.documents())]}
 
 
+def catalog_pin():
+    """The fabricator catalogue state a cited process limit is read from.
+
+    The same digest fab/selection.json already resolved this board's
+    process against, so the two cannot disagree: a re-pin there is a
+    review of the stackup and of every limit cited out of the catalogue
+    at once. Read rather than repeated, because a second copy of a
+    digest is a second thing to forget.
+    """
+    with open(os.path.join(layout.REPO_ROOT, "fab", "selection.json"),
+              encoding="utf-8") as handle:
+        selection = json.load(handle)
+    return {
+        "normalized_sha256": selection["approved_normalized_sha256"],
+        "why": "the catalogue state fab/selection.json already resolved "
+               "this board's fabrication against; citing a limit from any "
+               "other state would judge the board against rules it was "
+               "not selected under",
+    }
+
+
 def _base_document():
     project = netlist.PROJECT_NAME
     classes = {entry["name"]: {key: value
@@ -302,7 +325,23 @@ def _base_document():
                 "annulus_strict_overlaps counts positive shared area only",
             "mask_dam_rule": "contact",
             "design_target_mm": layout.VIA_MASK_CLEARANCE_MM,
+            "process": {
+                "name": "JLCPCB PCB capabilities",
+                "rule": "soldermask opening to neighbouring copper",
+                "limit_from_catalog": {
+                    "from_catalog": "soldermask_opening_to_trace_mm"},
+                "interpretation":
+                    "a via annulus is copper that is not the opening's own "
+                    "pad, so this published clearance is the process floor "
+                    "for the annulus_to_opening_mm metric this board "
+                    "already measures. The neighbouring fact "
+                    "filled_via_to_opening_mm (0.35 mm) is NOT the one to "
+                    "cite: its own conditions scope it to vias filled with "
+                    "soldermask and no wider than 0.5 mm, and this board's "
+                    "vias are tented, at 0.6 and 0.8 mm",
+            },
         },
+        "catalog": catalog_pin(),
         "artifacts": {
             "gerber_dir": "generated/release/gerbers",
             "bom": "generated/release/bom.csv",
