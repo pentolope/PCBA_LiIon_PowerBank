@@ -3,12 +3,12 @@
   "board_id": "liion_power_bank",
   "constraint_version": "layout-stage-2026-09-02",
   "release_profile": "jlcpcb-2layer-assembled",
-  "generated_utc": "2026-09-11T02:01:51.221974+00:00",
-  "source_closure_sha256": "50af89cf522ad2b5d1d3542e1c00ec8ce96a5ee6059c02e89718fc92b0789feb",
+  "generated_utc": "2026-09-12T00:31:16.062602+00:00",
+  "source_closure_sha256": "5b6d253ebbcd3d2bf34a00856267a887365ab9e124303d7c0414518fa8f2ddf9",
   "source_closure_files": 48,
   "source_closure": {
-    "<configuration>": "311cec41e3e1d69c689a6a3046b69689a6dca464d9a4fd441db5550f965a5c16",
-    "<toolkit>": "225152338acde8ebaf2b7272c3a47d6a660342fa+clean",
+    "<configuration>": "6bddd76dee062cae4c70ea96103e3ba776210d46616fc51ce9e2d05dc90d3bfe",
+    "<toolkit>": "e8abb572428100dca3e8da9fed3f07fb9420f55e+clean",
     "components/jlcpcb.json": "f1274e18f33fbc9eee97a4baaa3aed690daa31f0f2e6aef6255e5f0aecf0c626",
     "components/parameters.json": "f6ac84c3ff75f8b19b23638715d093521c5f55d40e7f7549a8e91df4dcfeb656",
     "constraints/requirements.json": "c4c3f0f4e9c131548b8f7ca5bb5f2ddbc923c2649a53194e1af43a6350ce9b99",
@@ -45,7 +45,7 @@
     "library/LiIonPowerBank.pretty/TI_X1SON-2_1.0x0.6mm_P0.65mm.kicad_mod": "f2a1d1b2cc0035e8cd954f3a94af293158956394d78767ffc198f53d78b0971d",
     "liion_power_bank.kicad_pcb": "93416fe7794d938e4199cabadec93cd810fb1c1d26940c24a5ed99df89b7bc0d",
     "liion_power_bank.kicad_prl": "623a8e518ba6844f852d3507788d0c13370caca4c87de4ecf30b4a6a8e6a38bf",
-    "liion_power_bank.kicad_pro": "54c3042197d8b3cbad54e1a41b529ebd3ec9594e7c2338e1d4e03c1ae9ef253e",
+    "liion_power_bank.kicad_pro": "b76583c824b0b3fe8c6b02bb41aa939445e03878277c2e28a12ca9a404a85178",
     "liion_power_bank.kicad_sch": "e98d86e6e9936ba0d3c723ff2f3c6679470cea8de59ad29a82997c404f484349",
     "sim/pre_layout_advertisement.json": "1ba425297b61a9aabcbc145bd0abc440aec8e903532c0bc74e56929c0fea3263",
     "sim/pre_layout_button_filter.json": "b84a7ff1b9c22575f0ba519553bef1c2418479ac12731b4ad96ace2d6b0cf378",
@@ -61,7 +61,7 @@
     "kicad_cli": "kicad-cli"
   },
   "toolkit": {
-    "commit": "225152338acde8ebaf2b7272c3a47d6a660342fa",
+    "commit": "e8abb572428100dca3e8da9fed3f07fb9420f55e",
     "working_tree_dirty": false,
     "detail": "git HEAD of the toolkit checkout that executed this validation"
   },
@@ -90,8 +90,8 @@
     "gerbers/liion_power_bank-PTH.drl": "827a508e52c2c326426b9a3bcb0ccbbe52b1fe98105427276751cffeff208fd5",
     "gerbers/liion_power_bank-job.gbrjob": "600d6ba1daa7e90693db3254bebba2e6c0dae132c0952bb91247e2c8827f1892",
     "liion_power_bank-fabrication.zip": "1cbd40a80912bb750d49527b03c74fc013cb5583bc290a49643bf4894fce4517",
-    "reports/drc.json": "88d7c79b6ba0e4c782ad728b11d724d78108c91d0ee7543dc82114adab8fc532",
-    "reports/erc.json": "39f1204b2086c3ec119c6a898fd4d7e42f31e09792f042ac1e103ff3225c5241"
+    "reports/drc.json": "c6468d1358d25f6b0ae5723906a789ee711ab77fcf18a895c6e48907a5355223",
+    "reports/erc.json": "43d94db3d5f7bad6ada56c0bd295e0cc04e43ecb37bb6f92fba0a1f849b34cca"
   },
   "excluded_layers": []
 }

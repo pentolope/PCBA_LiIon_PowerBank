@@ -67,12 +67,21 @@ POWER_CLASS_NETS = tuple(sorted(set(
 
 
 def project_document(root_sheet_uuid):
-    classes = []
-    for entry in NET_CLASSES:
-        record = dict(entry)
-        if record["name"] == "Power":
-            record["nets"] = list(POWER_CLASS_NETS)
-        classes.append(record)
+    # Membership belongs in `netclass_assignments`, never in a `nets`
+    # list inside the class entry: the KiCad 6 shape is not read by
+    # `kicad-cli pcb drc`, which is the DRC path every verdict on this
+    # board runs, so a class declaring it reaches no net and judges
+    # nothing. Measured on KiCad 10.0.6 against this board's own copper:
+    # raising Power's clearance to 0.9 mm produces 499 clearance
+    # violations through the assignments channel and not one through the
+    # in-class list. Assignments rather than patterns because this list
+    # is exact - a net renamed out from under it becomes a finding,
+    # where a pattern would quietly go on matching nothing.
+    net_settings = {
+        "classes": [dict(entry) for entry in NET_CLASSES],
+        "netclass_assignments": {net: ["Power"]
+                                 for net in POWER_CLASS_NETS},
+    }
     return {
         "board": {
             "design_settings": {
@@ -105,7 +114,7 @@ def project_document(root_sheet_uuid):
         "libraries": {"pinned_footprint_libs": [], "pinned_symbol_libs": []},
         "meta": {"filename": netlist.PROJECT_NAME + ".kicad_pro",
                  "version": 3},
-        "net_settings": {"classes": classes},
+        "net_settings": net_settings,
         "pcbnew": {"last_paths": {}, "page_layout_descr_file": ""},
         "schematic": {"legacy_lib_dir": "", "legacy_lib_list": []},
         "sheets": [[root_sheet_uuid, "Root"]],
@@ -113,11 +122,21 @@ def project_document(root_sheet_uuid):
     }
 
 
-def write_project():
+def generate_project_text():
+    """The project file's bytes, so a test can compare without writing.
+
+    The schematic has had `generate_schematic_text` since the start and
+    the committed file is held against it; the project had no such seam,
+    and a generator and a committed file that nothing compares is how
+    board/manifest.json drifted away from design/manifest.py.
+    """
     root_uuid = str(schematic._uuid("sheet", netlist.PROJECT_NAME))
+    return json.dumps(project_document(root_uuid), indent=2) + "\n"
+
+
+def write_project():
     with open(project_path(), "w", encoding="utf-8", newline="\n") as handle:
-        json.dump(project_document(root_uuid), handle, indent=2)
-        handle.write("\n")
+        handle.write(generate_project_text())
     return (project_path(),)
 
 

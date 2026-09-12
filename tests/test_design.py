@@ -86,6 +86,8 @@ class DesignSource(unittest.TestCase):
     def test_the_committed_design_files_are_the_generated_ones(self):
         with open(build.schematic_path(), "r", encoding="utf-8") as handle:
             self.assertEqual(handle.read(), build.generate_schematic_text())
+        with open(build.project_path(), "r", encoding="utf-8") as handle:
+            self.assertEqual(handle.read(), build.generate_project_text())
         for path, text in libraries.artifacts().items():
             with open(path, "r", encoding="utf-8") as handle:
                 self.assertEqual(handle.read(), text, path)

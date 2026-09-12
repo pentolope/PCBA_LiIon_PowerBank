@@ -62,19 +62,35 @@
         "clearance": 0.15,
         "track_width": 1.5,
         "via_diameter": 0.8,
-        "via_drill": 0.4,
-        "nets": [
-          "BAT",
-          "CELLN",
-          "GND",
-          "SW",
-          "VBUS",
-          "VIN",
-          "VOUT",
-          "VOUT_SW"
-        ]
+        "via_drill": 0.4
       }
-    ]
+    ],
+    "netclass_assignments": {
+      "BAT": [
+        "Power"
+      ],
+      "CELLN": [
+        "Power"
+      ],
+      "GND": [
+        "Power"
+      ],
+      "SW": [
+        "Power"
+      ],
+      "VBUS": [
+        "Power"
+      ],
+      "VIN": [
+        "Power"
+      ],
+      "VOUT": [
+        "Power"
+      ],
+      "VOUT_SW": [
+        "Power"
+      ]
+    }
   },
   "pcbnew": {
     "last_paths": {},
