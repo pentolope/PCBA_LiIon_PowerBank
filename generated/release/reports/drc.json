@@ -1,7 +1,7 @@
 {
   "$schema": "https://schemas.kicad.org/drc.v1.json",
   "coordinate_units": "mm",
-  "date": "2026-09-11T18:31:14",
+  "date": "2026-09-11T18:32:17",
   "ignored_checks": [],
   "included_severities": [
     "error",
@@ -14,9 +14,9 @@
   "unconnected_items": [],
   "violations": [],
   "source_sha256": "93416fe7794d938e4199cabadec93cd810fb1c1d26940c24a5ed99df89b7bc0d",
-  "source_closure_sha256": "5b6d253ebbcd3d2bf34a00856267a887365ab9e124303d7c0414518fa8f2ddf9",
+  "source_closure_sha256": "0fb802b47142224584245939683dea6ed69d4a7792ab65177aaed3296d83f611",
   "source_closure": {
-    "<configuration>": "6bddd76dee062cae4c70ea96103e3ba776210d46616fc51ce9e2d05dc90d3bfe",
+    "<configuration>": "e843a8558e75de19e8bd8f52aafb3ea3cb50ee9ac5db5284793ad17848c1be7d",
     "<toolkit>": "e8abb572428100dca3e8da9fed3f07fb9420f55e+clean",
     "components/jlcpcb.json": "f1274e18f33fbc9eee97a4baaa3aed690daa31f0f2e6aef6255e5f0aecf0c626",
     "components/parameters.json": "f6ac84c3ff75f8b19b23638715d093521c5f55d40e7f7549a8e91df4dcfeb656",

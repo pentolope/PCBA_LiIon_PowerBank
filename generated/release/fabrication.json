@@ -3,11 +3,11 @@
   "board_id": "liion_power_bank",
   "constraint_version": "layout-stage-2026-09-02",
   "release_profile": "jlcpcb-2layer-assembled",
-  "generated_utc": "2026-09-12T00:31:16.062602+00:00",
-  "source_closure_sha256": "5b6d253ebbcd3d2bf34a00856267a887365ab9e124303d7c0414518fa8f2ddf9",
+  "generated_utc": "2026-09-12T00:32:18.662437+00:00",
+  "source_closure_sha256": "0fb802b47142224584245939683dea6ed69d4a7792ab65177aaed3296d83f611",
   "source_closure_files": 48,
   "source_closure": {
-    "<configuration>": "6bddd76dee062cae4c70ea96103e3ba776210d46616fc51ce9e2d05dc90d3bfe",
+    "<configuration>": "e843a8558e75de19e8bd8f52aafb3ea3cb50ee9ac5db5284793ad17848c1be7d",
     "<toolkit>": "e8abb572428100dca3e8da9fed3f07fb9420f55e+clean",
     "components/jlcpcb.json": "f1274e18f33fbc9eee97a4baaa3aed690daa31f0f2e6aef6255e5f0aecf0c626",
     "components/parameters.json": "f6ac84c3ff75f8b19b23638715d093521c5f55d40e7f7549a8e91df4dcfeb656",
@@ -90,8 +90,8 @@
     "gerbers/liion_power_bank-PTH.drl": "827a508e52c2c326426b9a3bcb0ccbbe52b1fe98105427276751cffeff208fd5",
     "gerbers/liion_power_bank-job.gbrjob": "600d6ba1daa7e90693db3254bebba2e6c0dae132c0952bb91247e2c8827f1892",
     "liion_power_bank-fabrication.zip": "1cbd40a80912bb750d49527b03c74fc013cb5583bc290a49643bf4894fce4517",
-    "reports/drc.json": "c6468d1358d25f6b0ae5723906a789ee711ab77fcf18a895c6e48907a5355223",
-    "reports/erc.json": "43d94db3d5f7bad6ada56c0bd295e0cc04e43ecb37bb6f92fba0a1f849b34cca"
+    "reports/drc.json": "4941ee8adf4f81fc2da9139e5c240a4ec73b6e10f69c280ac4ee8b4297a5916c",
+    "reports/erc.json": "a6a5d3d6b7d4b79038f4e1013f34517c59bebb9bc2f5d1e48319e75008992d1f"
   },
   "excluded_layers": []
 }
